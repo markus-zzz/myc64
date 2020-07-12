@@ -1,0 +1,84 @@
+/*
+ * Copyright (C) 2020 Markus Lavin (https://www.zzzconsulting.se/)
+ *
+ * All rights reserved.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ *
+ */
+
+DEF_KEY("<DELETE>", 0, 0)
+DEF_KEY("<RETURN>", 0, 1)
+DEF_KEY("<CRSR-RT>", 0, 2)
+DEF_KEY("<F7>", 0, 3)
+DEF_KEY("<F1>", 0, 4)
+DEF_KEY("<F3>", 0, 5)
+DEF_KEY("<F5>", 0, 6)
+DEF_KEY("<CRSR-DN>", 0, 7)
+DEF_KEY("3", 1, 0)
+DEF_KEY("W", 1, 1)
+DEF_KEY("A", 1, 2)
+DEF_KEY("4", 1, 3)
+DEF_KEY("Z", 1, 4)
+DEF_KEY("S", 1, 5)
+DEF_KEY("E", 1, 6)
+DEF_KEY("<LSHIFT>", 1, 7)
+DEF_KEY("5", 2, 0)
+DEF_KEY("R", 2, 1)
+DEF_KEY("D", 2, 2)
+DEF_KEY("6", 2, 3)
+DEF_KEY("C", 2, 4)
+DEF_KEY("F", 2, 5)
+DEF_KEY("T", 2, 6)
+DEF_KEY("X", 2, 7)
+DEF_KEY("7", 3, 0)
+DEF_KEY("Y", 3, 1)
+DEF_KEY("G", 3, 2)
+DEF_KEY("8", 3, 3)
+DEF_KEY("B", 3, 4)
+DEF_KEY("H", 3, 5)
+DEF_KEY("U", 3, 6)
+DEF_KEY("V", 3, 7)
+DEF_KEY("9", 4, 0)
+DEF_KEY("I", 4, 1)
+DEF_KEY("J", 4, 2)
+DEF_KEY("0", 4, 3)
+DEF_KEY("M", 4, 4)
+DEF_KEY("K", 4, 5)
+DEF_KEY("O", 4, 6)
+DEF_KEY("N", 4, 7)
+DEF_KEY("+", 5, 0)
+DEF_KEY("P", 5, 1)
+DEF_KEY("L", 5, 2)
+DEF_KEY("-", 5, 3)
+DEF_KEY(".", 5, 4)
+DEF_KEY(":", 5, 5)
+DEF_KEY("@", 5, 6)
+DEF_KEY(",", 5, 7)
+DEF_KEY("£", 6, 0)
+DEF_KEY("*", 6, 1)
+DEF_KEY(";", 6, 2)
+DEF_KEY("<HOME>", 6, 3)
+DEF_KEY("<RSHIFT>", 6, 4)
+DEF_KEY("=", 6, 5)
+DEF_KEY("<UP-ARROW>", 6, 6)
+DEF_KEY("/", 6, 7)
+DEF_KEY("1", 7, 0)
+DEF_KEY("<LEFT-ARROW>", 7, 1)
+DEF_KEY("<CTRL>", 7, 2)
+DEF_KEY("2", 7, 3)
+DEF_KEY("<SPACE>", 7, 4)
+DEF_KEY("<C=>", 7, 5)
+DEF_KEY("Q", 7, 6)
+DEF_KEY("<STOP>", 7, 7)
