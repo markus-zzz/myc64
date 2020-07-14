@@ -44,8 +44,9 @@ static const struct {
   const char *C64Key;
   uint8_t PAIdx;
   uint8_t PBIdx;
+  uint16_t KeyCode;
 } KeyInfo[] = {
-#define DEF_KEY(a, b, c) {a, b, c},
+#define DEF_KEY(a, b, c, d) {a, b, c, d},
 #include "keys.def"
 #undef DEF_KEY
 };
@@ -174,13 +175,16 @@ static gboolean on_key_press(GtkWidget *widget, GdkEventKey *event,
                              gpointer user_data) {
   (void)widget;
   (void)user_data;
-#if 0
-  auto key = KeyMap[event->hardware_keycode];
-  int pa = std::get<0>(key);
-  int pb = std::get<1>(key);
-  uint64_t mask = 1ULL << (pa * 8 + pb);
-  tb->i_keyboard_mask |= mask;
-#endif
+  printf("KeyPress: 0x%x\n", event->hardware_keycode);
+  for (int i = 0; i < sizeof(KeyInfo) / sizeof(KeyInfo[0]); i++) {
+    if (KeyInfo[i].KeyCode == event->hardware_keycode) {
+      int pa = KeyInfo[i].PAIdx;
+      int pb = KeyInfo[i].PBIdx;
+      uint64_t mask = 1ULL << (pa * 8 + pb);
+      tb->i_keyboard_mask |= mask;
+      break;
+    }
+  }
   return FALSE;
 }
 
@@ -188,13 +192,15 @@ static gboolean on_key_release(GtkWidget *widget, GdkEventKey *event,
                                gpointer user_data) {
   (void)widget;
   (void)user_data;
-#if 0
-  auto key = KeyMap[event->hardware_keycode];
-  int pa = std::get<0>(key);
-  int pb = std::get<1>(key);
-  uint64_t mask = 1ULL << (pa * 8 + pb);
-  tb->i_keyboard_mask &= ~mask;
-#endif
+  for (int i = 0; i < sizeof(KeyInfo) / sizeof(KeyInfo[0]); i++) {
+    if (KeyInfo[i].KeyCode == event->hardware_keycode) {
+      int pa = KeyInfo[i].PAIdx;
+      int pb = KeyInfo[i].PBIdx;
+      uint64_t mask = 1ULL << (pa * 8 + pb);
+      tb->i_keyboard_mask &= ~mask;
+      break;
+    }
+  }
   return FALSE;
 }
 
