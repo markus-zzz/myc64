@@ -114,7 +114,7 @@ module vic_ii(
     end
   end
 
-  assign o_addr_ph2 = {5'b0001_0, BAD_LINE_COND ? i_data_ph1[7:0] : VML[VMLI][7:0], RC[2:0]};
+  assign o_addr_ph2 = {2'b00, r_d018[3:1], BAD_LINE_COND ? i_data_ph1[7:0] : VML[VMLI][7:0], RC[2:0]};
   reg [3:0] fgcolor, fgcolor_1;
 
   always @(posedge clk) begin
@@ -198,6 +198,7 @@ module vic_ii(
   assign BA = !(BAD_LINE_COND && CYCLE >= p_cycle_first_disp - 3 && CYCLE < p_cycle_first_disp + 40 + 3);
   assign BM = !(BAD_LINE_COND && CYCLE >= p_cycle_first_disp - 2 && CYCLE < p_cycle_first_disp + 40 + 2);
 
+  reg [7:0] r_d018; // Memory setup.
   reg [3:0] r_d020; // Border color.
   reg [3:0] r_d021; // Background color.
 
@@ -209,6 +210,7 @@ module vic_ii(
     else if (clk_1mhz_ph1_en & i_reg_cs & i_reg_we) begin
       //$display("VICII[%h]=%h(%b)", i_reg_addr, i_reg_data, i_reg_data);
       case (i_reg_addr)
+        6'h18: r_d018 <= i_reg_data[7:0];
         6'h20: r_d020 <= i_reg_data[3:0];
         6'h21: r_d021 <= i_reg_data[3:0];
         default: /* do nothing */;
@@ -219,6 +221,7 @@ module vic_ii(
   always @* begin
     case (i_reg_addr)
       6'h12: o_reg_data = RASTER[7:0];
+      6'h18: o_reg_data = r_d018;
       6'h20: o_reg_data = {4'h0, r_d020};
       6'h21: o_reg_data = {4'h0, r_d021};
       default: o_reg_data = 8'h0;

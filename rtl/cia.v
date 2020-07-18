@@ -66,6 +66,7 @@ module cia(
 
   always @* begin
     case (i_addr)
+    4'h0: o_data = 8'hff;
     4'h1: o_data = i_pb;
     default: o_data = 0;
     endcase

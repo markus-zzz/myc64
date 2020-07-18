@@ -27,11 +27,13 @@ module cpu6510(
   output reg WE,          // write enable
   input IRQ,              // interrupt request
   input NMI,              // non-maskable interrupt request
-  input RDY               // Ready signal. Pauses CPU when RDY=0
+  input RDY,              // Ready signal. Pauses CPU when RDY=0
+  output reg [5:0] PO,
+  input [5:0] PI
 );
 
   wire [15:0] AB_w;
-  wire [7:0] DO_w;
+  wire [7:0] DI_w, DO_w;
   wire WE_w;
 
   always @(posedge clk) begin
@@ -42,12 +44,22 @@ module cpu6510(
     end
   end
 
+  always @(posedge clk) begin
+    if (reset) begin
+      PO <= 6'b11_1111;
+    end
+    else if (RDY && WE_w && AB_w == 16'h0001) begin
+      PO <= DO_w[5:0];
+    end
+  end
+
+  assign DI_w = AB == 16'h0001 ? {2'b00, PO} : DI;
 
   cpu u_cpu(
     .clk(clk),
     .reset(reset),
     .AB(AB_w),
-    .DI(DI),
+    .DI(DI_w),
     .DO(DO_w),
     .WE(WE_w),
     .IRQ(IRQ),

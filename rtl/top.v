@@ -28,6 +28,7 @@ module top(
   output [23:0] o_pixel,
   output o_hsync,
   output o_vsync,
+  output [15:0] o_wave,
   input [63:0] i_keyboard_mask
 );
 
@@ -44,6 +45,7 @@ module top(
   wire [7:0] cpu_do;
   wire cpu_we;
   reg [7:0] cpu_di;
+  wire [5:0] cpu_po;
   wire [7:0] ram_main_ph1_do, ram_main_ph2_do, rom_basic_ph1_do, rom_kernal_ph1_do, rom_char_ph1_do, rom_char_ph2_do;
   wire [3:0] ram_color_ph1_do;
 
@@ -52,10 +54,16 @@ module top(
   wire [7:0] vic_reg_do;
   wire vic_ba, vic_bm;
 
+  wire [7:0] sid_do;
+
   wire [7:0] cia1_do;
   wire [7:0] cia1_pa;
   wire [7:0] cia1_pb;
   wire cia1_irq;
+
+  reg ram_enabled;
+
+  reg vic_cs, sid_cs, color_cs, cia1_cs;
 
   cpu6510 u_cpu(
     .clk(clk),
@@ -66,7 +74,9 @@ module top(
     .WE(cpu_we),
     .IRQ(cia1_irq),
     .NMI(1'b0),
-    .RDY(clk_1mhz_ph1_en & vic_ba)
+    .RDY(clk_1mhz_ph1_en & vic_ba),
+    .PO(cpu_po),
+    .PI()
   );
 
   vic_ii u_vic(
@@ -79,7 +89,7 @@ module top(
     .i_data_ph1({ram_color_ph1_do, ram_main_ph1_do}),
     .o_addr_ph2(vic_addr),
     .i_data_ph2({4'h0, vic_di}),
-    .i_reg_cs(cpu_addr[15:10] == 6'b1101_00),
+    .i_reg_cs(vic_cs),
     .i_reg_we(cpu_we),
     .i_reg_addr(cpu_addr[5:0]),
     .i_reg_data(cpu_do),
@@ -91,12 +101,24 @@ module top(
     .o_vsync(o_vsync)
   );
 
+  sid u_sid(
+    .clk(clk),
+    .rst(rst),
+    .clk_1mhz_ph1_en(clk_1mhz_ph1_en),
+    .i_cs(sid_cs),
+    .i_addr(cpu_addr[4:0]),
+    .i_we(cpu_we),
+    .i_data(cpu_do),
+    .o_data(sid_do),
+    .o_wave(o_wave)
+  );
+
   cia u_cia1(
     .clk(clk),
     .rst(rst),
     .clk_1mhz_ph1_en(clk_1mhz_ph1_en),
     .i_addr(cpu_addr[3:0]),
-    .i_cs(cpu_addr[15:8] == 8'hdc),
+    .i_cs(cia1_cs),
     .i_we(cpu_we),
     .i_data(cpu_do),
     .o_data(cia1_do),
@@ -115,6 +137,8 @@ module top(
     .ph2_en(clk_1mhz_ph2_en),
     .ph1_we(cpu_we & vic_bm),
     .ph2_we(1'b0),
+    .ph1_cs(ram_enabled | ~vic_bm),
+    .ph2_cs(1'b1),
     .ph1_addr(vic_bm ? cpu_addr[15:0] : vic_addr_ph1),
     .ph2_addr(0),
     .ph1_di(cpu_do),
@@ -131,8 +155,10 @@ module top(
     .rst(rst),
     .ph1_en(clk_1mhz_ph1_en),
     .ph2_en(clk_1mhz_ph2_en),
-    .ph1_we(cpu_we && cpu_addr[15:10] == 6'b1101_10), // Color RAM at 0xd800
+    .ph1_we(color_cs & cpu_we),
     .ph2_we(1'b0),
+    .ph1_cs(color_cs | ~vic_bm),
+    .ph2_cs(1'b1),
     .ph1_addr(vic_bm ? cpu_addr[9:0] : vic_addr_ph1[9:0]),
     .ph2_addr(0),
     .ph1_di(cpu_do[3:0]),
@@ -186,14 +212,88 @@ module top(
     .ph2_do()
   );
 
+  // Bank switching - following the table from
+  // https://www.c64-wiki.com/wiki/Bank_Switching
   always @(*) begin
-    casex (cpu_addr)
-      16'b101x_xxxx_xxxx_xxxx: cpu_di = rom_basic_ph1_do;
-      16'b111x_xxxx_xxxx_xxxx: cpu_di = rom_kernal_ph1_do;
-      16'b1101_00xx_xxxx_xxxx: cpu_di = vic_reg_do; // $D000-$D3FF
-      16'hdc_xx: cpu_di = cia1_do; // $DC00-$DCFF
-      default: cpu_di = ram_main_ph1_do;
-    endcase
+    ram_enabled = 0;
+    vic_cs = 0;
+    sid_cs = 0;
+    cia1_cs = 0;
+    color_cs = 0;
+    // RAM (which the system requires and must appear in each mode)
+    if (cpu_addr <= 16'h0FFF) begin
+      cpu_di = ram_main_ph1_do;
+      ram_enabled = 1;
+    end
+    // RAM or is unmapped
+    else if (16'h1000 <= cpu_addr && cpu_addr <= 16'h7FFF) begin
+      cpu_di = ram_main_ph1_do;
+      ram_enabled = 1;
+    end
+    // RAM or cartridge ROM
+    else if (16'h8000 <= cpu_addr && cpu_addr <= 16'h9FFF) begin
+      cpu_di = ram_main_ph1_do;
+      ram_enabled = 1;
+    end
+    // RAM, BASIC interpretor ROM, cartridge ROM or is unmapped
+    else if (16'hA000 <= cpu_addr && cpu_addr <= 16'hBFFF) begin
+      if (cpu_po[2:0] == 3'b111 || cpu_po[2:0] == 3'b011) begin
+        cpu_di = rom_basic_ph1_do;
+      end
+      else begin
+        cpu_di = ram_main_ph1_do;
+        ram_enabled = 1;
+      end
+    end
+    // RAM or is unmapped
+    else if (16'hC000 <= cpu_addr && cpu_addr <= 16'hCFFF) begin
+      cpu_di = ram_main_ph1_do;
+      ram_enabled = 1;
+    end
+    // RAM, Character generator ROM, or I/O registers and Color RAM
+    else if (16'hD000 <= cpu_addr && cpu_addr <= 16'hDFFF) begin
+      if (cpu_po[2:0] == 3'b111 || cpu_po[2:0] == 3'b110 ||
+          cpu_po[2:0] == 3'b101) begin
+        // IO
+        if (16'hD000 <= cpu_addr && cpu_addr <= 16'hD3FF) begin // VIC-II
+          cpu_di = vic_reg_do;
+          vic_cs = 1;
+        end
+        else if (16'hD400 <= cpu_addr && cpu_addr <= 16'hD7FF) begin // SID
+          cpu_di = sid_do;
+          sid_cs = 1;
+        end
+        else if (16'hD800 <= cpu_addr && cpu_addr <= 16'hDBFF) begin // COLOR-RAM
+          cpu_di = {4'h0, ram_color_ph1_do}; // XXX: No CPU read from color RAM?
+          color_cs = 1;
+        end
+        else if (16'hDC00 <= cpu_addr && cpu_addr <= 16'hDCFF) begin // CIA1
+          cpu_di = cia1_do;
+          cia1_cs = 1;
+        end
+      end
+      else if (cpu_po[2:0] == 3'b011 || cpu_po[2:0] == 3'b010 ||
+          cpu_po[2:0] == 3'b001) begin
+        // CHAR ROM
+        cpu_di = rom_char_ph1_do;
+      end
+      else begin
+        // RAM
+        cpu_di = ram_main_ph1_do;
+        ram_enabled = 1;
+      end
+    end
+    // RAM, KERNAL ROM or cartridge ROM
+    else if (16'hE000 <= cpu_addr) begin
+      if (cpu_po[2:0] == 3'b111 || cpu_po[2:0] == 3'b110 ||
+          cpu_po[2:0] == 3'b011 || cpu_po[2:0] == 3'b010) begin
+        cpu_di = rom_kernal_ph1_do;
+      end
+      else begin
+        cpu_di = ram_main_ph1_do;
+        ram_enabled = 1;
+      end
+    end
   end
 
   always @(*) begin
@@ -201,13 +301,6 @@ module top(
       16'bxx01_xxxx_xxxx_xxxx: vic_di = rom_char_ph2_do; // Char ROM at 0x1000-0x1fff
       default: vic_di = ram_main_ph2_do;
     endcase
-  end
-
-  always @(posedge clk) begin
-//    if (clk_1mhz_ph1_en & vic_ba && cpu_addr[15:8] == 8'hdc && cpu_we) $display("CIA1[%h]=%b", cpu_addr, cpu_do);
-//    if (clk_1mhz_ph1_en & vic_ba && cpu_addr[15:8] == 8'hdd && cpu_we) $display("CIA2[%h]=%h", cpu_addr, cpu_do);
-//    if (clk_1mhz_ph1_en & vic_ba && cpu_addr[15:8] == 8'hd0 && cpu_we) $display("VICII[%h]=%h", cpu_addr, cpu_do);
-//    if (clk_1mhz_ph1_en & vic_ba && cpu_addr[15:10] == 6'b1101_10 && cpu_we) $display("COLOR[%h]=%h", cpu_addr, cpu_do);
   end
 
   // Keyboard matrix.

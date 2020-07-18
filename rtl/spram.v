@@ -76,11 +76,13 @@ module spram2phase(
   ph1_do,
   ph1_di,
   ph1_we,
+  ph1_cs,
   ph2_en,
   ph2_addr,
   ph2_do,
   ph2_di,
-  ph2_we
+  ph2_we,
+  ph2_cs
 );
 
 	parameter aw = 10; //number of address-bits
@@ -93,11 +95,13 @@ module spram2phase(
   output reg [dw-1:0] ph1_do;
   input [dw-1:0] ph1_di;
   input ph1_we;
+  input ph1_cs;
   input ph2_en;
   input [aw-1:0] ph2_addr;
   output reg [dw-1:0] ph2_do;
   input [dw-1:0] ph2_di;
   input ph2_we;
+  input ph2_cs;
 
   wire [dw-1:0] do;
   reg ph1_not_ph2;
@@ -121,7 +125,7 @@ module spram2phase(
   ) u_spram(
     .clk(clk),
     .rst(rst),
-    .ce(1'b1),
+    .ce(ph1_not_ph2 ? ph1_cs : ph2_cs),
     .oe(1'b1),
     .addr(ph1_not_ph2 ? ph1_addr : ph2_addr),
     .do(do),

@@ -53,7 +53,8 @@ static const struct {
 
 static Vtop *tb = NULL;
 static VerilatedVcdC *trace = NULL;
-static unsigned tick = 0;
+static unsigned TraceTick = 0;
+static unsigned Cycle = 0;
 static const char *InjectKeyStringPtr = nullptr;
 
 struct CommandAtFrame {
@@ -108,6 +109,7 @@ std::list<CommandAtFrame *> Commands;
 
 GdkPixbuf *FramePixBuf;
 static int FrameIdx = -1;
+static std::vector<int16_t> SIDSamples;
 
 static struct {
   int scale;
@@ -116,9 +118,55 @@ static struct {
   int save_frame_to;
   const char *save_frame_prefix;
   int exit_after_frame;
-  int exit_after_cycle;
   bool trace;
 } options;
+
+static void saveWAV(std::vector<int16_t> &pcmSamples) {
+  FILE *fp;
+  fp = fopen("out.wav", "wb");
+
+  char ChunkID[] = {'R', 'I', 'F', 'F'};
+  uint32_t ChunkSize = 0;
+  char Format[] = {'W', 'A', 'V', 'E'};
+
+  char Subchunk1ID[] = {'f', 'm', 't', ' '};
+  uint32_t Subchunk1Size = 16;
+  uint16_t AudioFormat = 1;
+  uint16_t NumChannels = 1;
+  uint32_t SampleRate = 50000;
+  uint16_t BitsPerSample = 16;
+  uint32_t ByteRate = SampleRate * NumChannels * BitsPerSample / 8;
+  uint16_t BlockAlign = NumChannels * BitsPerSample / 8;
+
+  char Subchunk2ID[] = {'d', 'a', 't', 'a'};
+  uint32_t Subchunk2Size = pcmSamples.size() * NumChannels * BitsPerSample / 8;
+  ChunkSize = 36 + Subchunk2Size;
+
+  // RIFF chunk descriptor.
+  fwrite(&ChunkID[0], sizeof(ChunkID), 1, fp);
+  fwrite(&ChunkSize, sizeof(ChunkSize), 1, fp);
+  fwrite(&Format, sizeof(Format), 1, fp);
+
+  // fmt sub-chunk.
+  fwrite(&Subchunk1ID[0], sizeof(Subchunk1ID), 1, fp);
+  fwrite(&Subchunk1Size, sizeof(Subchunk1Size), 1, fp);
+  fwrite(&AudioFormat, sizeof(AudioFormat), 1, fp);
+  fwrite(&NumChannels, sizeof(NumChannels), 1, fp);
+  fwrite(&SampleRate, sizeof(SampleRate), 1, fp);
+  fwrite(&ByteRate, sizeof(ByteRate), 1, fp);
+  fwrite(&BlockAlign, sizeof(BlockAlign), 1, fp);
+  fwrite(&BitsPerSample, sizeof(BitsPerSample), 1, fp);
+
+  // data sub-chunk
+  fwrite(&Subchunk2ID[0], sizeof(Subchunk2ID), 1, fp);
+  fwrite(&Subchunk2Size, sizeof(Subchunk2Size), 1, fp);
+
+  long NextDataPos = ftell(fp);
+  for (unsigned i = 0; i < pcmSamples.size(); i++)
+    fwrite(&pcmSamples[i], sizeof(int16_t), 1, fp);
+
+  fclose(fp);
+}
 
 static void put_pixel(GdkPixbuf *pixbuf, int x, int y, guchar red, guchar green,
                       guchar blue) {
@@ -175,7 +223,6 @@ static gboolean on_key_press(GtkWidget *widget, GdkEventKey *event,
                              gpointer user_data) {
   (void)widget;
   (void)user_data;
-  printf("KeyPress: 0x%x\n", event->hardware_keycode);
   for (int i = 0; i < sizeof(KeyInfo) / sizeof(KeyInfo[0]); i++) {
     if (KeyInfo[i].KeyCode == event->hardware_keycode) {
       int pa = KeyInfo[i].PAIdx;
@@ -231,6 +278,9 @@ int clk_cb() {
 
   hcntr++;
 
+  if (Cycle % (20 * 8) == 0)
+    SIDSamples.push_back(tb->o_wave);
+
   return frame_done;
 }
 
@@ -239,14 +289,13 @@ static gboolean timeout_handler(GtkWidget *widget) {
     tb->clk = 1;
     tb->eval();
     if (trace)
-      trace->dump(tick++);
+      trace->dump(TraceTick++);
     tb->clk = 0;
     tb->eval();
     if (trace)
-      trace->dump(tick++);
+      trace->dump(TraceTick++);
 
-    if (tick > options.exit_after_cycle)
-      exit(0);
+    Cycle++;
 
     if (clk_cb()) {
       FrameIdx++;
@@ -296,6 +345,7 @@ static gboolean timeout_handler(GtkWidget *widget) {
       }
 
       if (FrameIdx >= options.exit_after_frame) {
+        saveWAV(SIDSamples);
         exit(0);
       }
 
@@ -342,8 +392,6 @@ static void parse_cmd_args(int argc, char *argv[]) {
       options.save_frame_prefix = &argv[i][off];
     } else if (MATCH("--exit-after-frame=")) {
       options.exit_after_frame = strtol(&argv[i][off], NULL, 0);
-    } else if (MATCH("--exit-after-cycle=")) {
-      options.exit_after_cycle = strtol(&argv[i][off], NULL, 0);
     } else if (MATCH("--trace")) {
       options.trace = true;
     } else if (MATCH("--cmd-inject-keys=")) {
@@ -405,7 +453,6 @@ int main(int argc, char *argv[]) {
   options.save_frame_to = INT_MAX;
   options.save_frame_prefix = "frame";
   options.exit_after_frame = INT_MAX;
-  options.exit_after_cycle = INT_MAX;
   options.trace = false;
 
   parse_cmd_args(argc, argv);
@@ -456,11 +503,12 @@ int main(int argc, char *argv[]) {
     tb->clk = 1;
     tb->eval();
     if (trace)
-      trace->dump(tick++);
+      trace->dump(TraceTick++);
     tb->clk = 0;
     tb->eval();
     if (trace)
-      trace->dump(tick++);
+      trace->dump(TraceTick++);
+    Cycle++;
   }
   tb->rst = 0;
 
