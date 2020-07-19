@@ -18,6 +18,19 @@
  *
  */
 
+/* Implementation is mostly based on information from the official datasheet
+ * and the interview with Bob Yannes
+ *  - http://archive.6502.org/datasheets/mos_6582_sid.pdf
+ *  - http://sid.kubarth.com/articles/interview_bob_yannes.html
+ *
+ * XXX: Currently many limitations such as (but not limited to)
+ *  - No noise waveform.
+ *  - No ring modulation.
+ *  - No hard sync.
+ *  - Linear envelope.
+ *  - No filters.
+ */
+
 `default_nettype none
 
 module sid(
@@ -44,7 +57,7 @@ module sid(
   waveform_gen u_wave_1(
     .clk(clk),
     .rst(rst),
-    .clk_1mhz_ph1_en(1'b1),
+    .clk_1mhz_ph1_en(clk_1mhz_ph1_en),
     .i_frequency({r_d401, r_d400}),
     .i_duty_cycle({r_d403, r_d402}),
     .i_triangle_en(r_d404[4]),
@@ -56,7 +69,7 @@ module sid(
   envelope_gen u_envelope_1(
     .clk(clk),
     .rst(rst),
-    .clk_1mhz_ph1_en(1'b1),
+    .clk_1mhz_ph1_en(clk_1mhz_ph1_en),
     .i_gate(r_d404[0]),
     .i_attack(r_d405[7:4]),
     .i_decay(r_d405[3:0]),
@@ -70,7 +83,7 @@ module sid(
   waveform_gen u_wave_2(
     .clk(clk),
     .rst(rst),
-    .clk_1mhz_ph1_en(1'b1),
+    .clk_1mhz_ph1_en(clk_1mhz_ph1_en),
     .i_frequency({r_d408, r_d407}),
     .i_duty_cycle({r_d40a, r_d409}),
     .i_triangle_en(r_d40b[4]),
@@ -82,7 +95,7 @@ module sid(
   envelope_gen u_envelope_2(
     .clk(clk),
     .rst(rst),
-    .clk_1mhz_ph1_en(1'b1),
+    .clk_1mhz_ph1_en(clk_1mhz_ph1_en),
     .i_gate(r_d40b[0]),
     .i_attack(r_d40c[7:4]),
     .i_decay(r_d40c[3:0]),
@@ -96,7 +109,7 @@ module sid(
   waveform_gen u_wave_3(
     .clk(clk),
     .rst(rst),
-    .clk_1mhz_ph1_en(1'b1),
+    .clk_1mhz_ph1_en(clk_1mhz_ph1_en),
     .i_frequency({r_d40f, r_d40e}),
     .i_duty_cycle({r_d411, r_d410}),
     .i_triangle_en(r_d412[4]),
@@ -108,7 +121,7 @@ module sid(
   envelope_gen u_envelope_3(
     .clk(clk),
     .rst(rst),
-    .clk_1mhz_ph1_en(1'b1),
+    .clk_1mhz_ph1_en(clk_1mhz_ph1_en),
     .i_gate(r_d412[0]),
     .i_attack(r_d413[7:4]),
     .i_decay(r_d413[3:0]),
@@ -324,7 +337,10 @@ module envelope_gen(
           end
         end
         s_attack: begin
-          if (cntr == 8'hff) begin
+          if (~i_gate) begin
+            state <= s_release;
+          end
+          else if (cntr == 8'hff) begin
             state <= s_decay;
           end
           else if (freq_div == 0) begin
@@ -333,7 +349,10 @@ module envelope_gen(
           end
         end
         s_decay: begin
-          if (cntr == {i_sustain, 4'h0}) begin
+          if (~i_gate) begin
+            state <= s_release;
+          end
+          else if (cntr == {i_sustain, 4'h0}) begin
             state <= s_sustain;
           end
           else if (freq_div == 0) begin
@@ -347,7 +366,10 @@ module envelope_gen(
           end
         end
         s_release: begin
-          if (cntr == 8'h00) begin
+          if (i_gate) begin
+            state <= s_attack;
+          end
+          else if (cntr == 8'h00) begin
             state <= s_idle;
           end
           else if (freq_div == 0) begin

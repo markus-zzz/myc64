@@ -278,6 +278,7 @@ int clk_cb() {
 
   hcntr++;
 
+  // Sample at 50kHz but clock is 8Mhz.
   if (Cycle % (20 * 8) == 0)
     SIDSamples.push_back(tb->o_wave);
 
