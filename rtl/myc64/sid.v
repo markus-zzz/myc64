@@ -42,15 +42,17 @@ module sid(
   input i_we,
   input [7:0] i_data,
   output reg [7:0] o_data,
-  output [15:0] o_wave
+  output reg [15:0] o_wave
 );
   wire [11:0] wave1, wave2, wave3;
   wire [7:0] env1, env2, env3;
   wire [20:0] voice1, voice2, voice3;
 
-  assign o_wave = $signed({{2{voice1[20]}}, voice1[20:7]}) +
-                  $signed({{2{voice2[20]}}, voice2[20:7]}) +
-                  $signed({{2{voice3[20]}}, voice3[20:7]});
+  always @(posedge clk) begin
+    o_wave <= $signed({{2{voice1[20]}}, voice1[20:7]}) +
+              $signed({{2{voice2[20]}}, voice2[20:7]}) +
+              $signed({{2{voice3[20]}}, voice3[20:7]});
+  end
 
   // Voice #1
   assign voice1 = $signed(wave1 - 12'h800) * $signed({1'b0, env1});

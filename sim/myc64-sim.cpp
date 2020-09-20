@@ -18,12 +18,12 @@
  *
  */
 
-#include "Vtop.h"
-#include "Vtop_spram2phase__A10_D8.h"
-#include "Vtop_spram2phase__D4.h"
-#include "Vtop_spram__A10_D8.h"
-#include "Vtop_spram__D4.h"
-#include "Vtop_top.h"
+#include "Vmyc64_top.h"
+#include "Vmyc64_top_myc64_top.h"
+#include "Vmyc64_top_spram2phase__A10_D8.h"
+#include "Vmyc64_top_spram2phase__D4.h"
+#include "Vmyc64_top_spram__A10_D8.h"
+#include "Vmyc64_top_spram__D4.h"
 #include "verilated.h"
 #include "verilated_vcd_c.h"
 #include <assert.h>
@@ -51,7 +51,7 @@ static const struct {
 #undef DEF_KEY
 };
 
-static Vtop *tb = NULL;
+static Vmyc64_top *dut = NULL;
 static VerilatedVcdC *trace = NULL;
 static unsigned TraceTick = 0;
 static unsigned Cycle = 0;
@@ -67,16 +67,31 @@ struct CommandLoadPRG : public CommandAtFrame {
   CommandLoadPRG(int FrameIdx, const char *PathToPRG)
       : CommandAtFrame(FrameIdx), m_PathToPRG(PathToPRG) {}
   void execute() override {
+    uint8_t *RAM = dut->myc64_top->u_ram_main->u_spram->mem;
     FILE *fp = fopen(m_PathToPRG, "rb");
-    uint16_t loadAddress;
+    fseek(fp, 0, SEEK_END);
+    uint16_t PrgSize = ftell(fp) - sizeof(uint16_t);
+    rewind(fp);
+    uint16_t PrgStartAddr;
     size_t res;
-    res = fread(&loadAddress, sizeof(loadAddress), 1, fp);
-    while (!feof(fp)) {
-      uint8_t byte;
-      res = fread(&byte, sizeof(byte), 1, fp);
-      tb->top->u_ram_main->u_spram->mem[loadAddress++] = byte;
-    }
+    res = fread(&PrgStartAddr, sizeof(PrgStartAddr), 1, fp);
+    assert(res == 1);
+    res = fread(&RAM[PrgStartAddr], PrgSize, 1, fp);
+    assert(res == 1);
     fclose(fp);
+
+    // Update various zero page pointers to adjust for loaded program.
+    // - Pointer to beginning of variable area. (End of program plus 1.)
+    // - Pointer to beginning of array variable area.
+    // - Pointer to end of array variable area.
+    // - Load address read from input file and pointer to current byte during
+    // LOAD/VERIFY from serial bus.
+    //   End address after LOAD/VERIFY from serial bus or datasette.
+    // For details see https://sta.c64.org/cbm64mem.html and
+    // VICE source: src/c64/c64mem.c:mem_set_basic_text()
+    uint16_t PrgEndAddr = PrgStartAddr + PrgSize;
+    RAM[0x2d] = RAM[0x2f] = RAM[0x31] = RAM[0xae] = PrgEndAddr & 0xff;
+    RAM[0x2e] = RAM[0x30] = RAM[0x32] = RAM[0xaf] = PrgEndAddr >> 8;
   }
   const char *m_PathToPRG;
 };
@@ -85,7 +100,7 @@ struct CommandDumpRAM : public CommandAtFrame {
   CommandDumpRAM(int FrameIdx, uint16_t Address, uint16_t Size)
       : CommandAtFrame(FrameIdx), m_Address(Address), m_Size(Size) {}
   void execute() override {
-    uint8_t *p = tb->top->u_ram_main->u_spram->mem;
+    uint8_t *p = dut->myc64_top->u_ram_main->u_spram->mem;
     for (uint16_t i = 0; i < m_Size; i++) {
       if (i % 16 == 0)
         printf("\n%04x: ", m_Address + i);
@@ -213,7 +228,7 @@ static gboolean on_draw_event(GtkWidget *widget, cairo_t *cr,
   cairo_move_to(cr, 10, 15);
   char buf[64];
   snprintf(buf, sizeof(buf), "Frame #%03d, KeyboardMask=0x%016lx", FrameIdx,
-           tb->i_keyboard_mask);
+           dut->i_keyboard_mask);
   cairo_show_text(cr, buf);
 
   return FALSE;
@@ -228,7 +243,7 @@ static gboolean on_key_press(GtkWidget *widget, GdkEventKey *event,
       int pa = KeyInfo[i].PAIdx;
       int pb = KeyInfo[i].PBIdx;
       uint64_t mask = 1ULL << (pa * 8 + pb);
-      tb->i_keyboard_mask |= mask;
+      dut->i_keyboard_mask |= mask;
       break;
     }
   }
@@ -244,7 +259,7 @@ static gboolean on_key_release(GtkWidget *widget, GdkEventKey *event,
       int pa = KeyInfo[i].PAIdx;
       int pb = KeyInfo[i].PBIdx;
       uint64_t mask = 1ULL << (pa * 8 + pb);
-      tb->i_keyboard_mask &= ~mask;
+      dut->i_keyboard_mask &= ~mask;
       break;
     }
   }
@@ -257,11 +272,11 @@ int clk_cb() {
 
   int frame_done = 0;
 
-  if (tb->o_hsync) {
+  if (dut->o_hsync) {
     hcntr = 0;
     vcntr++;
   }
-  if (tb->o_vsync) {
+  if (dut->o_vsync) {
     vcntr = 0;
     frame_done = 1;
   }
@@ -270,9 +285,9 @@ int clk_cb() {
   int vcntr_shifted = vcntr - 10;
   if (0 <= hcntr_shifted && hcntr_shifted < XRES && 0 <= vcntr_shifted &&
       vcntr_shifted < YRES) {
-    guchar red = tb->o_pixel >> 16;
-    guchar green = tb->o_pixel >> 8;
-    guchar blue = tb->o_pixel & 0xff;
+    guchar red = dut->o_color_rgb >> 16;
+    guchar green = dut->o_color_rgb >> 8;
+    guchar blue = dut->o_color_rgb & 0xff;
     put_pixel(FramePixBuf, hcntr_shifted, vcntr_shifted, red, green, blue);
   }
 
@@ -280,19 +295,21 @@ int clk_cb() {
 
   // Sample at 50kHz but clock is 8Mhz.
   if (Cycle % (20 * 8) == 0)
-    SIDSamples.push_back(tb->o_wave);
+    SIDSamples.push_back(dut->o_wave);
 
   return frame_done;
 }
 
 static gboolean timeout_handler(GtkWidget *widget) {
   while (!Verilated::gotFinish()) {
-    tb->clk = 1;
-    tb->eval();
+    // XXX: Need additional call to eval() see
+    // https://zipcpu.com/blog/2018/09/06/tbclock.html
+    dut->clk = 1;
+    dut->eval();
     if (trace)
       trace->dump(TraceTick++);
-    tb->clk = 0;
-    tb->eval();
+    dut->clk = 0;
+    dut->eval();
     if (trace)
       trace->dump(TraceTick++);
 
@@ -309,8 +326,8 @@ static gboolean timeout_handler(GtkWidget *widget) {
       static int KeyWaitFrameIdx = 0;
       if (FrameIdx >= KeyWaitFrameIdx && InjectKeyStringPtr &&
           *InjectKeyStringPtr != '\0') {
-        if (tb->i_keyboard_mask) {
-          tb->i_keyboard_mask = 0;
+        if (dut->i_keyboard_mask) {
+          dut->i_keyboard_mask = 0;
           KeyWaitFrameIdx = FrameIdx + 1;
         } else {
           // Inject key press.
@@ -324,7 +341,7 @@ static gboolean timeout_handler(GtkWidget *widget) {
                            std::min<size_t>(Rem, KeyLen))) {
                 uint64_t mask = 1ULL
                                 << (KeyInfo[i].PAIdx * 8 + KeyInfo[i].PBIdx);
-                tb->i_keyboard_mask |= mask;
+                dut->i_keyboard_mask |= mask;
                 InjectKeyStringPtr += KeyLen;
                 KeyWaitFrameIdx = FrameIdx + 1;
                 if (!strcmp("<LSHIFT>", KeyInfo[i].C64Key) ||
@@ -490,53 +507,28 @@ int main(int argc, char *argv[]) {
 
   Verilated::traceEverOn(options.trace);
 
-  tb = new Vtop;
+  dut = new Vmyc64_top;
 
   if (options.trace) {
     trace = new VerilatedVcdC;
-    tb->trace(trace, 99);
+    dut->trace(trace, 99);
     trace->open("dump.vcd");
   }
 
   // Apply five cycles with reset active.
-  tb->rst = 1;
+  dut->rst = 1;
   for (unsigned i = 0; i < 5; i++) {
-    tb->clk = 1;
-    tb->eval();
+    dut->clk = 1;
+    dut->eval();
     if (trace)
       trace->dump(TraceTick++);
-    tb->clk = 0;
-    tb->eval();
+    dut->clk = 0;
+    dut->eval();
     if (trace)
       trace->dump(TraceTick++);
     Cycle++;
   }
-  tb->rst = 0;
-
-#if 0
-  {
-    char idx = 0;
-    for (int r = 0; r < 25; r++) {
-      for (int c = 0; c < 40; c++) {
-        tb->top->u_ram_main->u_spram->mem[0x400 + r * 40 + c] = 0x20;
-        tb->top->u_ram_color->u_spram->mem[r * 40 + c] = idx++;
-      }
-    }
-    tb->top->u_ram_main->u_spram->mem[0x400 + 0 * 40 + 0] = 1;
-    tb->top->u_ram_main->u_spram->mem[0x400 + 0 * 40 + 1] = 2;
-    tb->top->u_ram_main->u_spram->mem[0x400 + 0 * 40 + 2] = 3;
-#if 1
-    for (int r = 0; r < 25; r++) {
-      tb->top->u_ram_main->u_spram->mem[0x400 + r * 40 + 0] = 1;
-      tb->top->u_ram_main->u_spram->mem[0x400 + r * 40 + 39] = 2;
-    }
-    for (int c = 0; c < 40; c++) {
-      tb->top->u_ram_main->u_spram->mem[0x400 + 0 * 40 + c] = 3;
-      tb->top->u_ram_main->u_spram->mem[0x400 + 24 * 40 + c] = 4;
-    }
-#endif
-  }
-#endif
+  dut->rst = 0;
 
   gtk_main();
 

@@ -1,0 +1,28 @@
+read_verilog -sv \
+-DMYC64_CHARACTERS_VH="../roms/characters.vh" \
+-DMYC64_BASIC_VH="../roms/basic.vh" \
+-DMYC64_KERNAL_VH="../roms/kernal.vh" \
+-DUSBDEV_ROM_VH="../../usbdev/sw/rom.vh" \
+../rtl/myc64/*.v \
+../rtl/myc64-soc/*.v \
+../../usbdev/rtl/pll.v \
+../../usbdev/rtl/crc16.v \
+../../usbdev/rtl/crc5.v \
+../../usbdev/rtl/usb-enc.v \
+../../usbdev/rtl/picorv32.v \
+../../usbdev/rtl/usb-dec.v \
+../../usbdev/rtl/usb-sync.v \
+../../usbdev/rtl/soc-top.v \
+../../usbdev/rtl/usb-dev.v \
+../../retrocon/rtl/vga_video.v \
+../../retrocon/rtl/ulx3s/tmds_encoder.v \
+../../retrocon/rtl/ulx3s/fake_differential.v \
+../../retrocon/rtl/ulx3s/vga2dvid.v \
+../../retrocon/rtl/ulx3s/clk_25_250_125_25.v \
+ulx3s-top.v
+
+hierarchy -top ulx3s_top
+synth_ecp5 -top ulx3s_top -noflatten
+hierarchy -top ulx3s_top -check -purge_lib
+check -assert
+write_json myc64.json

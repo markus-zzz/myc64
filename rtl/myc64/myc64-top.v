@@ -22,19 +22,30 @@
 
 /* verilator lint_off CASEX */
 
-module top(
+module myc64_top(
   input rst,
   input clk,
-  output [23:0] o_pixel,
+  output reg [23:0] o_color_rgb,
+  output [3:0] o_color_idx,
   output o_hsync,
   output o_vsync,
   output [15:0] o_wave,
-  input [63:0] i_keyboard_mask
+  input [63:0] i_keyboard_mask,
+  input i_ext_we,
+  input [15:0] i_ext_addr,
+  input [7:0] i_ext_data,
+  output o_ext_ready
 );
 
-  reg [2:0] clk_cntr = 0;
-  always @(posedge clk)
-    clk_cntr <= clk_cntr + 3'h1;
+  reg [2:0] clk_cntr;
+  always @(posedge clk) begin
+    if (rst)
+       // XXX: The system is sensitive to which clk_1mhz_ph?_en comes first
+       // after reset.
+      clk_cntr <= 3'b101;
+    else
+      clk_cntr <= clk_cntr + 3'h1;
+  end
 
   wire clk_1mhz_ph1_en;
   wire clk_1mhz_ph2_en;
@@ -64,6 +75,22 @@ module top(
   reg ram_enabled;
 
   reg vic_cs, sid_cs, color_cs, cia1_cs;
+
+  reg [15:0] ext_addr_r;
+  reg [7:0] ext_data_r;
+  reg ext_we_r;
+
+  // For better or worse the memory signals need to be stable for an entire ph2
+  // cycle.
+  always @(posedge clk) begin
+    if (clk_1mhz_ph2_en) begin
+      ext_addr_r <= i_ext_addr;
+      ext_data_r <= i_ext_data;
+      ext_we_r <= i_ext_we;
+    end
+  end
+
+  assign o_ext_ready = ext_we_r & clk_1mhz_ph1_en;
 
   cpu6510 u_cpu(
     .clk(clk),
@@ -96,7 +123,7 @@ module top(
     .o_reg_data(vic_reg_do),
     .BA(vic_ba),
     .BM(vic_bm),
-    .o_pixel(o_pixel),
+    .o_color(o_color_idx),
     .o_hsync(o_hsync),
     .o_vsync(o_vsync)
   );
@@ -136,13 +163,13 @@ module top(
     .ph1_en(clk_1mhz_ph1_en),
     .ph2_en(clk_1mhz_ph2_en),
     .ph1_we(cpu_we & vic_bm),
-    .ph2_we(1'b0),
+    .ph2_we(ext_we_r),
     .ph1_cs(ram_enabled | ~vic_bm),
     .ph2_cs(1'b1),
     .ph1_addr(vic_bm ? cpu_addr[15:0] : vic_addr_ph1),
-    .ph2_addr(0),
+    .ph2_addr(ext_addr_r),
     .ph1_di(cpu_do),
-    .ph2_di(0),
+    .ph2_di(ext_data_r),
     .ph1_do(ram_main_ph1_do),
     .ph2_do(ram_main_ph2_do)
   );
@@ -170,7 +197,7 @@ module top(
   sprom2phase #(
     .aw(12),
     .dw(8),
-    .MEM_INIT_FILE("characters.vh")
+    .MEM_INIT_FILE(`MYC64_CHARACTERS_VH)
   ) u_rom_char(
     .clk(clk),
     .rst(rst),
@@ -185,7 +212,7 @@ module top(
   sprom2phase #(
     .aw(13),
     .dw(8),
-    .MEM_INIT_FILE("basic.vh")
+    .MEM_INIT_FILE(`MYC64_BASIC_VH)
   ) u_rom_basic(
     .clk(clk),
     .rst(rst),
@@ -200,7 +227,7 @@ module top(
   sprom2phase #(
     .aw(13),
     .dw(8),
-    .MEM_INIT_FILE("kernal.vh")
+    .MEM_INIT_FILE(`MYC64_KERNAL_VH)
   ) u_rom_kernal(
     .clk(clk),
     .rst(rst),
@@ -215,6 +242,7 @@ module top(
   // Bank switching - following the table from
   // https://www.c64-wiki.com/wiki/Bank_Switching
   always @(*) begin
+    cpu_di = 0;
     ram_enabled = 0;
     vic_cs = 0;
     sid_cs = 0;
@@ -314,5 +342,26 @@ module top(
       (~cia1_pa[1] ? i_keyboard_mask[15:8]  : 8'h00) |
       (~cia1_pa[0] ? i_keyboard_mask[7:0]   : 8'h00));
 
+  // Map color index to RGB.
+  always @* begin
+   case (o_color_idx)
+   4'h0: o_color_rgb = 24'h00_00_00;
+   4'h1: o_color_rgb = 24'hff_ff_ff;
+   4'h2: o_color_rgb = 24'h88_00_00;
+   4'h3: o_color_rgb = 24'haa_ff_ee;
+   4'h4: o_color_rgb = 24'hcc_44_cc;
+   4'h5: o_color_rgb = 24'h00_cc_55;
+   4'h6: o_color_rgb = 24'h00_00_aa;
+   4'h7: o_color_rgb = 24'hee_ee_77;
+   4'h8: o_color_rgb = 24'hdd_88_55;
+   4'h9: o_color_rgb = 24'h66_44_00;
+   4'ha: o_color_rgb = 24'hff_77_77;
+   4'hb: o_color_rgb = 24'h33_33_33;
+   4'hc: o_color_rgb = 24'h77_77_77;
+   4'hd: o_color_rgb = 24'haa_ff_66;
+   4'he: o_color_rgb = 24'h00_88_ff;
+   4'hf: o_color_rgb = 24'hbb_bb_bb;
+   endcase
+  end
 
 endmodule

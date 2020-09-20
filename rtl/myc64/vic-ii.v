@@ -40,7 +40,7 @@ module vic_ii(
   output reg [7:0] o_reg_data,
   output BA,
   output BM,
-  output reg [23:0] o_pixel,
+  output [3:0] o_color,
   output o_hsync,
   output o_vsync
 );
@@ -174,26 +174,7 @@ module vic_ii(
       color = pixshift[7] ? fgcolor : r_d021;
   end
 
-  always @* begin
-   case (color)
-   4'h0: o_pixel = 24'h_00_00_00;
-   4'h1: o_pixel = 24'h_ff_ff_ff;
-   4'h2: o_pixel = 24'h_88_00_00;
-   4'h3: o_pixel = 24'h_aa_ff_ee;
-   4'h4: o_pixel = 24'h_cc_44_cc;
-   4'h5: o_pixel = 24'h_00_cc_55;
-   4'h6: o_pixel = 24'h_00_00_aa;
-   4'h7: o_pixel = 24'h_ee_ee_77;
-   4'h8: o_pixel = 24'h_dd_88_55;
-   4'h9: o_pixel = 24'h_66_44_00;
-   4'ha: o_pixel = 24'h_ff_77_77;
-   4'hb: o_pixel = 24'h_33_33_33;
-   4'hc: o_pixel = 24'h_77_77_77;
-   4'hd: o_pixel = 24'h_aa_ff_66;
-   4'he: o_pixel = 24'h_00_88_ff;
-   4'hf: o_pixel = 24'h_bb_bb_bb;
-   endcase
-  end
+  assign o_color = color;
 
   assign BA = !(BAD_LINE_COND && CYCLE >= p_cycle_first_disp - 3 && CYCLE < p_cycle_first_disp + 40 + 3);
   assign BM = !(BAD_LINE_COND && CYCLE >= p_cycle_first_disp - 2 && CYCLE < p_cycle_first_disp + 40 + 2);
