@@ -61,32 +61,29 @@ module sid(
 
   always @(*) begin
     if (clk_1mhz_ph1_en) begin
-      mul_0_a = wave1;
+      mul_0_a = wave1 - 12'h800;
       mul_0_b = {1'b0, env1};
     end
     else if (state == 1) begin
-      mul_0_a = wave2;
+      mul_0_a = wave2 - 12'h800;
       mul_0_b = {1'b0, env2};
     end
     else /*if (state == 2)*/ begin
-      mul_0_a = wave3;
+      mul_0_a = wave3 - 12'h800;
       mul_0_b = {1'b0, env3};
     end
   end
 
   always @(posedge clk) begin
     if (clk_1mhz_ph1_en) begin
-      //tmp_wave <= $signed(wave1) * $signed({1'b0, env1});
       tmp_wave <= {{2{mul_0_x[20]}}, mul_0_x[20:7]};
       state <= 1;
     end
     else if (state == 1) begin
-      //tmp_wave <= $signed(tmp_wave) + $signed(wave2) * $signed({1'b0, env2});
       tmp_wave <= tmp_wave + {{2{mul_0_x[20]}}, mul_0_x[20:7]};
       state <= 2;
     end
     else if (state == 2) begin
-      //o_wave <= $signed(tmp_wave) + $signed(wave3) * $signed({1'b0, env3});
       o_wave <= tmp_wave + {{2{mul_0_x[20]}}, mul_0_x[20:7]};
       state <= 3;
     end
@@ -270,9 +267,6 @@ module waveform_gen(
 );
   reg [23:0] phase_accum;
   wire [11:0] wave_sawtooth, wave_triangle, wave_pulse;
-  wire trixor;
-
-  assign trixor = (phase_accum[23:22] == 2'b00 || phase_accum[23:22] == 2'b11);
 
   always @(posedge clk) begin
     if (rst)
@@ -281,11 +275,9 @@ module waveform_gen(
       phase_accum <= phase_accum + {8'h00, i_frequency};
   end
 
-
   assign wave_sawtooth = phase_accum[23:12];
-  //assign wave_triangle = {{11{phase_accum[23]}} ^ phase_accum[22:12], 1'b0};
-  assign wave_triangle = {{11{trixor}} ^ phase_accum[22:12], 1'b0};
-  assign wave_pulse = phase_accum[23:12] <= i_duty_cycle ? 12'h7ff : 12'h800;
+  assign wave_triangle = {{11{phase_accum[23]}} ^ phase_accum[22:12], 1'b0};
+  assign wave_pulse = phase_accum[23:12] <= i_duty_cycle ? 12'hfff : 12'h000;
 
   assign o_wave = ~(~({12{i_sawtooth_en}} & wave_sawtooth) &
                     ~({12{i_triangle_en}} & wave_triangle) &
