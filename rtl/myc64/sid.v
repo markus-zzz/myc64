@@ -33,6 +33,10 @@
 
 `default_nettype none
 
+module mul_12x9(output [20:0] x, input [11:0] a, input [8:0] b);
+  assign x = $signed(a) * $signed(b);
+endmodule
+
 module sid(
   input clk,
   input rst,
@@ -46,16 +50,49 @@ module sid(
 );
   wire [11:0] wave1, wave2, wave3;
   wire [7:0] env1, env2, env3;
-  wire [20:0] voice1, voice2, voice3;
+
+  reg [15:0] tmp_wave;
+  reg [1:0] state;
+
+  wire [20:0] mul_0_x;
+  reg [11:0] mul_0_a;
+  reg [8:0] mul_0_b;
+  mul_12x9 mul_0(.x(mul_0_x), .a(mul_0_a), .b(mul_0_b));
+
+  always @(*) begin
+    if (clk_1mhz_ph1_en) begin
+      mul_0_a = wave1;
+      mul_0_b = {1'b0, env1};
+    end
+    else if (state == 1) begin
+      mul_0_a = wave2;
+      mul_0_b = {1'b0, env2};
+    end
+    else /*if (state == 2)*/ begin
+      mul_0_a = wave3;
+      mul_0_b = {1'b0, env3};
+    end
+  end
 
   always @(posedge clk) begin
-    o_wave <= $signed({{2{voice1[20]}}, voice1[20:7]}) +
-              $signed({{2{voice2[20]}}, voice2[20:7]}) +
-              $signed({{2{voice3[20]}}, voice3[20:7]});
+    if (clk_1mhz_ph1_en) begin
+      //tmp_wave <= $signed(wave1) * $signed({1'b0, env1});
+      tmp_wave <= {{2{mul_0_x[20]}}, mul_0_x[20:7]};
+      state <= 1;
+    end
+    else if (state == 1) begin
+      //tmp_wave <= $signed(tmp_wave) + $signed(wave2) * $signed({1'b0, env2});
+      tmp_wave <= tmp_wave + {{2{mul_0_x[20]}}, mul_0_x[20:7]};
+      state <= 2;
+    end
+    else if (state == 2) begin
+      //o_wave <= $signed(tmp_wave) + $signed(wave3) * $signed({1'b0, env3});
+      o_wave <= tmp_wave + {{2{mul_0_x[20]}}, mul_0_x[20:7]};
+      state <= 3;
+    end
   end
 
   // Voice #1
-  assign voice1 = $signed(wave1 - 12'h800) * $signed({1'b0, env1});
   waveform_gen u_wave_1(
     .clk(clk),
     .rst(rst),
@@ -81,7 +118,6 @@ module sid(
   );
 
   // Voice #2
-  assign voice2 = $signed(wave2 - 12'h800) * $signed({1'b0, env2});
   waveform_gen u_wave_2(
     .clk(clk),
     .rst(rst),
@@ -107,7 +143,6 @@ module sid(
   );
 
   // Voice #3
-  assign voice3 = $signed(wave3 - 12'h800) * $signed({1'b0, env3});
   waveform_gen u_wave_3(
     .clk(clk),
     .rst(rst),
@@ -235,6 +270,9 @@ module waveform_gen(
 );
   reg [23:0] phase_accum;
   wire [11:0] wave_sawtooth, wave_triangle, wave_pulse;
+  wire trixor;
+
+  assign trixor = (phase_accum[23:22] == 2'b00 || phase_accum[23:22] == 2'b11);
 
   always @(posedge clk) begin
     if (rst)
@@ -243,9 +281,11 @@ module waveform_gen(
       phase_accum <= phase_accum + {8'h00, i_frequency};
   end
 
+
   assign wave_sawtooth = phase_accum[23:12];
-  assign wave_triangle = {{11{phase_accum[23]}} ^ phase_accum[22:12], 1'b0};
-  assign wave_pulse = phase_accum[23:12] <= i_duty_cycle ? 12'hfff : 12'h0;
+  //assign wave_triangle = {{11{phase_accum[23]}} ^ phase_accum[22:12], 1'b0};
+  assign wave_triangle = {{11{trixor}} ^ phase_accum[22:12], 1'b0};
+  assign wave_pulse = phase_accum[23:12] <= i_duty_cycle ? 12'h7ff : 12'h800;
 
   assign o_wave = ~(~({12{i_sawtooth_en}} & wave_sawtooth) &
                     ~({12{i_triangle_en}} & wave_triangle) &
@@ -384,18 +424,25 @@ module envelope_gen(
   end
 
 endmodule
-/*
+//`define TB 1
+`ifdef TB
 module tb;
 
   reg clk, rst;
   reg gate;
 
-  sid u_sid(
+  waveform_gen u_wave_1(
     .clk(clk),
     .rst(rst),
     .clk_1mhz_ph1_en(1'b1),
-    .i_gate(gate)
+    .i_frequency(16'h1000),
+    .i_duty_cycle(12'h800),
+    .i_triangle_en(1'b0),
+    .i_sawtooth_en(1'b0),
+    .i_pulse_en(1'b0),
+    .o_wave()
   );
+
 
   initial begin
     $dumpfile("dump.vcd");
@@ -411,4 +458,4 @@ module tb;
   always clk = #1 ~clk;
 
 endmodule
-*/
+`endif
