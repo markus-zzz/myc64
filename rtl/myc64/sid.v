@@ -214,7 +214,7 @@ module sid(
       r_d413 <= 0;
       r_d414 <= 0;
     end
-    else if (clk_1mhz_ph1_en & i_cs & i_we) begin
+    else if (i_cs & i_we) begin
       case (i_addr)
         5'h00: r_d400 <= i_data[7:0];
         5'h01: r_d401 <= i_data[7:0];
@@ -295,54 +295,49 @@ module envelope_gen(
   input [3:0] i_release,
   output [7:0] o_envelope
 );
-  function [16:0] map_attack;
-    input [3:0] value;
-    reg [16:0] res;
-    case (value)
-      4'h0: res = 17'h7;     // 0.002
-      4'h1: res = 17'h1f;    // 0.008
-      4'h2: res = 17'h3e;    // 0.016
-      4'h3: res = 17'h5d;    // 0.024
-      4'h4: res = 17'h94;    // 0.038
-      4'h5: res = 17'hda;    // 0.056
-      4'h6: res = 17'h109;   // 0.068
-      4'h7: res = 17'h138;   // 0.08
-      4'h8: res = 17'h186;   // 0.1
-      4'h9: res = 17'h3d0;   // 0.25
-      4'ha: res = 17'h7a1;   // 0.5
-      4'hb: res = 17'hc35;   // 0.8
-      4'hc: res = 17'hf42;   // 1.0
-      4'hd: res = 17'h2dc6;  // 3.0
-      4'he: res = 17'h4c4b;  // 5.0
-      4'hf: res = 17'h7a12;  // 8.0
+  reg [16:0] map_attack;
+  always @* begin
+    case (i_attack)
+      4'h0: map_attack = 17'h7;     // 0.002
+      4'h1: map_attack = 17'h1f;    // 0.008
+      4'h2: map_attack = 17'h3e;    // 0.016
+      4'h3: map_attack = 17'h5d;    // 0.024
+      4'h4: map_attack = 17'h94;    // 0.038
+      4'h5: map_attack = 17'hda;    // 0.056
+      4'h6: map_attack = 17'h109;   // 0.068
+      4'h7: map_attack = 17'h138;   // 0.08
+      4'h8: map_attack = 17'h186;   // 0.1
+      4'h9: map_attack = 17'h3d0;   // 0.25
+      4'ha: map_attack = 17'h7a1;   // 0.5
+      4'hb: map_attack = 17'hc35;   // 0.8
+      4'hc: map_attack = 17'hf42;   // 1.0
+      4'hd: map_attack = 17'h2dc6;  // 3.0
+      4'he: map_attack = 17'h4c4b;  // 5.0
+      4'hf: map_attack = 17'h7a12;  // 8.0
     endcase
-    map_attack = res;
-  endfunction
+  end
 
-  function [16:0] map_decay_release;
-    input [3:0] value;
-    reg [16:0] res;
-    case (value)
-      4'h0: res = 17'h17;     //  0.006
-      4'h1: res = 17'h5d;     //  0.024
-      4'h2: res = 17'hbb;     //  0.048
-      4'h3: res = 17'h119;    //  0.072
-      4'h4: res = 17'h1bd;    //  0.114
-      4'h5: res = 17'h290;    //  0.168
-      4'h6: res = 17'h31c;    //  0.204
-      4'h7: res = 17'h3a9;    //  0.24
-      4'h8: res = 17'h493;    //  0.3
-      4'h9: res = 17'hb71;    //  0.75
-      4'ha: res = 17'h16e3;   //  1.5
-      4'hb: res = 17'h249f;   //  2.4
-      4'hc: res = 17'h2dc6;   //  3.0
-      4'hd: res = 17'h8954;   //  9.0
-      4'he: res = 17'he4e1;   // 15.0
-      4'hf: res = 17'h16e36;  // 24.0
+  reg [16:0] map_decay_release;
+  always @* begin
+    case (state == s_decay ? i_decay : i_release)
+      4'h0: map_decay_release = 17'h17;     //  0.006
+      4'h1: map_decay_release = 17'h5d;     //  0.024
+      4'h2: map_decay_release = 17'hbb;     //  0.048
+      4'h3: map_decay_release = 17'h119;    //  0.072
+      4'h4: map_decay_release = 17'h1bd;    //  0.114
+      4'h5: map_decay_release = 17'h290;    //  0.168
+      4'h6: map_decay_release = 17'h31c;    //  0.204
+      4'h7: map_decay_release = 17'h3a9;    //  0.24
+      4'h8: map_decay_release = 17'h493;    //  0.3
+      4'h9: map_decay_release = 17'hb71;    //  0.75
+      4'ha: map_decay_release = 17'h16e3;   //  1.5
+      4'hb: map_decay_release = 17'h249f;   //  2.4
+      4'hc: map_decay_release = 17'h2dc6;   //  3.0
+      4'hd: map_decay_release = 17'h8954;   //  9.0
+      4'he: map_decay_release = 17'he4e1;   // 15.0
+      4'hf: map_decay_release = 17'h16e36;  // 24.0
     endcase
-    map_decay_release = res;
-  endfunction
-
+  end
 
   parameter s_idle = 1,
             s_attack = 2,
@@ -367,6 +362,7 @@ module envelope_gen(
       case (state)
         s_idle: begin
           if (i_gate) begin
+            freq_div <= map_attack;
             state <= s_attack;
           end
         end
@@ -379,7 +375,7 @@ module envelope_gen(
           end
           else if (freq_div == 0) begin
             cntr <= cntr + 8'h01;
-            freq_div <= map_attack(i_attack);
+            freq_div <= map_attack;
           end
         end
         s_decay: begin
@@ -391,7 +387,7 @@ module envelope_gen(
           end
           else if (freq_div == 0) begin
             cntr <= cntr - 8'h01;
-            freq_div <= map_decay_release(i_decay);
+            freq_div <= map_decay_release;
           end
         end
         s_sustain: begin
@@ -401,6 +397,7 @@ module envelope_gen(
         end
         s_release: begin
           if (i_gate) begin
+            freq_div <= map_attack;
             state <= s_attack;
           end
           else if (cntr == 8'h00) begin
@@ -408,7 +405,7 @@ module envelope_gen(
           end
           else if (freq_div == 0) begin
             cntr <= cntr - 8'h01;
-            freq_div <= map_decay_release(i_release);
+            freq_div <= map_decay_release;
           end
         end
       endcase
