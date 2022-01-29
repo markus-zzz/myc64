@@ -51,7 +51,10 @@ module myc64_soc_top(
   output o_vga_vsync,
   output o_vga_hsync,
   output o_vga_blank,
-  output [23:0] o_vga_color_rgb
+  output [23:0] o_vga_color_rgb,
+  output [15:0] o_sid_wave,
+  output [31:0] o_port_2,
+  output [31:0] o_port_3
 );
   assign usb_fpga_pu_dp = 1'b0;
   assign led[7:0] = keyb_matrix_0[7:0];
@@ -90,6 +93,8 @@ module myc64_soc_top(
     .o_usb_attach(usb_fpga_pu_dn),
     .o_port_0(keyb_matrix_0),
     .o_port_1(keyb_matrix_1),
+    .o_port_2(o_port_2),
+    .o_port_3(o_port_3),
     .o_ext_addr(ext_addr),
     .o_ext_data(ext_data),
     .o_ext_valid(ext_valid),
@@ -98,9 +103,6 @@ module myc64_soc_top(
     .test_out(gp[22])
   );
 
-  wire [15:0] sid_wave;
-
-  assign audio_l = sid_wave[14:11];
   wire [3:0] color_idx;
   wire hsync /* verilator public */;
   wire vsync /* verilator public */;
@@ -113,7 +115,7 @@ module myc64_soc_top(
     .o_color_idx(color_idx_c64),
     .o_hsync(hsync),
     .o_vsync(vsync),
-    .o_wave(sid_wave),
+    .o_wave(o_sid_wave),
     .i_keyboard_mask({keyb_matrix_1, keyb_matrix_0}), //XXX: Metastabiliy
     .i_ext_addr(ext_addr),
     .i_ext_data(ext_data),

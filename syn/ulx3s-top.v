@@ -135,7 +135,77 @@ module ulx3s_top(
     .o_sdram_dqm(sdram_dqm),
     .o_sdram_dq_oe(sdram_dq_oe),
     .o_sdram_dq(sdram_dq_o),
-    .i_sdram_dq(sdram_d)
+    .i_sdram_dq(sdram_d),
+    .o_sid_wave(sid_wave),
+    .o_port_2(port_2),
+    .o_port_3(port_3)
   );
+
+
+  wire LRCLK;
+  wire BCLK;
+  wire SDIN;
+  wire MCLK;
+
+  wire [15:0] sid_wave;
+  wire [31:0] port_2, port_3;
+
+  assign gn[26] = LRCLK;
+  assign gn[25] = BCLK;
+  assign gn[24] = SDIN;
+  assign gn[23] = MCLK;
+
+  // SCL
+  assign gp[27] = port_2[0] ? 1'bz : 1'b0;
+  // SDA
+  assign gn[27] = port_3[0] ? 1'bz : 1'b0;
+
+  wire clk25mhz;
+  wire i_rst;
+  reg [10:0] clk_cntr;
+
+  assign clk25mhz = clk_25mhz;
+  assign i_rst = rst_async;
+
+  always @(posedge clk25mhz) begin
+    if (i_rst)
+      clk_cntr <= 0;
+    else
+      clk_cntr <= clk_cntr + 1;
+  end
+
+  assign MCLK = clk_cntr[0]; // 12.5MHz
+  assign LRCLK = clk_cntr[8]; // 48.8kHz
+  assign BCLK = clk_cntr[3]; // 1.5625MHz
+
+  reg prev_lrclk;
+  always @(posedge clk25mhz) begin
+    if (i_rst)
+      prev_lrclk <= 0;
+    else
+      prev_lrclk <= LRCLK;
+  end
+
+  reg prev_bclk;
+  always @(posedge clk25mhz) begin
+    if (i_rst)
+      prev_bclk <= 0;
+    else
+      prev_bclk <= BCLK;
+  end
+
+  reg [15:0] shift;
+  always @(posedge clk25mhz) begin
+    if (i_rst)
+      shift <= 0;
+    else if (~prev_lrclk & LRCLK)
+      shift <= sid_wave;
+    else if (prev_lrclk & ~LRCLK)
+      shift <= sid_wave;
+    else if (~prev_bclk & BCLK)
+      shift <= {shift[14:0], 1'b0};
+  end
+
+  assign SDIN = shift[15];
 
 endmodule
