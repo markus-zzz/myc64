@@ -21,6 +21,8 @@
 module cpu6510(
   input clk,              // CPU clock
   input reset,            // reset signal
+  input clk_1mhz_ph1_en,
+  input clk_1mhz_ph2_en,
   output reg [15:0] AB,   // address bus
   input [7:0] DI,         // data in, read bus
   output reg [7:0] DO,    // data out, write bus
@@ -35,6 +37,7 @@ module cpu6510(
   wire [15:0] AB_w;
   wire [7:0] DI_w, DO_w;
   wire WE_w;
+  reg [7:0] DI_r;
 
   always @(posedge clk) begin
     if (RDY) begin
@@ -53,7 +56,11 @@ module cpu6510(
     end
   end
 
-  assign DI_w = AB == 16'h0001 ? {2'b00, PO} : DI;
+  always @(posedge clk) begin
+    if (clk_1mhz_ph2_en)
+      DI_r <= DI;
+  end
+  assign DI_w = AB == 16'h0001 ? {2'b00, PO} : DI_r;
 
   cpu u_cpu(
     .clk(clk),

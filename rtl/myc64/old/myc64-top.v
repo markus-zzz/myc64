@@ -57,10 +57,10 @@ module myc64_top(
   wire cpu_we;
   reg [7:0] cpu_di;
   wire [5:0] cpu_po;
-  wire [7:0] ram_main_ph1_do, ram_main_ph2_do, rom_basic_ph1_do, rom_kernal_ph1_do, rom_char_ph1_do, rom_char_ph2_do;
-  wire [3:0] ram_color_ph1_do;
+  wire [7:0] ram_main_do, rom_basic_do, rom_kernal_do, rom_char_do;
+  wire [3:0] ram_color_do;
 
-  wire [15:0] vic_addr, vic_addr_ph1;
+  wire [15:0] vic_addr;
   reg [7:0] vic_di;
   wire [7:0] vic_reg_do;
   wire vic_ba, vic_bm;
@@ -80,6 +80,14 @@ module myc64_top(
   reg [7:0] ext_data_r;
   reg ext_we_r;
 
+  reg vic_cycle;
+  always @(posedge clk) begin
+    if (clk_1mhz_ph1_en)
+      vic_cycle <= 0;
+    else if (clk_1mhz_ph2_en)
+      vic_cycle <= 1;
+  end
+
   // For better or worse the memory signals need to be stable for an entire ph2
   // cycle.
   always @(posedge clk) begin
@@ -95,6 +103,8 @@ module myc64_top(
   cpu6510 u_cpu(
     .clk(clk),
     .reset(rst),
+    .clk_1mhz_ph1_en(clk_1mhz_ph1_en),
+    .clk_1mhz_ph2_en(clk_1mhz_ph2_en),
     .AB(cpu_addr),
     .DI(cpu_di),
     .DO(cpu_do),
@@ -106,16 +116,14 @@ module myc64_top(
     .PI()
   );
 
-  vic_ii u_vic(
+  vic_ii_2 u_vic(
     .clk(clk),
     .rst(rst),
     .clk_8mhz_en(1'b1),
     .clk_1mhz_ph1_en(clk_1mhz_ph1_en),
     .clk_1mhz_ph2_en(clk_1mhz_ph2_en),
-    .o_addr_ph1(vic_addr_ph1),
-    .i_data_ph1({ram_color_ph1_do, ram_main_ph1_do}),
-    .o_addr_ph2(vic_addr),
-    .i_data_ph2({4'h0, vic_di}),
+    .o_addr(vic_addr),
+    .i_data({ram_color_do, vic_di}),
     .i_reg_cs(vic_cs),
     .i_reg_we(cpu_we),
     .i_reg_addr(cpu_addr[5:0]),
@@ -154,89 +162,71 @@ module myc64_top(
     .o_irq(cia1_irq)
   );
 
-  spram2phase #(
+  spram #(
     .aw(16),
     .dw(8)
   ) u_ram_main(
     .clk(clk),
     .rst(rst),
-    .ph1_en(clk_1mhz_ph1_en),
-    .ph2_en(clk_1mhz_ph2_en),
-    .ph1_we(cpu_we & vic_bm),
-    .ph2_we(ext_we_r),
-    .ph1_cs(ram_enabled | ~vic_bm),
-    .ph2_cs(1'b1),
-    .ph1_addr(vic_bm ? cpu_addr[15:0] : vic_addr_ph1),
-    .ph2_addr(ext_addr_r),
-    .ph1_di(cpu_do),
-    .ph2_di(ext_data_r),
-    .ph1_do(ram_main_ph1_do),
-    .ph2_do(ram_main_ph2_do)
+    .we(cpu_we & vic_bm & ~vic_cycle),
+    .ce(1'b1),
+    .oe(1'b1),
+    .addr((~vic_bm | vic_cycle) ? vic_addr : cpu_addr),
+    .di(cpu_do),
+    .do(ram_main_do)
   );
 
-  spram2phase #(
+  spram #(
     .aw(10),
     .dw(4)
   ) u_ram_color(
     .clk(clk),
     .rst(rst),
-    .ph1_en(clk_1mhz_ph1_en),
-    .ph2_en(clk_1mhz_ph2_en),
-    .ph1_we(color_cs & cpu_we),
-    .ph2_we(1'b0),
-    .ph1_cs(color_cs | ~vic_bm),
-    .ph2_cs(1'b1),
-    .ph1_addr(vic_bm ? cpu_addr[9:0] : vic_addr_ph1[9:0]),
-    .ph2_addr(0),
-    .ph1_di(cpu_do[3:0]),
-    .ph2_di(0),
-    .ph1_do(ram_color_ph1_do),
-    .ph2_do()
+    .we(color_cs & cpu_we),
+    .ce(color_cs | ~vic_bm),
+    .oe(1'b1),
+    .addr(vic_bm ? cpu_addr[9:0] : vic_addr[9:0]),
+    .di(cpu_do[3:0]),
+    .do(ram_color_do)
   );
 
-  sprom2phase #(
+  sprom #(
     .aw(12),
     .dw(8),
     .MEM_INIT_FILE(`MYC64_CHARACTERS_VH)
   ) u_rom_char(
     .clk(clk),
     .rst(rst),
-    .ph1_en(clk_1mhz_ph1_en),
-    .ph2_en(clk_1mhz_ph2_en),
-    .ph1_addr(cpu_addr[11:0]),
-    .ph2_addr(vic_addr[11:0]),
-    .ph1_do(rom_char_ph1_do),
-    .ph2_do(rom_char_ph2_do)
+    .oe(1'b1),
+    .ce(1'b1),
+    .addr(vic_cycle ? vic_addr : cpu_addr[11:0]),
+    .do(rom_char_do)
   );
 
-  sprom2phase #(
+  sprom #(
     .aw(13),
     .dw(8),
     .MEM_INIT_FILE(`MYC64_BASIC_VH)
   ) u_rom_basic(
     .clk(clk),
     .rst(rst),
-    .ph1_en(clk_1mhz_ph1_en),
-    .ph2_en(clk_1mhz_ph2_en),
-    .ph1_addr(cpu_addr[12:0]),
-    .ph2_addr(0),
-    .ph1_do(rom_basic_ph1_do),
-    .ph2_do()
+    .oe(1'b1),
+    .ce(1'b1),
+    .addr(cpu_addr[12:0]),
+    .do(rom_basic_do)
   );
 
-  sprom2phase #(
+  sprom #(
     .aw(13),
     .dw(8),
     .MEM_INIT_FILE(`MYC64_KERNAL_VH)
   ) u_rom_kernal(
     .clk(clk),
     .rst(rst),
-    .ph1_en(clk_1mhz_ph1_en),
-    .ph2_en(clk_1mhz_ph2_en),
-    .ph1_addr(cpu_addr[12:0]),
-    .ph2_addr(0),
-    .ph1_do(rom_kernal_ph1_do),
-    .ph2_do()
+    .oe(1'b1),
+    .ce(1'b1),
+    .addr(cpu_addr[12:0]),
+    .do(rom_kernal_do)
   );
 
   // Bank switching - following the table from
@@ -250,32 +240,32 @@ module myc64_top(
     color_cs = 0;
     // RAM (which the system requires and must appear in each mode)
     if (cpu_addr <= 16'h0FFF) begin
-      cpu_di = ram_main_ph1_do;
+      cpu_di = ram_main_do;
       ram_enabled = 1;
     end
     // RAM or is unmapped
     else if (16'h1000 <= cpu_addr && cpu_addr <= 16'h7FFF) begin
-      cpu_di = ram_main_ph1_do;
+      cpu_di = ram_main_do;
       ram_enabled = 1;
     end
     // RAM or cartridge ROM
     else if (16'h8000 <= cpu_addr && cpu_addr <= 16'h9FFF) begin
-      cpu_di = ram_main_ph1_do;
+      cpu_di = ram_main_do;
       ram_enabled = 1;
     end
     // RAM, BASIC interpretor ROM, cartridge ROM or is unmapped
     else if (16'hA000 <= cpu_addr && cpu_addr <= 16'hBFFF) begin
       if (cpu_po[2:0] == 3'b111 || cpu_po[2:0] == 3'b011) begin
-        cpu_di = rom_basic_ph1_do;
+        cpu_di = rom_basic_do;
       end
       else begin
-        cpu_di = ram_main_ph1_do;
+        cpu_di = ram_main_do;
         ram_enabled = 1;
       end
     end
     // RAM or is unmapped
     else if (16'hC000 <= cpu_addr && cpu_addr <= 16'hCFFF) begin
-      cpu_di = ram_main_ph1_do;
+      cpu_di = ram_main_do;
       ram_enabled = 1;
     end
     // RAM, Character generator ROM, or I/O registers and Color RAM
@@ -292,7 +282,7 @@ module myc64_top(
           sid_cs = 1;
         end
         else if (16'hD800 <= cpu_addr && cpu_addr <= 16'hDBFF) begin // COLOR-RAM
-          cpu_di = {4'h0, ram_color_ph1_do}; // XXX: No CPU read from color RAM?
+          cpu_di = {4'h0, ram_color_do}; // XXX: No CPU read from color RAM?
           color_cs = 1;
         end
         else if (16'hDC00 <= cpu_addr && cpu_addr <= 16'hDCFF) begin // CIA1
@@ -303,11 +293,11 @@ module myc64_top(
       else if (cpu_po[2:0] == 3'b011 || cpu_po[2:0] == 3'b010 ||
           cpu_po[2:0] == 3'b001) begin
         // CHAR ROM
-        cpu_di = rom_char_ph1_do;
+        cpu_di = rom_char_do;
       end
       else begin
         // RAM
-        cpu_di = ram_main_ph1_do;
+        cpu_di = ram_main_do;
         ram_enabled = 1;
       end
     end
@@ -315,10 +305,10 @@ module myc64_top(
     else if (16'hE000 <= cpu_addr) begin
       if (cpu_po[2:0] == 3'b111 || cpu_po[2:0] == 3'b110 ||
           cpu_po[2:0] == 3'b011 || cpu_po[2:0] == 3'b010) begin
-        cpu_di = rom_kernal_ph1_do;
+        cpu_di = rom_kernal_do;
       end
       else begin
-        cpu_di = ram_main_ph1_do;
+        cpu_di = ram_main_do;
         ram_enabled = 1;
       end
     end
@@ -326,8 +316,8 @@ module myc64_top(
 
   always @(*) begin
     casex (vic_addr)
-      16'bxx01_xxxx_xxxx_xxxx: vic_di = rom_char_ph2_do; // Char ROM at 0x1000-0x1fff
-      default: vic_di = ram_main_ph2_do;
+      16'bxx01_xxxx_xxxx_xxxx: vic_di = rom_char_do; // Char ROM at 0x1000-0x1fff
+      default: vic_di = ram_main_do;
     endcase
   end
 

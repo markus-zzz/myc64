@@ -18,29 +18,30 @@
  *
  */
 
-module sprom(clk, rst, ce, oe, addr, do);
+module spram(clk, rst, ce, we, oe, addr, di, do);
 	//
 	// Default address and data buses width (1024*32)
 	//
 	parameter aw = 10; //number of address-bits
 	parameter dw = 32; //number of data-bits
-	parameter MEM_INIT_FILE = "";
 
 	//
-	// Generic synchronous single-port ROM interface
+	// Generic synchronous single-port RAM interface
 	//
 	input           clk;  // Clock, rising edge
 	input           rst;  // Reset, active high
 	input           ce;   // Chip enable input, active high
+	input           we;   // Write enable input, active high
 	input           oe;   // Output enable input, active high
 	input  [aw-1:0] addr; // address bus inputs
+	input  [dw-1:0] di;   // input data bus
 	output reg [dw-1:0] do;   // output data bus
 
 	//
 	// Module body
 	//
 
-	reg [dw-1:0] mem [(1<<aw) -1:0];
+	reg [dw-1:0] mem [(1<<aw) -1:0] /* verilator public */;
 	reg [aw-1:0] ra;
 	reg oe_r;
 
@@ -56,68 +57,12 @@ module sprom(clk, rst, ce, oe, addr, do);
 	  if (ce)
 	    ra <= addr;     // read address needs to be registered to read clock
 
-	initial begin
-		/* verilator lint_off WIDTH */
-		if (MEM_INIT_FILE != "") begin
-		/* verilator lint_on WIDTH */
-			$readmemh(MEM_INIT_FILE, mem);
-		end
-	end
-
-endmodule
-
-// Async ROM wrapper that serves two pases. phN_addr must be stable between phN_en pulses.
-module sprom2phase(
-  clk,
-  rst,
-  ph1_en,
-  ph1_addr,
-  ph1_do,
-  ph2_en,
-  ph2_addr,
-  ph2_do
-);
-
-	parameter aw = 10; //number of address-bits
-	parameter dw = 32; //number of data-bits
-	parameter MEM_INIT_FILE = "";
-
-  input clk;
-  input rst;
-  input ph1_en;
-  input [aw-1:0] ph1_addr;
-  output reg [dw-1:0] ph1_do;
-  input ph2_en;
-  input [aw-1:0] ph2_addr;
-  output reg [dw-1:0] ph2_do;
-
-  wire [dw-1:0] do;
-  reg ph1_not_ph2;
-
-  always @(posedge clk) begin
-    if (ph1_en) ph1_not_ph2 <= 1'b1;
-    else if (ph2_en) ph1_not_ph2 <= 1'b0;
-  end
-
-  always @(posedge clk) begin
-    if (ph1_en) ph2_do <= do;
-  end
-
-  always @(posedge clk) begin
-    if (ph2_en) ph1_do <= do;
-  end
-
-  sprom #(
-    .aw(aw),
-    .dw(dw),
-    .MEM_INIT_FILE(MEM_INIT_FILE)
-  ) u_sprom(
-    .clk(clk),
-    .rst(rst),
-    .ce(1'b1),
-    .oe(1'b1),
-    .addr(ph1_not_ph2 ? ph1_addr : ph2_addr),
-    .do(do)
-  );
+	// write operation
+	always @(posedge clk) begin
+	  if (we && ce) begin
+	    mem[addr] <= di;
+            // $display("mem[%h] <= %h\n", addr, di);
+          end
+        end
 
 endmodule

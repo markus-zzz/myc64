@@ -19,11 +19,6 @@
  */
 
 #include "Vmyc64_top.h"
-#include "Vmyc64_top_myc64_top.h"
-#include "Vmyc64_top_spram2phase__A10_D8.h"
-#include "Vmyc64_top_spram2phase__D4.h"
-#include "Vmyc64_top_spram__A10_D8.h"
-#include "Vmyc64_top_spram__D4.h"
 #include "verilated.h"
 #include "verilated_vcd_c.h"
 #include <assert.h>
@@ -67,7 +62,7 @@ struct CommandLoadPRG : public CommandAtFrame {
   CommandLoadPRG(int FrameIdx, const char *PathToPRG)
       : CommandAtFrame(FrameIdx), m_PathToPRG(PathToPRG) {}
   void execute() override {
-    uint8_t *RAM = dut->myc64_top->u_ram_main->u_spram->mem;
+    uint8_t *RAM = dut->myc64_top__DOT__u_ram_main;
     FILE *fp = fopen(m_PathToPRG, "rb");
     fseek(fp, 0, SEEK_END);
     uint16_t PrgSize = ftell(fp) - sizeof(uint16_t);
@@ -97,26 +92,39 @@ struct CommandLoadPRG : public CommandAtFrame {
 };
 
 struct CommandDumpRAM : public CommandAtFrame {
-  CommandDumpRAM(int FrameIdx, uint16_t Address, uint16_t Size)
-      : CommandAtFrame(FrameIdx), m_Address(Address), m_Size(Size) {}
+  CommandDumpRAM(int FrameIdx, uint16_t Address, uint32_t Size,
+                 const char *Path)
+      : CommandAtFrame(FrameIdx), m_Address(Address), m_Size(Size),
+        m_Path(Path) {}
   void execute() override {
-    uint8_t *p = dut->myc64_top->u_ram_main->u_spram->mem;
-    for (uint16_t i = 0; i < m_Size; i++) {
-      if (i % 16 == 0)
-        printf("\n%04x: ", m_Address + i);
+    FILE *FP = fopen(m_Path, "wb");
+    uint8_t *p = dut->myc64_top__DOT__u_ram_main;
+    for (uint32_t i = 0; i < m_Size; i++) {
       uint8_t b = p[m_Address + i];
-      printf(" %02x", b);
+      fwrite(&b, 1, 1, FP);
     }
-    printf("\n");
+    fclose(FP);
   }
   uint16_t m_Address;
-  uint16_t m_Size;
+  uint32_t m_Size;
+  const char *m_Path;
 };
 
 struct CommandInjectKeys : public CommandAtFrame {
   CommandInjectKeys(int FrameIdx, const char *Keys)
       : CommandAtFrame(FrameIdx), m_Keys(Keys) {}
   void execute() override { InjectKeyStringPtr = m_Keys; }
+  const char *m_Keys;
+};
+
+struct CommandTrace : public CommandAtFrame {
+  CommandTrace(int FrameIdx) : CommandAtFrame(FrameIdx) {}
+  void execute() override {
+    trace = new VerilatedVcdC;
+    dut->trace(trace, 99);
+    trace->open("dump.vcd");
+  }
+
   const char *m_Keys;
 };
 
@@ -266,6 +274,15 @@ static gboolean on_key_release(GtkWidget *widget, GdkEventKey *event,
   return FALSE;
 }
 
+static uint32_t mapcolor(uint8_t idx) {
+  // Map color index to RGB.
+  const uint32_t map[] = {0x000000, 0xffffff, 0x880000, 0xaaffee,
+                          0xcc44cc, 0x00cc55, 0x0000aa, 0xeeee77,
+                          0xdd8855, 0x664400, 0xff7777, 0x333333,
+                          0x777777, 0xaaff66, 0x0088ff, 0xbbbbbb};
+  return map[idx & 0xf];
+}
+
 int clk_cb() {
   static int hcntr = 0;
   static int vcntr = 0;
@@ -285,9 +302,10 @@ int clk_cb() {
   int vcntr_shifted = vcntr - 10;
   if (0 <= hcntr_shifted && hcntr_shifted < XRES && 0 <= vcntr_shifted &&
       vcntr_shifted < YRES) {
-    guchar red = dut->o_color_rgb >> 16;
-    guchar green = dut->o_color_rgb >> 8;
-    guchar blue = dut->o_color_rgb & 0xff;
+    uint32_t rgb = mapcolor(dut->o_color_idx);
+    guchar red = rgb >> 16;
+    guchar green = rgb >> 8;
+    guchar blue = rgb & 0xff;
     put_pixel(FramePixBuf, hcntr_shifted, vcntr_shifted, red, green, blue);
   }
 
@@ -386,10 +404,10 @@ static void print_usage(const char *prog) {
   fprintf(stderr, "  --save-frame-to=N=N   -- dump frames to .png ending with frame #N\n");
   fprintf(stderr, "  --save-frame-prefix=S -- prefix dump frame files with S\n");
   fprintf(stderr, "  --exit-after-frame=N  -- exit after frame #N\n");
-  fprintf(stderr, "  --trace               -- create dump.vcd\n");
+  fprintf(stderr, "  --cmd-trace=<FRAME>                    -- wait until <FRAME> then enable trace\n");
   fprintf(stderr, "  --cmd-load-prg=<FRAME>:<PRG>           -- wait until <FRAME> then load <PRG>\n");
   fprintf(stderr, "  --cmd-inject-keys=<FRAME>:<KEYS>       -- wait until <FRAME> then inject <KEYS>\n");
-  fprintf(stderr, "  --cmd-dump-ram=<FRAME>:<ADDR>:<LENGTH> -- wait until <FRAME> then dump <LENGTH> bytes of RAM starting at <ADDR>\n");
+  fprintf(stderr, "  --cmd-dump-ram=<FRAME>:<ADDR>:<LENGTH>:<FILE> -- wait until <FRAME> then dump <LENGTH> bytes of RAM starting at <ADDR> to <FILE>\n");
   fprintf(stderr, "\n");
   // clang-format on
 }
@@ -410,8 +428,15 @@ static void parse_cmd_args(int argc, char *argv[]) {
       options.save_frame_prefix = &argv[i][off];
     } else if (MATCH("--exit-after-frame=")) {
       options.exit_after_frame = strtol(&argv[i][off], NULL, 0);
-    } else if (MATCH("--trace")) {
+    } else if (MATCH("--cmd-trace=")) {
       options.trace = true;
+      char *EndPtr;
+      int CmdFrameIdx = strtol(&argv[i][off], &EndPtr, 0);
+      if (*EndPtr != '\0') {
+        print_usage(argv[0]);
+        exit(1);
+      }
+      Commands.push_back(new CommandTrace(CmdFrameIdx));
     } else if (MATCH("--cmd-inject-keys=")) {
       char *EndPtr;
       int CmdFrameIdx = strtol(&argv[i][off], &EndPtr, 0);
@@ -435,12 +460,14 @@ static void parse_cmd_args(int argc, char *argv[]) {
         exit(1);
       }
       EndPtr++;
-      uint16_t Size = strtol(EndPtr, &EndPtr, 0);
-      if (*EndPtr != '\0') {
+      uint32_t Size = strtol(EndPtr, &EndPtr, 0);
+      if (*EndPtr != ':') {
         print_usage(argv[0]);
         exit(1);
       }
-      Commands.push_back(new CommandDumpRAM(CmdFrameIdx, Address, Size));
+      EndPtr++;
+      Commands.push_back(
+          new CommandDumpRAM(CmdFrameIdx, Address, Size, EndPtr));
     } else if (MATCH("--cmd-load-prg=")) {
       char *EndPtr;
       int CmdFrameIdx = strtol(&argv[i][off], &EndPtr, 0);
@@ -509,11 +536,44 @@ int main(int argc, char *argv[]) {
 
   dut = new Vmyc64_top;
 
-  if (options.trace) {
-    trace = new VerilatedVcdC;
-    dut->trace(trace, 99);
-    trace->open("dump.vcd");
+#if 0
+  // Enable trace from the very beginning.
+  CommandTrace ct(0);
+  ct.execute();
+#endif
+
+#if 0
+  // Initialize Screen RAM (area) and Color RAM with pattern. Since we start
+  // out with character set mapped to RAM at address 0 we pick characters that
+  // would be just after the zero-page to reduce the likelihood of them being
+  // trashed by the CPU.
+  {
+    uint8_t *ColorRAM = dut->myc64_top->u_ram_color->mem;
+    uint8_t *MainRAM = dut->myc64_top->u_ram_main->mem;
+    for (int r = 0; r < 25; r++) {
+      MainRAM[0x400 + r * 40 + 0] = 32;
+      ColorRAM[r * 40 + 0] = 5;
+      MainRAM[0x400 + r * 40 + 39] = 33;
+      ColorRAM[r * 40 + 39] = 6;
+    }
+    for (int c = 0; c < 40; c++) {
+      MainRAM[0x400 + 0 * 40 + c] = 34;
+      ColorRAM[0 * 40 + c] = 7;
+      MainRAM[0x400 + 24 * 40 + c] = 35;
+      ColorRAM[24 * 40 + c] = 8;
+    }
+
+    // Sprite pointers.
+    for (int i = 0; i < 8; i++)
+      MainRAM[0x07f8 + i] = i*0x11;
+
+    // Fill in patterns for the four different characters.
+    memset(&MainRAM[8*32], 0xff, 8);
+    memset(&MainRAM[8*33], 0xaa, 8);
+    memset(&MainRAM[8*34], 0x18, 8);
+    memset(&MainRAM[8*35], 0xf0, 8);
   }
+#endif
 
   // Apply five cycles with reset active.
   dut->rst = 1;

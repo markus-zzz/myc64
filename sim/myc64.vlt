@@ -1,0 +1,4 @@
+`verilator_config
+public -module "myc64" -var "u_ram_main"
+public -module "myc64" -var "u_ram_color"
+lint_off -file "nmigen.v"
