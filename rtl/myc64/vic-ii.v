@@ -42,7 +42,8 @@ module vic_ii(
   output BM,
   output [3:0] o_color,
   output o_hsync,
-  output o_vsync
+  output o_vsync,
+  output o_visib
 );
 
   parameter p_x_raster_last = 9'h190,
@@ -131,7 +132,8 @@ module vic_ii(
   end
 
   assign o_hsync = X == p_x_raster_last;
-  assign o_vsync = RASTER == 0 && o_hsync;
+  assign o_vsync = RASTER == 0 && X == (p_x_raster_last - 3);
+  assign o_visib = (CYCLE >= p_cycle_first_disp - 4 && CYCLE < p_cycle_first_disp + 40 + 4 && RASTER >= 9'h30 - 32 && RASTER <= 9'hf7 + 32);
 
   always @(posedge clk) begin
     if (clk_1mhz_ph1_en) begin

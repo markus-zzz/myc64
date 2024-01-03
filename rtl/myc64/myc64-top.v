@@ -27,8 +27,9 @@ module myc64_top(
   input clk,
   output reg [23:0] o_color_rgb,
   output [3:0] o_color_idx,
-  output o_hsync,
-  output o_vsync,
+  output o_vid_hsync,
+  output o_vid_vsync,
+  output o_vid_en,
   output [15:0] o_wave,
   input [63:0] i_keyboard_mask,
   input i_ext_we,
@@ -124,8 +125,9 @@ module myc64_top(
     .BA(vic_ba),
     .BM(vic_bm),
     .o_color(o_color_idx),
-    .o_hsync(o_hsync),
-    .o_vsync(o_vsync)
+    .o_hsync(o_vid_hsync),
+    .o_vsync(o_vid_vsync),
+    .o_visib(o_vid_en)
   );
 
   sid u_sid(
