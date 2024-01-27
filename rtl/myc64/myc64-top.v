@@ -35,7 +35,13 @@ module myc64_top(
   input i_ext_we,
   input [15:0] i_ext_addr,
   input [7:0] i_ext_data,
-  output o_ext_ready
+  output o_ext_ready,
+  // Interface to pre-load ROMs
+  input [15:0] i_ext_rom_addr,
+  input [7:0] i_ext_rom_data,
+  input i_ext_rom_basic_we,
+  input i_ext_rom_char_we,
+  input i_ext_rom_kernal_we
 );
 
   reg [2:0] clk_cntr;
@@ -198,8 +204,7 @@ module myc64_top(
 
   sprom2phase #(
     .aw(12),
-    .dw(8),
-    .MEM_INIT_FILE(`MYC64_CHARACTERS_VH)
+    .dw(8)
   ) u_rom_char(
     .clk(clk),
     .rst(rst),
@@ -208,13 +213,15 @@ module myc64_top(
     .ph1_addr(cpu_addr[11:0]),
     .ph2_addr(vic_addr[11:0]),
     .ph1_do(rom_char_ph1_do),
-    .ph2_do(rom_char_ph2_do)
+    .ph2_do(rom_char_ph2_do),
+    .ext_addr(i_ext_rom_addr),
+    .ext_di(i_ext_rom_data),
+    .ext_we(i_ext_rom_char_we)
   );
 
   sprom2phase #(
     .aw(13),
-    .dw(8),
-    .MEM_INIT_FILE(`MYC64_BASIC_VH)
+    .dw(8)
   ) u_rom_basic(
     .clk(clk),
     .rst(rst),
@@ -223,13 +230,15 @@ module myc64_top(
     .ph1_addr(cpu_addr[12:0]),
     .ph2_addr(0),
     .ph1_do(rom_basic_ph1_do),
-    .ph2_do()
+    .ph2_do(),
+    .ext_addr(i_ext_rom_addr),
+    .ext_di(i_ext_rom_data),
+    .ext_we(i_ext_rom_basic_we)
   );
 
   sprom2phase #(
     .aw(13),
-    .dw(8),
-    .MEM_INIT_FILE(`MYC64_KERNAL_VH)
+    .dw(8)
   ) u_rom_kernal(
     .clk(clk),
     .rst(rst),
@@ -238,7 +247,10 @@ module myc64_top(
     .ph1_addr(cpu_addr[12:0]),
     .ph2_addr(0),
     .ph1_do(rom_kernal_ph1_do),
-    .ph2_do()
+    .ph2_do(),
+    .ext_addr(i_ext_rom_addr),
+    .ext_di(i_ext_rom_data),
+    .ext_we(i_ext_rom_kernal_we)
   );
 
   // Bank switching - following the table from

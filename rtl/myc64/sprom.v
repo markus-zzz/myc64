@@ -18,7 +18,11 @@
  *
  */
 
-module sprom(clk, rst, ce, oe, addr, do);
+module sprom(clk, rst, ce, oe, addr, do,
+  ext_addr,
+  ext_di,
+  ext_we
+);
 	//
 	// Default address and data buses width (1024*32)
 	//
@@ -36,6 +40,10 @@ module sprom(clk, rst, ce, oe, addr, do);
 	input  [aw-1:0] addr; // address bus inputs
 	output reg [dw-1:0] do;   // output data bus
 
+  input [aw-1:0] ext_addr;
+  input [dw-1:0] ext_di;
+  input ext_we;
+
 	//
 	// Module body
 	//
@@ -52,9 +60,14 @@ module sprom(clk, rst, ce, oe, addr, do);
 			do = mem[ra];
 
 	// read operation
-	always @(posedge clk)
-	  if (ce)
+	always @(posedge clk) begin
+    if (ext_we) begin
+      mem[ext_addr] <= ext_di;
+    end
+	  else if (ce) begin
 	    ra <= addr;     // read address needs to be registered to read clock
+    end
+  end
 
 	initial begin
 		/* verilator lint_off WIDTH */
@@ -75,7 +88,10 @@ module sprom2phase(
   ph1_do,
   ph2_en,
   ph2_addr,
-  ph2_do
+  ph2_do,
+  ext_addr,
+  ext_di,
+  ext_we
 );
 
 	parameter aw = 10; //number of address-bits
@@ -90,6 +106,10 @@ module sprom2phase(
   input ph2_en;
   input [aw-1:0] ph2_addr;
   output reg [dw-1:0] ph2_do;
+
+  input [aw-1:0] ext_addr;
+  input [dw-1:0] ext_di;
+  input ext_we;
 
   wire [dw-1:0] do;
   reg ph1_not_ph2;
@@ -117,7 +137,10 @@ module sprom2phase(
     .ce(1'b1),
     .oe(1'b1),
     .addr(ph1_not_ph2 ? ph1_addr : ph2_addr),
-    .do(do)
+    .do(do),
+    .ext_addr(ext_addr),
+    .ext_di(ext_di),
+    .ext_we(ext_we)
   );
 
 endmodule

@@ -8,6 +8,10 @@ wget http://www.zimmers.net/anonftp/pub/cbm/firmware/computers/c64/kernal.901227
 wget http://www.zimmers.net/anonftp/pub/cbm/firmware/computers/c64/characters.901225-01.bin
 wget http://www.zimmers.net/anonftp/pub/cbm/firmware/computers/c64/basic.901226-01.bin
 
-hexdump -v -e '4/1 "%02x " "\n"' kernal.901227-03.bin > kernal.vh
-hexdump -v -e '4/1 "%02x " "\n"' basic.901226-01.bin > basic.vh
-hexdump -v -e '4/1 "%02x " "\n"' characters.901225-01.bin > characters.vh
+cp kernal.901227-03.bin kernal.bin
+cp basic.901226-01.bin basic.bin
+cp characters.901225-01.bin characters.bin
+
+xxd -i kernal.bin > kernal.h
+xxd -i basic.bin > basic.h
+xxd -i characters.bin > characters.h
