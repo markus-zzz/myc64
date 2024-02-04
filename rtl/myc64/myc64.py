@@ -40,8 +40,9 @@ def readMemInit(path):
 class MyC64(Elaboratable):
   def __init__(self):
     self.o_color_idx = Signal(4)
-    self.o_hsync = Signal()
-    self.o_vsync = Signal()
+    self.o_vid_hsync = Signal()
+    self.o_vid_vsync = Signal()
+    self.o_vid_en = Signal()
     self.o_wave = Signal(16)
     self.i_keyboard_mask = Signal(64)
     self.i_ext_we = Signal()
@@ -256,7 +257,7 @@ class MyC64(Elaboratable):
         Mux(~u_cia1.o_pa[1], self.i_keyboard_mask[8:16], 0) |  #
         Mux(~u_cia1.o_pa[0], self.i_keyboard_mask[0:8], 0)))
 
-    m.d.comb += [self.o_color_idx.eq(u_vic.o_color), self.o_hsync.eq(u_vic.o_hsync), self.o_vsync.eq(u_vic.o_vsync)]
+    m.d.comb += [self.o_color_idx.eq(u_vic.o_color), self.o_vid_hsync.eq(u_vic.o_hsync), self.o_vid_vsync.eq(u_vic.o_vsync), self.o_vid_en(u_vic.o_visib)]
 
     return m
 

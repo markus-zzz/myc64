@@ -43,6 +43,7 @@ class VicII(Elaboratable):
     self.o_color = Signal(4)
     self.o_hsync = Signal()
     self.o_vsync = Signal()
+    self.o_visib = Signal()
 
     self.ports = [
         self.clk_8mhz_en, self.clk_1mhz_ph1_en, self.clk_1mhz_ph2_en, self.o_addr, self.i_data, self.i_reg_addr,
@@ -159,7 +160,9 @@ class VicII(Elaboratable):
 
     pixshift = Signal(8)
 
-    m.d.comb += [self.o_hsync.eq(x == p_x_raster_last), self.o_vsync.eq((y == 0) & self.o_hsync)]
+    m.d.comb += [self.o_hsync.eq(x == p_x_raster_last),
+                 self.o_vsync.eq((y == 0) & (x == (p_x_raster_last - 3))),
+                 self.o_visib.eq((cycle >= p_cycle_first_disp - 4) & (cycle < p_cycle_first_disp + 40 + 4) & (raster >= 0x30 - 32) & (raster <= 0xf7))]
 
     sprite_idx = Signal(range(8))
     refresh_idx = Signal(range(5))
