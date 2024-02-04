@@ -18,9 +18,7 @@
 #
 # yapf --in-place --recursive --style="{indent_width: 2, column_limit: 120}"
 
-from nmigen import *
-from nmigen.cli import main
-
+from amaranth import *
 
 class Cpu6510(Elaboratable):
   def __init__(self):
@@ -86,8 +84,3 @@ class Cpu6510(Elaboratable):
     m.d.comb += data_i.eq(Mux(self.o_addr == 0x0001, self.o_port, data_ir))
 
     return m
-
-
-if __name__ == "__main__":
-  cpu = Cpu6510()
-  main(cpu, name="cpu6510", ports=cpu.ports)

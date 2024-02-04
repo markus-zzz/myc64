@@ -18,8 +18,7 @@
 #
 # yapf --in-place --recursive --style="{indent_width: 2, column_limit: 120}"
 
-from nmigen import *
-from nmigen.cli import main
+from amaranth import *
 from cpu6510 import Cpu6510
 from cia import Cia
 from vicii import VicII
@@ -261,7 +260,17 @@ class MyC64(Elaboratable):
 
     return m
 
+#
+# Generate verilog
+#
+
+from amaranth.back import verilog
+import sys
+import os
 
 if __name__ == "__main__":
+
   myc64 = MyC64()
-  main(myc64, name="myc64_top", ports=myc64.ports)
+
+  with open("amaranth.v", "w") as f:
+    f.write(verilog.convert(elaboratable=myc64, name='myc64_top', ports=myc64.ports))

@@ -18,9 +18,8 @@
 #
 # yapf --in-place --recursive --style="{indent_width: 2, column_limit: 120}"
 
-from nmigen import *
+from amaranth import *
 from typing import NamedTuple
-
 
 class RegisterFile():
   class RegisterInfoRW(NamedTuple):

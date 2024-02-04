@@ -62,7 +62,7 @@ struct CommandLoadPRG : public CommandAtFrame {
   CommandLoadPRG(int FrameIdx, const char *PathToPRG)
       : CommandAtFrame(FrameIdx), m_PathToPRG(PathToPRG) {}
   void execute() override {
-    uint8_t *RAM = dut->myc64_top__DOT__u_ram_main;
+    uint8_t *RAM = nullptr; // dut->myc64_top__DOT__u_ram_main;
     FILE *fp = fopen(m_PathToPRG, "rb");
     fseek(fp, 0, SEEK_END);
     uint16_t PrgSize = ftell(fp) - sizeof(uint16_t);
@@ -98,7 +98,7 @@ struct CommandDumpRAM : public CommandAtFrame {
         m_Path(Path) {}
   void execute() override {
     FILE *FP = fopen(m_Path, "wb");
-    uint8_t *p = dut->myc64_top__DOT__u_ram_main;
+    uint8_t *p = nullptr; // dut->myc64_top__DOT__u_ram_main;
     for (uint32_t i = 0; i < m_Size; i++) {
       uint8_t b = p[m_Address + i];
       fwrite(&b, 1, 1, FP);

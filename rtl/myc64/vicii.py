@@ -18,8 +18,8 @@
 #
 # yapf --in-place --recursive --style="{indent_width: 2, column_limit: 120}"
 
-from nmigen import *
-from nmigen.cli import main
+from amaranth import *
+
 from enum import IntEnum, unique
 from typing import NamedTuple
 from utils.regs import RegisterFile
@@ -319,8 +319,3 @@ class VicII(Elaboratable):
     m.d.comb += [self.IRQ.eq(~((irq & r_d01a).any()))]
 
     return m
-
-
-if __name__ == "__main__":
-  v = VicII()
-  main(v, name="vic_ii_2", ports=v.ports)

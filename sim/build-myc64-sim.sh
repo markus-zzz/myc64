@@ -6,9 +6,9 @@ OBJ_DIR=obj_dir_myc64
 rm -rf $OBJ_DIR
 
 echo "nMigen..."
-python ../rtl/myc64/myc64.py generate > nmigen.v
+python3 ../rtl/myc64/myc64.py
 echo "verilator..."
-verilator -trace -cc ../rtl/myc64/*.v nmigen.v +1364-2005ext+v --top-module myc64_top -Wno-fatal --Mdir $OBJ_DIR -comp-limit-members 1024
+verilator -trace -cc ../rtl/myc64/*.v amaranth.v +1364-2005ext+v --top-module myc64_top -Wno-fatal --Mdir $OBJ_DIR -comp-limit-members 1024
 
 VERILATOR_ROOT=/usr/share/verilator/
 cd $OBJ_DIR; make -f Vmyc64_top.mk; cd ..

@@ -18,9 +18,7 @@
 #
 # yapf --in-place --recursive --style="{indent_width: 2, column_limit: 120}"
 
-from nmigen import *
-from nmigen.cli import main
-
+from amaranth import *
 
 class Cia(Elaboratable):
   def __init__(self):
