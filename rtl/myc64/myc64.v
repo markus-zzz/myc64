@@ -5,781 +5,779 @@
 (* generator = "Amaranth" *)
 module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_bus_addr, i_rom_char_data, i_rom_basic_data, i_rom_kernal_data, i_ram_main_data, o_ram_main_data, o_ram_main_we, o_clk_1mhz_ph1_en, o_clk_1mhz_ph2_en, clk, rst, o_vid_rgb);
   reg \$auto$verilog_backend.cc:2083:dump_module$1  = 0;
-  (* src = "myc64.py:59" *)
+  (* src = "myc64.py:60" *)
   wire [3:0] \$1 ;
-  (* src = "myc64.py:116" *)
+  (* src = "myc64.py:118" *)
   wire \$10 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$100 ;
-  (* src = "myc64.py:85" *)
+  (* src = "myc64.py:89" *)
   wire [7:0] \$102 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$104 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$106 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$108 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$110 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$112 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$114 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$116 ;
-  (* src = "myc64.py:132" *)
+  (* src = "myc64.py:134" *)
   wire \$118 ;
-  (* src = "myc64.py:132" *)
+  (* src = "myc64.py:134" *)
   wire \$12 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$120 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$122 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$124 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$126 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$128 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$130 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$132 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$134 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$136 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$138 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$14 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$140 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$142 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$144 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$146 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$148 ;
-  (* src = "myc64.py:170" *)
+  (* src = "myc64.py:172" *)
   wire \$150 ;
-  (* src = "myc64.py:142" *)
+  (* src = "myc64.py:144" *)
   wire \$152 ;
-  (* src = "myc64.py:142" *)
+  (* src = "myc64.py:144" *)
   wire \$154 ;
-  (* src = "myc64.py:142" *)
+  (* src = "myc64.py:144" *)
   wire \$156 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$158 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$16 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$160 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$162 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$164 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$166 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$168 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$170 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$172 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$174 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$176 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$178 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$18 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$180 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$182 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$184 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$186 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$188 ;
-  (* src = "myc64.py:171" *)
+  (* src = "myc64.py:173" *)
   wire \$190 ;
-  (* src = "myc64.py:132" *)
+  (* src = "myc64.py:134" *)
   wire \$192 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$194 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$196 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$198 ;
-  (* src = "myc64.py:59" *)
+  (* src = "myc64.py:60" *)
   wire [3:0] \$2 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$20 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$200 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$202 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$204 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$206 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$208 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$210 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$212 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$214 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$216 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$218 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$22 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$220 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$222 ;
-  (* src = "myc64.py:170" *)
+  (* src = "myc64.py:172" *)
   wire \$224 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$226 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$228 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$230 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$232 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$234 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$236 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$238 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$24 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$240 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$242 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$244 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$246 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$248 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$250 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$252 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$254 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$256 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$258 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$26 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$260 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$262 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$264 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$266 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$268 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$270 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$272 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$274 ;
-  (* src = "myc64.py:132" *)
+  (* src = "myc64.py:134" *)
   wire \$276 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$278 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$28 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$280 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$282 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$284 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$286 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$288 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$290 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$292 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$294 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$296 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$298 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$30 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$300 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$302 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$304 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$306 ;
-  (* src = "myc64.py:170" *)
+  (* src = "myc64.py:172" *)
   wire \$308 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$310 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$312 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$314 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$316 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$318 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$32 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$320 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$322 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$324 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$326 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$328 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$330 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$332 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$334 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$336 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$338 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$34 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$340 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$342 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$344 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$346 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$348 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$350 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$352 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$354 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$356 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$358 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$36 ;
-  (* src = "myc64.py:132" *)
+  (* src = "myc64.py:134" *)
   wire \$360 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$362 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$364 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$366 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$368 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$370 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$372 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$374 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$376 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$378 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$38 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$380 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$382 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$384 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$386 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$388 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$390 ;
-  (* src = "myc64.py:170" *)
+  (* src = "myc64.py:172" *)
   wire \$392 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$394 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$396 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$398 ;
-  (* src = "myc64.py:63" *)
+  (* src = "myc64.py:64" *)
   wire \$4 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$40 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$400 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$402 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$404 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$406 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$408 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$410 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$412 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$414 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$416 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$418 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$42 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$420 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$422 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$424 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$426 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$428 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$430 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$432 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$434 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$436 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$438 ;
-  (* src = "myc64.py:170" *)
+  (* src = "myc64.py:172" *)
   wire \$44 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$440 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$442 ;
-  (* src = "myc64.py:132" *)
+  (* src = "myc64.py:134" *)
   wire \$444 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$446 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$448 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$450 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$452 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$454 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$456 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$458 ;
-  (* src = "myc64.py:142" *)
+  (* src = "myc64.py:144" *)
   wire \$46 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$460 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$462 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$464 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$466 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$468 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$470 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$472 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$474 ;
-  (* src = "myc64.py:170" *)
+  (* src = "myc64.py:172" *)
   wire \$476 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$478 ;
-  (* src = "myc64.py:142" *)
+  (* src = "myc64.py:144" *)
   wire \$48 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$480 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$482 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$484 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$486 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$488 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$490 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$492 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$494 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$496 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$498 ;
-  (* src = "myc64.py:142" *)
+  (* src = "myc64.py:144" *)
   wire \$50 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$500 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$502 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$504 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$506 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$508 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$510 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$512 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$514 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$516 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$518 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$52 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$520 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$522 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$524 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$526 ;
-  (* src = "myc64.py:132" *)
+  (* src = "myc64.py:134" *)
   wire \$528 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$530 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$532 ;
-  (* src = "myc64.py:135" *)
+  (* src = "myc64.py:137" *)
   wire \$534 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$536 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$538 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$54 ;
-  (* src = "myc64.py:138" *)
+  (* src = "myc64.py:140" *)
   wire \$540 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$542 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$544 ;
-  (* src = "myc64.py:141" *)
+  (* src = "myc64.py:143" *)
   wire \$546 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$548 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$550 ;
-  (* src = "myc64.py:147" *)
+  (* src = "myc64.py:149" *)
   wire \$552 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$554 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$556 ;
-  (* src = "myc64.py:150" *)
+  (* src = "myc64.py:152" *)
   wire \$558 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$56 ;
-  (* src = "myc64.py:170" *)
+  (* src = "myc64.py:172" *)
   wire \$560 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$562 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$564 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$566 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$568 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$570 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$572 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$574 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$576 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$578 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$58 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$580 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$582 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$584 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$586 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$588 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$590 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$592 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$594 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$596 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$598 ;
-  (* src = "myc64.py:63" *)
+  (* src = "myc64.py:64" *)
   wire \$6 ;
-  (* src = "myc64.py:151" *)
+  (* src = "myc64.py:153" *)
   wire \$60 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$600 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$602 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$604 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$606 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$608 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$610 ;
-  (* src = "myc64.py:181" *)
+  (* src = "myc64.py:183" *)
   wire \$612 ;
-  (* src = "myc64.py:183" *)
+  (* src = "myc64.py:185" *)
   wire \$614 ;
-  (* src = "myc64.py:183" *)
+  (* src = "myc64.py:185" *)
   wire \$616 ;
-  (* src = "myc64.py:211" *)
+  (* src = "myc64.py:219" *)
   wire [1:0] \$619 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$62 ;
-  (* src = "myc64.py:211" *)
+  (* src = "myc64.py:219" *)
   wire [15:0] \$621 ;
-  (* src = "myc64.py:211" *)
+  (* src = "myc64.py:219" *)
   wire \$622 ;
-  (* src = "myc64.py:211" *)
+  (* src = "myc64.py:219" *)
   wire \$624 ;
-  (* src = "myc64.py:212" *)
+  (* src = "myc64.py:220" *)
   wire \$627 ;
-  (* src = "myc64.py:212" *)
+  (* src = "myc64.py:220" *)
   wire \$629 ;
-  (* src = "myc64.py:212" *)
+  (* src = "myc64.py:220" *)
   wire \$631 ;
-  (* src = "myc64.py:216" *)
+  (* src = "myc64.py:224" *)
   wire \$633 ;
-  (* src = "myc64.py:216" *)
+  (* src = "myc64.py:224" *)
   wire \$635 ;
-  (* src = "myc64.py:216" *)
+  (* src = "myc64.py:224" *)
   wire \$637 ;
-  (* src = "myc64.py:222" *)
+  (* src = "myc64.py:230" *)
   wire [7:0] \$639 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$64 ;
-  (* src = "myc64.py:223" *)
+  (* src = "myc64.py:231" *)
   wire [7:0] \$640 ;
-  (* src = "myc64.py:223" *)
+  (* src = "myc64.py:231" *)
   wire \$641 ;
-  (* src = "myc64.py:224" *)
+  (* src = "myc64.py:232" *)
   wire [7:0] \$644 ;
-  (* src = "myc64.py:224" *)
+  (* src = "myc64.py:232" *)
   wire \$645 ;
-  (* src = "myc64.py:223" *)
+  (* src = "myc64.py:231" *)
   wire [7:0] \$648 ;
-  (* src = "myc64.py:225" *)
+  (* src = "myc64.py:233" *)
   wire [7:0] \$650 ;
-  (* src = "myc64.py:225" *)
+  (* src = "myc64.py:233" *)
   wire \$651 ;
-  (* src = "myc64.py:223" *)
+  (* src = "myc64.py:231" *)
   wire [7:0] \$654 ;
-  (* src = "myc64.py:226" *)
+  (* src = "myc64.py:234" *)
   wire [7:0] \$656 ;
-  (* src = "myc64.py:226" *)
+  (* src = "myc64.py:234" *)
   wire \$657 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$66 ;
-  (* src = "myc64.py:223" *)
+  (* src = "myc64.py:231" *)
   wire [7:0] \$660 ;
-  (* src = "myc64.py:227" *)
+  (* src = "myc64.py:235" *)
   wire [7:0] \$662 ;
-  (* src = "myc64.py:227" *)
+  (* src = "myc64.py:235" *)
   wire \$663 ;
-  (* src = "myc64.py:223" *)
+  (* src = "myc64.py:231" *)
   wire [7:0] \$666 ;
-  (* src = "myc64.py:228" *)
+  (* src = "myc64.py:236" *)
   wire [7:0] \$668 ;
-  (* src = "myc64.py:228" *)
+  (* src = "myc64.py:236" *)
   wire \$669 ;
-  (* src = "myc64.py:223" *)
+  (* src = "myc64.py:231" *)
   wire [7:0] \$672 ;
-  (* src = "myc64.py:229" *)
+  (* src = "myc64.py:237" *)
   wire [7:0] \$674 ;
-  (* src = "myc64.py:229" *)
+  (* src = "myc64.py:237" *)
   wire \$675 ;
-  (* src = "myc64.py:223" *)
+  (* src = "myc64.py:231" *)
   wire [7:0] \$678 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$68 ;
-  (* src = "myc64.py:230" *)
+  (* src = "myc64.py:238" *)
   wire [7:0] \$680 ;
-  (* src = "myc64.py:230" *)
+  (* src = "myc64.py:238" *)
   wire \$681 ;
-  (* src = "myc64.py:223" *)
+  (* src = "myc64.py:231" *)
   wire [7:0] \$684 ;
-  (* src = "myc64.py:163" *)
+  (* src = "myc64.py:165" *)
   wire \$70 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$72 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$74 ;
-  (* src = "myc64.py:153" *)
+  (* src = "myc64.py:155" *)
   wire \$76 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$78 ;
-  (* src = "myc64.py:115" *)
+  (* src = "myc64.py:117" *)
   wire \$8 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$80 ;
-  (* src = "myc64.py:155" *)
+  (* src = "myc64.py:157" *)
   wire \$82 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$84 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$86 ;
-  (* src = "myc64.py:157" *)
+  (* src = "myc64.py:159" *)
   wire \$88 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$90 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$92 ;
-  (* src = "myc64.py:159" *)
+  (* src = "myc64.py:161" *)
   wire \$94 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$96 ;
-  (* src = "myc64.py:161" *)
+  (* src = "myc64.py:163" *)
   wire \$98 ;
-  (* src = "myc64.py:104" *)
+  (* src = "myc64.py:106" *)
   wire [15:0] bus_addr;
-  (* src = "myc64.py:107" *)
+  (* src = "myc64.py:109" *)
   wire [7:0] bus_do;
-  (* src = "myc64.py:105" *)
+  (* src = "myc64.py:107" *)
   wire bus_we;
-  (* src = "myc64.py:92" *)
+  (* src = "myc64.py:96" *)
   reg cia1_cs;
-  (* src = "myc64.py:93" *)
+  (* src = "myc64.py:97" *)
   reg cia2_cs;
   (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/ir.py:508" *)
   input clk;
   wire clk;
-  (* src = "myc64.py:61" *)
+  (* src = "myc64.py:62" *)
   wire clk_1mhz_ph1_en;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cpu6510.py:25" *)
   wire \clk_1mhz_ph1_en$618 ;
-  (* src = "myc64.py:62" *)
+  (* src = "myc64.py:63" *)
   wire clk_1mhz_ph2_en;
-  (* src = "myc64.py:58" *)
+  (* src = "myc64.py:59" *)
   reg [2:0] clk_cntr = 3'h5;
-  (* src = "myc64.py:58" *)
+  (* src = "myc64.py:59" *)
   reg [2:0] \clk_cntr$next ;
-  (* src = "myc64.py:94" *)
-  reg color_cs;
-  (* src = "myc64.py:96" *)
-  wire [15:0] cpu_addr;
   (* src = "myc64.py:98" *)
-  reg [7:0] cpu_di;
-  (* src = "myc64.py:99" *)
-  wire [7:0] cpu_do;
+  reg color_cs;
   (* src = "myc64.py:100" *)
+  wire [15:0] cpu_addr;
+  (* src = "myc64.py:102" *)
+  reg [7:0] cpu_di;
+  (* src = "myc64.py:103" *)
+  wire [7:0] cpu_do;
+  (* src = "myc64.py:104" *)
   wire [5:0] cpu_po;
-  (* src = "myc64.py:97" *)
+  (* src = "myc64.py:101" *)
   wire cpu_we;
-  (* src = "myc64.py:34" *)
+  (* src = "myc64.py:35" *)
   input [63:0] i_keyboard_mask;
   wire [63:0] i_keyboard_mask;
-  (* src = "myc64.py:40" *)
+  (* src = "myc64.py:41" *)
   input [7:0] i_ram_main_data;
   wire [7:0] i_ram_main_data;
-  (* src = "myc64.py:38" *)
+  (* src = "myc64.py:39" *)
   input [7:0] i_rom_basic_data;
   wire [7:0] i_rom_basic_data;
-  (* src = "myc64.py:37" *)
+  (* src = "myc64.py:38" *)
   input [7:0] i_rom_char_data;
   wire [7:0] i_rom_char_data;
-  (* src = "myc64.py:39" *)
+  (* src = "myc64.py:40" *)
   input [7:0] i_rom_kernal_data;
   wire [7:0] i_rom_kernal_data;
-  (* src = "myc64.py:36" *)
+  (* src = "myc64.py:37" *)
   output [15:0] o_bus_addr;
   wire [15:0] o_bus_addr;
-  (* src = "myc64.py:44" *)
+  (* src = "myc64.py:45" *)
   output o_clk_1mhz_ph1_en;
   wire o_clk_1mhz_ph1_en;
-  (* src = "myc64.py:45" *)
+  (* src = "myc64.py:46" *)
   output o_clk_1mhz_ph2_en;
   wire o_clk_1mhz_ph2_en;
-  (* src = "myc64.py:41" *)
+  (* src = "myc64.py:42" *)
   output [7:0] o_ram_main_data;
   wire [7:0] o_ram_main_data;
-  (* src = "myc64.py:42" *)
+  (* src = "myc64.py:43" *)
   output o_ram_main_we;
   wire o_ram_main_we;
-  (* src = "myc64.py:32" *)
+  (* src = "myc64.py:33" *)
   output o_vid_en;
   wire o_vid_en;
-  (* src = "myc64.py:30" *)
+  (* src = "myc64.py:31" *)
   output o_vid_hsync;
   wire o_vid_hsync;
-  (* src = "myc64.py:29" *)
+  (* src = "myc64.py:30" *)
   output [23:0] o_vid_rgb;
   reg [23:0] o_vid_rgb;
-  (* src = "myc64.py:31" *)
+  (* src = "myc64.py:32" *)
   output o_vid_vsync;
   wire o_vid_vsync;
-  (* src = "myc64.py:33" *)
-  input [15:0] o_wave;
+  (* src = "myc64.py:34" *)
+  output [15:0] o_wave;
   wire [15:0] o_wave;
-  (* src = "myc64.py:90" *)
+  (* src = "myc64.py:94" *)
   reg ram_cs;
   (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/ir.py:508" *)
   input rst;
   wire rst;
-  (* src = "myc64.py:91" *)
+  (* src = "myc64.py:95" *)
   reg sid_cs;
-  (* src = "myc64.py:102" *)
-  wire [7:0] sid_do;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:25" *)
   wire u_cia1_clk_1mhz_ph_en;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:27" *)
@@ -830,18 +828,32 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   wire [5:0] u_cpu_o_port;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cpu6510.py:30" *)
   wire u_cpu_o_we;
-  (* src = "myc64.py:85" *)
+  (* src = "myc64.py:89" *)
   wire [9:0] u_ram_color_r_addr;
-  (* src = "myc64.py:85" *)
+  (* src = "myc64.py:89" *)
   wire [3:0] u_ram_color_r_data;
-  (* src = "myc64.py:85" *)
+  (* src = "myc64.py:89" *)
   wire u_ram_color_r_en;
-  (* src = "myc64.py:86" *)
+  (* src = "myc64.py:90" *)
   wire [9:0] u_ram_color_w_addr;
-  (* src = "myc64.py:86" *)
+  (* src = "myc64.py:90" *)
   wire [3:0] u_ram_color_w_data;
-  (* src = "myc64.py:86" *)
+  (* src = "myc64.py:90" *)
   wire u_ram_color_w_en;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:28" *)
+  wire [4:0] u_sid_i_addr;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:26" *)
+  wire u_sid_i_clk_1mhz_ph1_en;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:27" *)
+  wire u_sid_i_cs;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:30" *)
+  wire [7:0] u_sid_i_data;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:29" *)
+  wire u_sid_i_we;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:31" *)
+  wire [7:0] u_sid_o_data;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:32" *)
+  wire [15:0] u_sid_o_wave;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:40" *)
   wire u_vic_BA;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:41" *)
@@ -876,9 +888,9 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   wire u_vic_o_visib;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:45" *)
   wire u_vic_o_vsync;
-  (* src = "myc64.py:65" *)
+  (* src = "myc64.py:66" *)
   reg vic_cycle = 1'h0;
-  (* src = "myc64.py:65" *)
+  (* src = "myc64.py:66" *)
   reg \vic_cycle$next ;
   reg [3:0] \U$$0  [1023:0];
   initial begin
@@ -1919,352 +1931,352 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   end
   initial _0_ = 4'h0;
   assign u_ram_color_r_data = _0_;
-  assign \$100  = \$96  & (* src = "myc64.py:161" *) \$98 ;
-  assign \$102  = + (* src = "myc64.py:85" *) u_ram_color_r_data;
-  assign \$104  = cpu_po[2:0] == (* src = "myc64.py:171" *) 3'h7;
-  assign \$106  = cpu_po[2:0] == (* src = "myc64.py:171" *) 3'h6;
-  assign \$108  = \$104  | (* src = "myc64.py:171" *) \$106 ;
-  assign \$10  = color_cs & (* src = "myc64.py:116" *) bus_we;
-  assign \$110  = cpu_po[2:0] == (* src = "myc64.py:171" *) 2'h3;
-  assign \$112  = \$108  | (* src = "myc64.py:171" *) \$110 ;
-  assign \$114  = cpu_po[2:0] == (* src = "myc64.py:171" *) 2'h2;
-  assign \$116  = \$112  | (* src = "myc64.py:171" *) \$114 ;
-  assign \$118  = cpu_addr <= (* src = "myc64.py:132" *) 12'hfff;
-  assign \$120  = cpu_addr >= (* src = "myc64.py:135" *) 13'h1000;
-  assign \$122  = cpu_addr <= (* src = "myc64.py:135" *) 15'h7fff;
-  assign \$124  = \$120  & (* src = "myc64.py:135" *) \$122 ;
-  assign \$126  = cpu_addr >= (* src = "myc64.py:138" *) 16'h8000;
-  assign \$128  = cpu_addr <= (* src = "myc64.py:138" *) 16'h9fff;
-  assign \$12  = cpu_addr <= (* src = "myc64.py:132" *) 12'hfff;
-  assign \$130  = \$126  & (* src = "myc64.py:138" *) \$128 ;
-  assign \$132  = cpu_addr >= (* src = "myc64.py:141" *) 16'ha000;
-  assign \$134  = cpu_addr <= (* src = "myc64.py:141" *) 16'hbfff;
-  assign \$136  = \$132  & (* src = "myc64.py:141" *) \$134 ;
-  assign \$138  = cpu_addr >= (* src = "myc64.py:147" *) 16'hc000;
-  assign \$140  = cpu_addr <= (* src = "myc64.py:147" *) 16'hcfff;
-  assign \$142  = \$138  & (* src = "myc64.py:147" *) \$140 ;
-  assign \$144  = cpu_addr >= (* src = "myc64.py:150" *) 16'hd000;
-  assign \$146  = cpu_addr <= (* src = "myc64.py:150" *) 16'hdfff;
-  assign \$148  = \$144  & (* src = "myc64.py:150" *) \$146 ;
-  assign \$14  = cpu_addr >= (* src = "myc64.py:135" *) 13'h1000;
-  assign \$150  = cpu_addr >= (* src = "myc64.py:170" *) 16'he000;
-  assign \$152  = cpu_po[2:0] == (* src = "myc64.py:142" *) 3'h7;
-  assign \$154  = cpu_po[2:0] == (* src = "myc64.py:142" *) 2'h3;
-  assign \$156  = \$152  | (* src = "myc64.py:142" *) \$154 ;
-  assign \$158  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h7;
-  assign \$160  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h6;
-  assign \$162  = \$158  | (* src = "myc64.py:151" *) \$160 ;
-  assign \$164  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h5;
-  assign \$166  = \$162  | (* src = "myc64.py:151" *) \$164 ;
-  assign \$168  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h3;
-  assign \$16  = cpu_addr <= (* src = "myc64.py:135" *) 15'h7fff;
-  assign \$170  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h2;
-  assign \$172  = \$168  | (* src = "myc64.py:163" *) \$170 ;
-  assign \$174  = cpu_po[2:0] == (* src = "myc64.py:163" *) 1'h1;
-  assign \$176  = \$172  | (* src = "myc64.py:163" *) \$174 ;
-  assign \$178  = cpu_po[2:0] == (* src = "myc64.py:171" *) 3'h7;
-  assign \$180  = cpu_po[2:0] == (* src = "myc64.py:171" *) 3'h6;
-  assign \$182  = \$178  | (* src = "myc64.py:171" *) \$180 ;
-  assign \$184  = cpu_po[2:0] == (* src = "myc64.py:171" *) 2'h3;
-  assign \$186  = \$182  | (* src = "myc64.py:171" *) \$184 ;
-  assign \$188  = cpu_po[2:0] == (* src = "myc64.py:171" *) 2'h2;
-  assign \$18  = \$14  & (* src = "myc64.py:135" *) \$16 ;
-  assign \$190  = \$186  | (* src = "myc64.py:171" *) \$188 ;
-  assign \$192  = cpu_addr <= (* src = "myc64.py:132" *) 12'hfff;
-  assign \$194  = cpu_addr >= (* src = "myc64.py:135" *) 13'h1000;
-  assign \$196  = cpu_addr <= (* src = "myc64.py:135" *) 15'h7fff;
-  assign \$198  = \$194  & (* src = "myc64.py:135" *) \$196 ;
-  assign \$200  = cpu_addr >= (* src = "myc64.py:138" *) 16'h8000;
-  assign \$202  = cpu_addr <= (* src = "myc64.py:138" *) 16'h9fff;
-  assign \$204  = \$200  & (* src = "myc64.py:138" *) \$202 ;
-  assign \$206  = cpu_addr >= (* src = "myc64.py:141" *) 16'ha000;
-  assign \$208  = cpu_addr <= (* src = "myc64.py:141" *) 16'hbfff;
-  assign \$20  = cpu_addr >= (* src = "myc64.py:138" *) 16'h8000;
-  assign \$210  = \$206  & (* src = "myc64.py:141" *) \$208 ;
-  assign \$212  = cpu_addr >= (* src = "myc64.py:147" *) 16'hc000;
-  assign \$214  = cpu_addr <= (* src = "myc64.py:147" *) 16'hcfff;
-  assign \$216  = \$212  & (* src = "myc64.py:147" *) \$214 ;
-  assign \$218  = cpu_addr >= (* src = "myc64.py:150" *) 16'hd000;
-  assign \$220  = cpu_addr <= (* src = "myc64.py:150" *) 16'hdfff;
-  assign \$222  = \$218  & (* src = "myc64.py:150" *) \$220 ;
-  assign \$224  = cpu_addr >= (* src = "myc64.py:170" *) 16'he000;
-  assign \$226  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h7;
-  assign \$228  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h6;
-  assign \$22  = cpu_addr <= (* src = "myc64.py:138" *) 16'h9fff;
-  assign \$230  = \$226  | (* src = "myc64.py:151" *) \$228 ;
-  assign \$232  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h5;
-  assign \$234  = \$230  | (* src = "myc64.py:151" *) \$232 ;
-  assign \$236  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h3;
-  assign \$238  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h2;
-  assign \$240  = \$236  | (* src = "myc64.py:163" *) \$238 ;
-  assign \$242  = cpu_po[2:0] == (* src = "myc64.py:163" *) 1'h1;
-  assign \$244  = \$240  | (* src = "myc64.py:163" *) \$242 ;
-  assign \$246  = cpu_addr >= (* src = "myc64.py:153" *) 16'hd000;
-  assign \$248  = cpu_addr <= (* src = "myc64.py:153" *) 16'hd3ff;
-  assign \$24  = \$20  & (* src = "myc64.py:138" *) \$22 ;
-  assign \$250  = \$246  & (* src = "myc64.py:153" *) \$248 ;
-  assign \$252  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd400;
-  assign \$254  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd7ff;
-  assign \$256  = \$252  & (* src = "myc64.py:155" *) \$254 ;
-  assign \$258  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd800;
-  assign \$260  = cpu_addr <= (* src = "myc64.py:157" *) 16'hdbff;
-  assign \$262  = \$258  & (* src = "myc64.py:157" *) \$260 ;
-  assign \$264  = cpu_addr >= (* src = "myc64.py:159" *) 16'hdc00;
-  assign \$266  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdcff;
-  assign \$268  = \$264  & (* src = "myc64.py:159" *) \$266 ;
-  assign \$26  = cpu_addr >= (* src = "myc64.py:141" *) 16'ha000;
-  assign \$270  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdd00;
-  assign \$272  = cpu_addr <= (* src = "myc64.py:161" *) 16'hddff;
-  assign \$274  = \$270  & (* src = "myc64.py:161" *) \$272 ;
-  assign \$276  = cpu_addr <= (* src = "myc64.py:132" *) 12'hfff;
-  assign \$278  = cpu_addr >= (* src = "myc64.py:135" *) 13'h1000;
-  assign \$280  = cpu_addr <= (* src = "myc64.py:135" *) 15'h7fff;
-  assign \$282  = \$278  & (* src = "myc64.py:135" *) \$280 ;
-  assign \$284  = cpu_addr >= (* src = "myc64.py:138" *) 16'h8000;
-  assign \$286  = cpu_addr <= (* src = "myc64.py:138" *) 16'h9fff;
-  assign \$288  = \$284  & (* src = "myc64.py:138" *) \$286 ;
-  assign \$28  = cpu_addr <= (* src = "myc64.py:141" *) 16'hbfff;
-  assign \$290  = cpu_addr >= (* src = "myc64.py:141" *) 16'ha000;
-  assign \$292  = cpu_addr <= (* src = "myc64.py:141" *) 16'hbfff;
-  assign \$294  = \$290  & (* src = "myc64.py:141" *) \$292 ;
-  assign \$296  = cpu_addr >= (* src = "myc64.py:147" *) 16'hc000;
-  assign \$298  = cpu_addr <= (* src = "myc64.py:147" *) 16'hcfff;
-  assign \$2  = clk_cntr + (* src = "myc64.py:59" *) 1'h1;
-  assign \$300  = \$296  & (* src = "myc64.py:147" *) \$298 ;
-  assign \$302  = cpu_addr >= (* src = "myc64.py:150" *) 16'hd000;
-  assign \$304  = cpu_addr <= (* src = "myc64.py:150" *) 16'hdfff;
-  assign \$306  = \$302  & (* src = "myc64.py:150" *) \$304 ;
-  assign \$308  = cpu_addr >= (* src = "myc64.py:170" *) 16'he000;
-  assign \$30  = \$26  & (* src = "myc64.py:141" *) \$28 ;
-  assign \$310  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h7;
-  assign \$312  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h6;
-  assign \$314  = \$310  | (* src = "myc64.py:151" *) \$312 ;
-  assign \$316  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h5;
-  assign \$318  = \$314  | (* src = "myc64.py:151" *) \$316 ;
-  assign \$320  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h3;
-  assign \$322  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h2;
-  assign \$324  = \$320  | (* src = "myc64.py:163" *) \$322 ;
-  assign \$326  = cpu_po[2:0] == (* src = "myc64.py:163" *) 1'h1;
-  assign \$328  = \$324  | (* src = "myc64.py:163" *) \$326 ;
-  assign \$32  = cpu_addr >= (* src = "myc64.py:147" *) 16'hc000;
-  assign \$330  = cpu_addr >= (* src = "myc64.py:153" *) 16'hd000;
-  assign \$332  = cpu_addr <= (* src = "myc64.py:153" *) 16'hd3ff;
-  assign \$334  = \$330  & (* src = "myc64.py:153" *) \$332 ;
-  assign \$336  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd400;
-  assign \$338  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd7ff;
-  assign \$340  = \$336  & (* src = "myc64.py:155" *) \$338 ;
-  assign \$342  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd800;
-  assign \$344  = cpu_addr <= (* src = "myc64.py:157" *) 16'hdbff;
-  assign \$346  = \$342  & (* src = "myc64.py:157" *) \$344 ;
-  assign \$348  = cpu_addr >= (* src = "myc64.py:159" *) 16'hdc00;
-  assign \$34  = cpu_addr <= (* src = "myc64.py:147" *) 16'hcfff;
-  assign \$350  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdcff;
-  assign \$352  = \$348  & (* src = "myc64.py:159" *) \$350 ;
-  assign \$354  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdd00;
-  assign \$356  = cpu_addr <= (* src = "myc64.py:161" *) 16'hddff;
-  assign \$358  = \$354  & (* src = "myc64.py:161" *) \$356 ;
-  assign \$360  = cpu_addr <= (* src = "myc64.py:132" *) 12'hfff;
-  assign \$362  = cpu_addr >= (* src = "myc64.py:135" *) 13'h1000;
-  assign \$364  = cpu_addr <= (* src = "myc64.py:135" *) 15'h7fff;
-  assign \$366  = \$362  & (* src = "myc64.py:135" *) \$364 ;
-  assign \$368  = cpu_addr >= (* src = "myc64.py:138" *) 16'h8000;
-  assign \$36  = \$32  & (* src = "myc64.py:147" *) \$34 ;
-  assign \$370  = cpu_addr <= (* src = "myc64.py:138" *) 16'h9fff;
-  assign \$372  = \$368  & (* src = "myc64.py:138" *) \$370 ;
-  assign \$374  = cpu_addr >= (* src = "myc64.py:141" *) 16'ha000;
-  assign \$376  = cpu_addr <= (* src = "myc64.py:141" *) 16'hbfff;
-  assign \$378  = \$374  & (* src = "myc64.py:141" *) \$376 ;
-  assign \$380  = cpu_addr >= (* src = "myc64.py:147" *) 16'hc000;
-  assign \$382  = cpu_addr <= (* src = "myc64.py:147" *) 16'hcfff;
-  assign \$384  = \$380  & (* src = "myc64.py:147" *) \$382 ;
-  assign \$386  = cpu_addr >= (* src = "myc64.py:150" *) 16'hd000;
-  assign \$388  = cpu_addr <= (* src = "myc64.py:150" *) 16'hdfff;
-  assign \$38  = cpu_addr >= (* src = "myc64.py:150" *) 16'hd000;
-  assign \$390  = \$386  & (* src = "myc64.py:150" *) \$388 ;
-  assign \$392  = cpu_addr >= (* src = "myc64.py:170" *) 16'he000;
-  assign \$394  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h7;
-  assign \$396  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h6;
-  assign \$398  = \$394  | (* src = "myc64.py:151" *) \$396 ;
-  assign \$400  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h5;
-  assign \$402  = \$398  | (* src = "myc64.py:151" *) \$400 ;
-  assign \$404  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h3;
-  assign \$406  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h2;
-  assign \$408  = \$404  | (* src = "myc64.py:163" *) \$406 ;
-  assign \$40  = cpu_addr <= (* src = "myc64.py:150" *) 16'hdfff;
-  assign \$410  = cpu_po[2:0] == (* src = "myc64.py:163" *) 1'h1;
-  assign \$412  = \$408  | (* src = "myc64.py:163" *) \$410 ;
-  assign \$414  = cpu_addr >= (* src = "myc64.py:153" *) 16'hd000;
-  assign \$416  = cpu_addr <= (* src = "myc64.py:153" *) 16'hd3ff;
-  assign \$418  = \$414  & (* src = "myc64.py:153" *) \$416 ;
-  assign \$420  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd400;
-  assign \$422  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd7ff;
-  assign \$424  = \$420  & (* src = "myc64.py:155" *) \$422 ;
-  assign \$426  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd800;
-  assign \$428  = cpu_addr <= (* src = "myc64.py:157" *) 16'hdbff;
-  assign \$42  = \$38  & (* src = "myc64.py:150" *) \$40 ;
-  assign \$430  = \$426  & (* src = "myc64.py:157" *) \$428 ;
-  assign \$432  = cpu_addr >= (* src = "myc64.py:159" *) 16'hdc00;
-  assign \$434  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdcff;
-  assign \$436  = \$432  & (* src = "myc64.py:159" *) \$434 ;
-  assign \$438  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdd00;
-  assign \$440  = cpu_addr <= (* src = "myc64.py:161" *) 16'hddff;
-  assign \$442  = \$438  & (* src = "myc64.py:161" *) \$440 ;
-  assign \$444  = cpu_addr <= (* src = "myc64.py:132" *) 12'hfff;
-  assign \$446  = cpu_addr >= (* src = "myc64.py:135" *) 13'h1000;
-  assign \$448  = cpu_addr <= (* src = "myc64.py:135" *) 15'h7fff;
-  assign \$44  = cpu_addr >= (* src = "myc64.py:170" *) 16'he000;
-  assign \$450  = \$446  & (* src = "myc64.py:135" *) \$448 ;
-  assign \$452  = cpu_addr >= (* src = "myc64.py:138" *) 16'h8000;
-  assign \$454  = cpu_addr <= (* src = "myc64.py:138" *) 16'h9fff;
-  assign \$456  = \$452  & (* src = "myc64.py:138" *) \$454 ;
-  assign \$458  = cpu_addr >= (* src = "myc64.py:141" *) 16'ha000;
-  assign \$460  = cpu_addr <= (* src = "myc64.py:141" *) 16'hbfff;
-  assign \$462  = \$458  & (* src = "myc64.py:141" *) \$460 ;
-  assign \$464  = cpu_addr >= (* src = "myc64.py:147" *) 16'hc000;
-  assign \$466  = cpu_addr <= (* src = "myc64.py:147" *) 16'hcfff;
-  assign \$468  = \$464  & (* src = "myc64.py:147" *) \$466 ;
-  assign \$46  = cpu_po[2:0] == (* src = "myc64.py:142" *) 3'h7;
-  assign \$470  = cpu_addr >= (* src = "myc64.py:150" *) 16'hd000;
-  assign \$472  = cpu_addr <= (* src = "myc64.py:150" *) 16'hdfff;
-  assign \$474  = \$470  & (* src = "myc64.py:150" *) \$472 ;
-  assign \$476  = cpu_addr >= (* src = "myc64.py:170" *) 16'he000;
-  assign \$478  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h7;
-  assign \$480  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h6;
-  assign \$482  = \$478  | (* src = "myc64.py:151" *) \$480 ;
-  assign \$484  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h5;
-  assign \$486  = \$482  | (* src = "myc64.py:151" *) \$484 ;
-  assign \$488  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h3;
-  assign \$48  = cpu_po[2:0] == (* src = "myc64.py:142" *) 2'h3;
-  assign \$490  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h2;
-  assign \$492  = \$488  | (* src = "myc64.py:163" *) \$490 ;
-  assign \$494  = cpu_po[2:0] == (* src = "myc64.py:163" *) 1'h1;
-  assign \$496  = \$492  | (* src = "myc64.py:163" *) \$494 ;
-  assign \$498  = cpu_addr >= (* src = "myc64.py:153" *) 16'hd000;
-  assign \$4  = ! (* src = "myc64.py:63" *) clk_cntr;
-  assign \$500  = cpu_addr <= (* src = "myc64.py:153" *) 16'hd3ff;
-  assign \$502  = \$498  & (* src = "myc64.py:153" *) \$500 ;
-  assign \$504  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd400;
-  assign \$506  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd7ff;
-  assign \$508  = \$504  & (* src = "myc64.py:155" *) \$506 ;
-  assign \$50  = \$46  | (* src = "myc64.py:142" *) \$48 ;
-  assign \$510  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd800;
-  assign \$512  = cpu_addr <= (* src = "myc64.py:157" *) 16'hdbff;
-  assign \$514  = \$510  & (* src = "myc64.py:157" *) \$512 ;
-  assign \$516  = cpu_addr >= (* src = "myc64.py:159" *) 16'hdc00;
-  assign \$518  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdcff;
-  assign \$520  = \$516  & (* src = "myc64.py:159" *) \$518 ;
-  assign \$522  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdd00;
-  assign \$524  = cpu_addr <= (* src = "myc64.py:161" *) 16'hddff;
-  assign \$526  = \$522  & (* src = "myc64.py:161" *) \$524 ;
-  assign \$528  = cpu_addr <= (* src = "myc64.py:132" *) 12'hfff;
-  assign \$52  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h7;
-  assign \$530  = cpu_addr >= (* src = "myc64.py:135" *) 13'h1000;
-  assign \$532  = cpu_addr <= (* src = "myc64.py:135" *) 15'h7fff;
-  assign \$534  = \$530  & (* src = "myc64.py:135" *) \$532 ;
-  assign \$536  = cpu_addr >= (* src = "myc64.py:138" *) 16'h8000;
-  assign \$538  = cpu_addr <= (* src = "myc64.py:138" *) 16'h9fff;
-  assign \$540  = \$536  & (* src = "myc64.py:138" *) \$538 ;
-  assign \$542  = cpu_addr >= (* src = "myc64.py:141" *) 16'ha000;
-  assign \$544  = cpu_addr <= (* src = "myc64.py:141" *) 16'hbfff;
-  assign \$546  = \$542  & (* src = "myc64.py:141" *) \$544 ;
-  assign \$548  = cpu_addr >= (* src = "myc64.py:147" *) 16'hc000;
-  assign \$54  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h6;
-  assign \$550  = cpu_addr <= (* src = "myc64.py:147" *) 16'hcfff;
-  assign \$552  = \$548  & (* src = "myc64.py:147" *) \$550 ;
-  assign \$554  = cpu_addr >= (* src = "myc64.py:150" *) 16'hd000;
-  assign \$556  = cpu_addr <= (* src = "myc64.py:150" *) 16'hdfff;
-  assign \$558  = \$554  & (* src = "myc64.py:150" *) \$556 ;
-  assign \$560  = cpu_addr >= (* src = "myc64.py:170" *) 16'he000;
-  assign \$562  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h7;
-  assign \$564  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h6;
-  assign \$566  = \$562  | (* src = "myc64.py:151" *) \$564 ;
-  assign \$568  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h5;
-  assign \$56  = \$52  | (* src = "myc64.py:151" *) \$54 ;
-  assign \$570  = \$566  | (* src = "myc64.py:151" *) \$568 ;
-  assign \$572  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h3;
-  assign \$574  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h2;
-  assign \$576  = \$572  | (* src = "myc64.py:163" *) \$574 ;
-  assign \$578  = cpu_po[2:0] == (* src = "myc64.py:163" *) 1'h1;
-  assign \$580  = \$576  | (* src = "myc64.py:163" *) \$578 ;
-  assign \$582  = cpu_addr >= (* src = "myc64.py:153" *) 16'hd000;
-  assign \$584  = cpu_addr <= (* src = "myc64.py:153" *) 16'hd3ff;
-  assign \$586  = \$582  & (* src = "myc64.py:153" *) \$584 ;
-  assign \$588  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd400;
-  assign \$58  = cpu_po[2:0] == (* src = "myc64.py:151" *) 3'h5;
-  assign \$590  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd7ff;
-  assign \$592  = \$588  & (* src = "myc64.py:155" *) \$590 ;
-  assign \$594  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd800;
-  assign \$596  = cpu_addr <= (* src = "myc64.py:157" *) 16'hdbff;
-  assign \$598  = \$594  & (* src = "myc64.py:157" *) \$596 ;
-  assign \$600  = cpu_addr >= (* src = "myc64.py:159" *) 16'hdc00;
-  assign \$602  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdcff;
-  assign \$604  = \$600  & (* src = "myc64.py:159" *) \$602 ;
-  assign \$606  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdd00;
-  assign \$608  = cpu_addr <= (* src = "myc64.py:161" *) 16'hddff;
-  assign \$60  = \$56  | (* src = "myc64.py:151" *) \$58 ;
-  assign \$610  = \$606  & (* src = "myc64.py:161" *) \$608 ;
-  assign \$612  = clk_1mhz_ph1_en & (* src = "myc64.py:181" *) u_vic_BA;
-  assign \$614  = ~ (* src = "myc64.py:183" *) u_vic_IRQ;
-  assign \$616  = u_cia1_o_irq | (* src = "myc64.py:183" *) \$614 ;
-  assign \$619  = ~ (* src = "myc64.py:211" *) u_cia2_o_pa[1:0];
-  assign \$622  = ~ (* src = "myc64.py:211" *) u_vic_BM;
-  assign \$624  = vic_cycle | (* src = "myc64.py:211" *) \$622 ;
-  assign \$621  = \$624  ? (* src = "myc64.py:211" *) { \$619 , u_vic_o_addr } : cpu_addr;
-  assign \$627  = cpu_we & (* src = "myc64.py:212" *) u_vic_BM;
-  assign \$62  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h3;
-  assign \$629  = ~ (* src = "myc64.py:212" *) vic_cycle;
-  assign \$631  = \$627  & (* src = "myc64.py:212" *) \$629 ;
-  assign \$633  = bus_addr[15:12] == (* src = "myc64.py:216" *) 1'h1;
-  assign \$635  = bus_addr[15:12] == (* src = "myc64.py:216" *) 4'h9;
-  assign \$637  = \$633  | (* src = "myc64.py:216" *) \$635 ;
-  assign \$641  = ~ (* src = "myc64.py:223" *) u_cia1_o_pa[7];
-  assign \$640  = u_cia1_o_pa[7] ? (* src = "myc64.py:223" *) 8'h00 : i_keyboard_mask[63:56];
-  assign \$645  = ~ (* src = "myc64.py:224" *) u_cia1_o_pa[6];
-  assign \$644  = u_cia1_o_pa[6] ? (* src = "myc64.py:224" *) 8'h00 : i_keyboard_mask[55:48];
-  assign \$648  = \$640  | (* src = "myc64.py:223" *) \$644 ;
-  assign \$64  = cpu_po[2:0] == (* src = "myc64.py:163" *) 2'h2;
-  assign \$651  = ~ (* src = "myc64.py:225" *) u_cia1_o_pa[5];
-  assign \$650  = u_cia1_o_pa[5] ? (* src = "myc64.py:225" *) 8'h00 : i_keyboard_mask[47:40];
-  assign \$654  = \$648  | (* src = "myc64.py:223" *) \$650 ;
-  assign \$657  = ~ (* src = "myc64.py:226" *) u_cia1_o_pa[4];
-  assign \$656  = u_cia1_o_pa[4] ? (* src = "myc64.py:226" *) 8'h00 : i_keyboard_mask[39:32];
-  assign \$660  = \$654  | (* src = "myc64.py:223" *) \$656 ;
-  assign \$663  = ~ (* src = "myc64.py:227" *) u_cia1_o_pa[3];
-  assign \$662  = u_cia1_o_pa[3] ? (* src = "myc64.py:227" *) 8'h00 : i_keyboard_mask[31:24];
-  assign \$666  = \$660  | (* src = "myc64.py:223" *) \$662 ;
-  assign \$66  = \$62  | (* src = "myc64.py:163" *) \$64 ;
-  assign \$669  = ~ (* src = "myc64.py:228" *) u_cia1_o_pa[2];
-  assign \$668  = u_cia1_o_pa[2] ? (* src = "myc64.py:228" *) 8'h00 : i_keyboard_mask[23:16];
-  assign \$672  = \$666  | (* src = "myc64.py:223" *) \$668 ;
-  assign \$675  = ~ (* src = "myc64.py:229" *) u_cia1_o_pa[1];
-  assign \$674  = u_cia1_o_pa[1] ? (* src = "myc64.py:229" *) 8'h00 : i_keyboard_mask[15:8];
-  assign \$678  = \$672  | (* src = "myc64.py:223" *) \$674 ;
-  assign \$681  = ~ (* src = "myc64.py:230" *) u_cia1_o_pa[0];
-  assign \$680  = u_cia1_o_pa[0] ? (* src = "myc64.py:230" *) 8'h00 : i_keyboard_mask[7:0];
-  assign \$684  = \$678  | (* src = "myc64.py:223" *) \$680 ;
-  assign \$639  = ~ (* src = "myc64.py:222" *) \$684 ;
+  assign \$100  = \$96  & (* src = "myc64.py:163" *) \$98 ;
+  assign \$102  = + (* src = "myc64.py:89" *) u_ram_color_r_data;
+  assign \$104  = cpu_po[2:0] == (* src = "myc64.py:173" *) 3'h7;
+  assign \$106  = cpu_po[2:0] == (* src = "myc64.py:173" *) 3'h6;
+  assign \$108  = \$104  | (* src = "myc64.py:173" *) \$106 ;
+  assign \$10  = color_cs & (* src = "myc64.py:118" *) bus_we;
+  assign \$110  = cpu_po[2:0] == (* src = "myc64.py:173" *) 2'h3;
+  assign \$112  = \$108  | (* src = "myc64.py:173" *) \$110 ;
+  assign \$114  = cpu_po[2:0] == (* src = "myc64.py:173" *) 2'h2;
+  assign \$116  = \$112  | (* src = "myc64.py:173" *) \$114 ;
+  assign \$118  = cpu_addr <= (* src = "myc64.py:134" *) 12'hfff;
+  assign \$120  = cpu_addr >= (* src = "myc64.py:137" *) 13'h1000;
+  assign \$122  = cpu_addr <= (* src = "myc64.py:137" *) 15'h7fff;
+  assign \$124  = \$120  & (* src = "myc64.py:137" *) \$122 ;
+  assign \$126  = cpu_addr >= (* src = "myc64.py:140" *) 16'h8000;
+  assign \$128  = cpu_addr <= (* src = "myc64.py:140" *) 16'h9fff;
+  assign \$12  = cpu_addr <= (* src = "myc64.py:134" *) 12'hfff;
+  assign \$130  = \$126  & (* src = "myc64.py:140" *) \$128 ;
+  assign \$132  = cpu_addr >= (* src = "myc64.py:143" *) 16'ha000;
+  assign \$134  = cpu_addr <= (* src = "myc64.py:143" *) 16'hbfff;
+  assign \$136  = \$132  & (* src = "myc64.py:143" *) \$134 ;
+  assign \$138  = cpu_addr >= (* src = "myc64.py:149" *) 16'hc000;
+  assign \$140  = cpu_addr <= (* src = "myc64.py:149" *) 16'hcfff;
+  assign \$142  = \$138  & (* src = "myc64.py:149" *) \$140 ;
+  assign \$144  = cpu_addr >= (* src = "myc64.py:152" *) 16'hd000;
+  assign \$146  = cpu_addr <= (* src = "myc64.py:152" *) 16'hdfff;
+  assign \$148  = \$144  & (* src = "myc64.py:152" *) \$146 ;
+  assign \$14  = cpu_addr >= (* src = "myc64.py:137" *) 13'h1000;
+  assign \$150  = cpu_addr >= (* src = "myc64.py:172" *) 16'he000;
+  assign \$152  = cpu_po[2:0] == (* src = "myc64.py:144" *) 3'h7;
+  assign \$154  = cpu_po[2:0] == (* src = "myc64.py:144" *) 2'h3;
+  assign \$156  = \$152  | (* src = "myc64.py:144" *) \$154 ;
+  assign \$158  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h7;
+  assign \$160  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h6;
+  assign \$162  = \$158  | (* src = "myc64.py:153" *) \$160 ;
+  assign \$164  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h5;
+  assign \$166  = \$162  | (* src = "myc64.py:153" *) \$164 ;
+  assign \$168  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h3;
+  assign \$16  = cpu_addr <= (* src = "myc64.py:137" *) 15'h7fff;
+  assign \$170  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h2;
+  assign \$172  = \$168  | (* src = "myc64.py:165" *) \$170 ;
+  assign \$174  = cpu_po[2:0] == (* src = "myc64.py:165" *) 1'h1;
+  assign \$176  = \$172  | (* src = "myc64.py:165" *) \$174 ;
+  assign \$178  = cpu_po[2:0] == (* src = "myc64.py:173" *) 3'h7;
+  assign \$180  = cpu_po[2:0] == (* src = "myc64.py:173" *) 3'h6;
+  assign \$182  = \$178  | (* src = "myc64.py:173" *) \$180 ;
+  assign \$184  = cpu_po[2:0] == (* src = "myc64.py:173" *) 2'h3;
+  assign \$186  = \$182  | (* src = "myc64.py:173" *) \$184 ;
+  assign \$188  = cpu_po[2:0] == (* src = "myc64.py:173" *) 2'h2;
+  assign \$18  = \$14  & (* src = "myc64.py:137" *) \$16 ;
+  assign \$190  = \$186  | (* src = "myc64.py:173" *) \$188 ;
+  assign \$192  = cpu_addr <= (* src = "myc64.py:134" *) 12'hfff;
+  assign \$194  = cpu_addr >= (* src = "myc64.py:137" *) 13'h1000;
+  assign \$196  = cpu_addr <= (* src = "myc64.py:137" *) 15'h7fff;
+  assign \$198  = \$194  & (* src = "myc64.py:137" *) \$196 ;
+  assign \$200  = cpu_addr >= (* src = "myc64.py:140" *) 16'h8000;
+  assign \$202  = cpu_addr <= (* src = "myc64.py:140" *) 16'h9fff;
+  assign \$204  = \$200  & (* src = "myc64.py:140" *) \$202 ;
+  assign \$206  = cpu_addr >= (* src = "myc64.py:143" *) 16'ha000;
+  assign \$208  = cpu_addr <= (* src = "myc64.py:143" *) 16'hbfff;
+  assign \$20  = cpu_addr >= (* src = "myc64.py:140" *) 16'h8000;
+  assign \$210  = \$206  & (* src = "myc64.py:143" *) \$208 ;
+  assign \$212  = cpu_addr >= (* src = "myc64.py:149" *) 16'hc000;
+  assign \$214  = cpu_addr <= (* src = "myc64.py:149" *) 16'hcfff;
+  assign \$216  = \$212  & (* src = "myc64.py:149" *) \$214 ;
+  assign \$218  = cpu_addr >= (* src = "myc64.py:152" *) 16'hd000;
+  assign \$220  = cpu_addr <= (* src = "myc64.py:152" *) 16'hdfff;
+  assign \$222  = \$218  & (* src = "myc64.py:152" *) \$220 ;
+  assign \$224  = cpu_addr >= (* src = "myc64.py:172" *) 16'he000;
+  assign \$226  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h7;
+  assign \$228  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h6;
+  assign \$22  = cpu_addr <= (* src = "myc64.py:140" *) 16'h9fff;
+  assign \$230  = \$226  | (* src = "myc64.py:153" *) \$228 ;
+  assign \$232  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h5;
+  assign \$234  = \$230  | (* src = "myc64.py:153" *) \$232 ;
+  assign \$236  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h3;
+  assign \$238  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h2;
+  assign \$240  = \$236  | (* src = "myc64.py:165" *) \$238 ;
+  assign \$242  = cpu_po[2:0] == (* src = "myc64.py:165" *) 1'h1;
+  assign \$244  = \$240  | (* src = "myc64.py:165" *) \$242 ;
+  assign \$246  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd000;
+  assign \$248  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd3ff;
+  assign \$24  = \$20  & (* src = "myc64.py:140" *) \$22 ;
+  assign \$250  = \$246  & (* src = "myc64.py:155" *) \$248 ;
+  assign \$252  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd400;
+  assign \$254  = cpu_addr <= (* src = "myc64.py:157" *) 16'hd7ff;
+  assign \$256  = \$252  & (* src = "myc64.py:157" *) \$254 ;
+  assign \$258  = cpu_addr >= (* src = "myc64.py:159" *) 16'hd800;
+  assign \$260  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdbff;
+  assign \$262  = \$258  & (* src = "myc64.py:159" *) \$260 ;
+  assign \$264  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdc00;
+  assign \$266  = cpu_addr <= (* src = "myc64.py:161" *) 16'hdcff;
+  assign \$268  = \$264  & (* src = "myc64.py:161" *) \$266 ;
+  assign \$26  = cpu_addr >= (* src = "myc64.py:143" *) 16'ha000;
+  assign \$270  = cpu_addr >= (* src = "myc64.py:163" *) 16'hdd00;
+  assign \$272  = cpu_addr <= (* src = "myc64.py:163" *) 16'hddff;
+  assign \$274  = \$270  & (* src = "myc64.py:163" *) \$272 ;
+  assign \$276  = cpu_addr <= (* src = "myc64.py:134" *) 12'hfff;
+  assign \$278  = cpu_addr >= (* src = "myc64.py:137" *) 13'h1000;
+  assign \$280  = cpu_addr <= (* src = "myc64.py:137" *) 15'h7fff;
+  assign \$282  = \$278  & (* src = "myc64.py:137" *) \$280 ;
+  assign \$284  = cpu_addr >= (* src = "myc64.py:140" *) 16'h8000;
+  assign \$286  = cpu_addr <= (* src = "myc64.py:140" *) 16'h9fff;
+  assign \$288  = \$284  & (* src = "myc64.py:140" *) \$286 ;
+  assign \$28  = cpu_addr <= (* src = "myc64.py:143" *) 16'hbfff;
+  assign \$290  = cpu_addr >= (* src = "myc64.py:143" *) 16'ha000;
+  assign \$292  = cpu_addr <= (* src = "myc64.py:143" *) 16'hbfff;
+  assign \$294  = \$290  & (* src = "myc64.py:143" *) \$292 ;
+  assign \$296  = cpu_addr >= (* src = "myc64.py:149" *) 16'hc000;
+  assign \$298  = cpu_addr <= (* src = "myc64.py:149" *) 16'hcfff;
+  assign \$2  = clk_cntr + (* src = "myc64.py:60" *) 1'h1;
+  assign \$300  = \$296  & (* src = "myc64.py:149" *) \$298 ;
+  assign \$302  = cpu_addr >= (* src = "myc64.py:152" *) 16'hd000;
+  assign \$304  = cpu_addr <= (* src = "myc64.py:152" *) 16'hdfff;
+  assign \$306  = \$302  & (* src = "myc64.py:152" *) \$304 ;
+  assign \$308  = cpu_addr >= (* src = "myc64.py:172" *) 16'he000;
+  assign \$30  = \$26  & (* src = "myc64.py:143" *) \$28 ;
+  assign \$310  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h7;
+  assign \$312  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h6;
+  assign \$314  = \$310  | (* src = "myc64.py:153" *) \$312 ;
+  assign \$316  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h5;
+  assign \$318  = \$314  | (* src = "myc64.py:153" *) \$316 ;
+  assign \$320  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h3;
+  assign \$322  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h2;
+  assign \$324  = \$320  | (* src = "myc64.py:165" *) \$322 ;
+  assign \$326  = cpu_po[2:0] == (* src = "myc64.py:165" *) 1'h1;
+  assign \$328  = \$324  | (* src = "myc64.py:165" *) \$326 ;
+  assign \$32  = cpu_addr >= (* src = "myc64.py:149" *) 16'hc000;
+  assign \$330  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd000;
+  assign \$332  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd3ff;
+  assign \$334  = \$330  & (* src = "myc64.py:155" *) \$332 ;
+  assign \$336  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd400;
+  assign \$338  = cpu_addr <= (* src = "myc64.py:157" *) 16'hd7ff;
+  assign \$340  = \$336  & (* src = "myc64.py:157" *) \$338 ;
+  assign \$342  = cpu_addr >= (* src = "myc64.py:159" *) 16'hd800;
+  assign \$344  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdbff;
+  assign \$346  = \$342  & (* src = "myc64.py:159" *) \$344 ;
+  assign \$348  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdc00;
+  assign \$34  = cpu_addr <= (* src = "myc64.py:149" *) 16'hcfff;
+  assign \$350  = cpu_addr <= (* src = "myc64.py:161" *) 16'hdcff;
+  assign \$352  = \$348  & (* src = "myc64.py:161" *) \$350 ;
+  assign \$354  = cpu_addr >= (* src = "myc64.py:163" *) 16'hdd00;
+  assign \$356  = cpu_addr <= (* src = "myc64.py:163" *) 16'hddff;
+  assign \$358  = \$354  & (* src = "myc64.py:163" *) \$356 ;
+  assign \$360  = cpu_addr <= (* src = "myc64.py:134" *) 12'hfff;
+  assign \$362  = cpu_addr >= (* src = "myc64.py:137" *) 13'h1000;
+  assign \$364  = cpu_addr <= (* src = "myc64.py:137" *) 15'h7fff;
+  assign \$366  = \$362  & (* src = "myc64.py:137" *) \$364 ;
+  assign \$368  = cpu_addr >= (* src = "myc64.py:140" *) 16'h8000;
+  assign \$36  = \$32  & (* src = "myc64.py:149" *) \$34 ;
+  assign \$370  = cpu_addr <= (* src = "myc64.py:140" *) 16'h9fff;
+  assign \$372  = \$368  & (* src = "myc64.py:140" *) \$370 ;
+  assign \$374  = cpu_addr >= (* src = "myc64.py:143" *) 16'ha000;
+  assign \$376  = cpu_addr <= (* src = "myc64.py:143" *) 16'hbfff;
+  assign \$378  = \$374  & (* src = "myc64.py:143" *) \$376 ;
+  assign \$380  = cpu_addr >= (* src = "myc64.py:149" *) 16'hc000;
+  assign \$382  = cpu_addr <= (* src = "myc64.py:149" *) 16'hcfff;
+  assign \$384  = \$380  & (* src = "myc64.py:149" *) \$382 ;
+  assign \$386  = cpu_addr >= (* src = "myc64.py:152" *) 16'hd000;
+  assign \$388  = cpu_addr <= (* src = "myc64.py:152" *) 16'hdfff;
+  assign \$38  = cpu_addr >= (* src = "myc64.py:152" *) 16'hd000;
+  assign \$390  = \$386  & (* src = "myc64.py:152" *) \$388 ;
+  assign \$392  = cpu_addr >= (* src = "myc64.py:172" *) 16'he000;
+  assign \$394  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h7;
+  assign \$396  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h6;
+  assign \$398  = \$394  | (* src = "myc64.py:153" *) \$396 ;
+  assign \$400  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h5;
+  assign \$402  = \$398  | (* src = "myc64.py:153" *) \$400 ;
+  assign \$404  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h3;
+  assign \$406  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h2;
+  assign \$408  = \$404  | (* src = "myc64.py:165" *) \$406 ;
+  assign \$40  = cpu_addr <= (* src = "myc64.py:152" *) 16'hdfff;
+  assign \$410  = cpu_po[2:0] == (* src = "myc64.py:165" *) 1'h1;
+  assign \$412  = \$408  | (* src = "myc64.py:165" *) \$410 ;
+  assign \$414  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd000;
+  assign \$416  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd3ff;
+  assign \$418  = \$414  & (* src = "myc64.py:155" *) \$416 ;
+  assign \$420  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd400;
+  assign \$422  = cpu_addr <= (* src = "myc64.py:157" *) 16'hd7ff;
+  assign \$424  = \$420  & (* src = "myc64.py:157" *) \$422 ;
+  assign \$426  = cpu_addr >= (* src = "myc64.py:159" *) 16'hd800;
+  assign \$428  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdbff;
+  assign \$42  = \$38  & (* src = "myc64.py:152" *) \$40 ;
+  assign \$430  = \$426  & (* src = "myc64.py:159" *) \$428 ;
+  assign \$432  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdc00;
+  assign \$434  = cpu_addr <= (* src = "myc64.py:161" *) 16'hdcff;
+  assign \$436  = \$432  & (* src = "myc64.py:161" *) \$434 ;
+  assign \$438  = cpu_addr >= (* src = "myc64.py:163" *) 16'hdd00;
+  assign \$440  = cpu_addr <= (* src = "myc64.py:163" *) 16'hddff;
+  assign \$442  = \$438  & (* src = "myc64.py:163" *) \$440 ;
+  assign \$444  = cpu_addr <= (* src = "myc64.py:134" *) 12'hfff;
+  assign \$446  = cpu_addr >= (* src = "myc64.py:137" *) 13'h1000;
+  assign \$448  = cpu_addr <= (* src = "myc64.py:137" *) 15'h7fff;
+  assign \$44  = cpu_addr >= (* src = "myc64.py:172" *) 16'he000;
+  assign \$450  = \$446  & (* src = "myc64.py:137" *) \$448 ;
+  assign \$452  = cpu_addr >= (* src = "myc64.py:140" *) 16'h8000;
+  assign \$454  = cpu_addr <= (* src = "myc64.py:140" *) 16'h9fff;
+  assign \$456  = \$452  & (* src = "myc64.py:140" *) \$454 ;
+  assign \$458  = cpu_addr >= (* src = "myc64.py:143" *) 16'ha000;
+  assign \$460  = cpu_addr <= (* src = "myc64.py:143" *) 16'hbfff;
+  assign \$462  = \$458  & (* src = "myc64.py:143" *) \$460 ;
+  assign \$464  = cpu_addr >= (* src = "myc64.py:149" *) 16'hc000;
+  assign \$466  = cpu_addr <= (* src = "myc64.py:149" *) 16'hcfff;
+  assign \$468  = \$464  & (* src = "myc64.py:149" *) \$466 ;
+  assign \$46  = cpu_po[2:0] == (* src = "myc64.py:144" *) 3'h7;
+  assign \$470  = cpu_addr >= (* src = "myc64.py:152" *) 16'hd000;
+  assign \$472  = cpu_addr <= (* src = "myc64.py:152" *) 16'hdfff;
+  assign \$474  = \$470  & (* src = "myc64.py:152" *) \$472 ;
+  assign \$476  = cpu_addr >= (* src = "myc64.py:172" *) 16'he000;
+  assign \$478  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h7;
+  assign \$480  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h6;
+  assign \$482  = \$478  | (* src = "myc64.py:153" *) \$480 ;
+  assign \$484  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h5;
+  assign \$486  = \$482  | (* src = "myc64.py:153" *) \$484 ;
+  assign \$488  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h3;
+  assign \$48  = cpu_po[2:0] == (* src = "myc64.py:144" *) 2'h3;
+  assign \$490  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h2;
+  assign \$492  = \$488  | (* src = "myc64.py:165" *) \$490 ;
+  assign \$494  = cpu_po[2:0] == (* src = "myc64.py:165" *) 1'h1;
+  assign \$496  = \$492  | (* src = "myc64.py:165" *) \$494 ;
+  assign \$498  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd000;
+  assign \$4  = ! (* src = "myc64.py:64" *) clk_cntr;
+  assign \$500  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd3ff;
+  assign \$502  = \$498  & (* src = "myc64.py:155" *) \$500 ;
+  assign \$504  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd400;
+  assign \$506  = cpu_addr <= (* src = "myc64.py:157" *) 16'hd7ff;
+  assign \$508  = \$504  & (* src = "myc64.py:157" *) \$506 ;
+  assign \$50  = \$46  | (* src = "myc64.py:144" *) \$48 ;
+  assign \$510  = cpu_addr >= (* src = "myc64.py:159" *) 16'hd800;
+  assign \$512  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdbff;
+  assign \$514  = \$510  & (* src = "myc64.py:159" *) \$512 ;
+  assign \$516  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdc00;
+  assign \$518  = cpu_addr <= (* src = "myc64.py:161" *) 16'hdcff;
+  assign \$520  = \$516  & (* src = "myc64.py:161" *) \$518 ;
+  assign \$522  = cpu_addr >= (* src = "myc64.py:163" *) 16'hdd00;
+  assign \$524  = cpu_addr <= (* src = "myc64.py:163" *) 16'hddff;
+  assign \$526  = \$522  & (* src = "myc64.py:163" *) \$524 ;
+  assign \$528  = cpu_addr <= (* src = "myc64.py:134" *) 12'hfff;
+  assign \$52  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h7;
+  assign \$530  = cpu_addr >= (* src = "myc64.py:137" *) 13'h1000;
+  assign \$532  = cpu_addr <= (* src = "myc64.py:137" *) 15'h7fff;
+  assign \$534  = \$530  & (* src = "myc64.py:137" *) \$532 ;
+  assign \$536  = cpu_addr >= (* src = "myc64.py:140" *) 16'h8000;
+  assign \$538  = cpu_addr <= (* src = "myc64.py:140" *) 16'h9fff;
+  assign \$540  = \$536  & (* src = "myc64.py:140" *) \$538 ;
+  assign \$542  = cpu_addr >= (* src = "myc64.py:143" *) 16'ha000;
+  assign \$544  = cpu_addr <= (* src = "myc64.py:143" *) 16'hbfff;
+  assign \$546  = \$542  & (* src = "myc64.py:143" *) \$544 ;
+  assign \$548  = cpu_addr >= (* src = "myc64.py:149" *) 16'hc000;
+  assign \$54  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h6;
+  assign \$550  = cpu_addr <= (* src = "myc64.py:149" *) 16'hcfff;
+  assign \$552  = \$548  & (* src = "myc64.py:149" *) \$550 ;
+  assign \$554  = cpu_addr >= (* src = "myc64.py:152" *) 16'hd000;
+  assign \$556  = cpu_addr <= (* src = "myc64.py:152" *) 16'hdfff;
+  assign \$558  = \$554  & (* src = "myc64.py:152" *) \$556 ;
+  assign \$560  = cpu_addr >= (* src = "myc64.py:172" *) 16'he000;
+  assign \$562  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h7;
+  assign \$564  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h6;
+  assign \$566  = \$562  | (* src = "myc64.py:153" *) \$564 ;
+  assign \$568  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h5;
+  assign \$56  = \$52  | (* src = "myc64.py:153" *) \$54 ;
+  assign \$570  = \$566  | (* src = "myc64.py:153" *) \$568 ;
+  assign \$572  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h3;
+  assign \$574  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h2;
+  assign \$576  = \$572  | (* src = "myc64.py:165" *) \$574 ;
+  assign \$578  = cpu_po[2:0] == (* src = "myc64.py:165" *) 1'h1;
+  assign \$580  = \$576  | (* src = "myc64.py:165" *) \$578 ;
+  assign \$582  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd000;
+  assign \$584  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd3ff;
+  assign \$586  = \$582  & (* src = "myc64.py:155" *) \$584 ;
+  assign \$588  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd400;
+  assign \$58  = cpu_po[2:0] == (* src = "myc64.py:153" *) 3'h5;
+  assign \$590  = cpu_addr <= (* src = "myc64.py:157" *) 16'hd7ff;
+  assign \$592  = \$588  & (* src = "myc64.py:157" *) \$590 ;
+  assign \$594  = cpu_addr >= (* src = "myc64.py:159" *) 16'hd800;
+  assign \$596  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdbff;
+  assign \$598  = \$594  & (* src = "myc64.py:159" *) \$596 ;
+  assign \$600  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdc00;
+  assign \$602  = cpu_addr <= (* src = "myc64.py:161" *) 16'hdcff;
+  assign \$604  = \$600  & (* src = "myc64.py:161" *) \$602 ;
+  assign \$606  = cpu_addr >= (* src = "myc64.py:163" *) 16'hdd00;
+  assign \$608  = cpu_addr <= (* src = "myc64.py:163" *) 16'hddff;
+  assign \$60  = \$56  | (* src = "myc64.py:153" *) \$58 ;
+  assign \$610  = \$606  & (* src = "myc64.py:163" *) \$608 ;
+  assign \$612  = clk_1mhz_ph1_en & (* src = "myc64.py:183" *) u_vic_BA;
+  assign \$614  = ~ (* src = "myc64.py:185" *) u_vic_IRQ;
+  assign \$616  = u_cia1_o_irq | (* src = "myc64.py:185" *) \$614 ;
+  assign \$619  = ~ (* src = "myc64.py:219" *) u_cia2_o_pa[1:0];
+  assign \$622  = ~ (* src = "myc64.py:219" *) u_vic_BM;
+  assign \$624  = vic_cycle | (* src = "myc64.py:219" *) \$622 ;
+  assign \$621  = \$624  ? (* src = "myc64.py:219" *) { \$619 , u_vic_o_addr } : cpu_addr;
+  assign \$627  = cpu_we & (* src = "myc64.py:220" *) u_vic_BM;
+  assign \$62  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h3;
+  assign \$629  = ~ (* src = "myc64.py:220" *) vic_cycle;
+  assign \$631  = \$627  & (* src = "myc64.py:220" *) \$629 ;
+  assign \$633  = bus_addr[15:12] == (* src = "myc64.py:224" *) 1'h1;
+  assign \$635  = bus_addr[15:12] == (* src = "myc64.py:224" *) 4'h9;
+  assign \$637  = \$633  | (* src = "myc64.py:224" *) \$635 ;
+  assign \$641  = ~ (* src = "myc64.py:231" *) u_cia1_o_pa[7];
+  assign \$640  = u_cia1_o_pa[7] ? (* src = "myc64.py:231" *) 8'h00 : i_keyboard_mask[63:56];
+  assign \$645  = ~ (* src = "myc64.py:232" *) u_cia1_o_pa[6];
+  assign \$644  = u_cia1_o_pa[6] ? (* src = "myc64.py:232" *) 8'h00 : i_keyboard_mask[55:48];
+  assign \$648  = \$640  | (* src = "myc64.py:231" *) \$644 ;
+  assign \$64  = cpu_po[2:0] == (* src = "myc64.py:165" *) 2'h2;
+  assign \$651  = ~ (* src = "myc64.py:233" *) u_cia1_o_pa[5];
+  assign \$650  = u_cia1_o_pa[5] ? (* src = "myc64.py:233" *) 8'h00 : i_keyboard_mask[47:40];
+  assign \$654  = \$648  | (* src = "myc64.py:231" *) \$650 ;
+  assign \$657  = ~ (* src = "myc64.py:234" *) u_cia1_o_pa[4];
+  assign \$656  = u_cia1_o_pa[4] ? (* src = "myc64.py:234" *) 8'h00 : i_keyboard_mask[39:32];
+  assign \$660  = \$654  | (* src = "myc64.py:231" *) \$656 ;
+  assign \$663  = ~ (* src = "myc64.py:235" *) u_cia1_o_pa[3];
+  assign \$662  = u_cia1_o_pa[3] ? (* src = "myc64.py:235" *) 8'h00 : i_keyboard_mask[31:24];
+  assign \$666  = \$660  | (* src = "myc64.py:231" *) \$662 ;
+  assign \$66  = \$62  | (* src = "myc64.py:165" *) \$64 ;
+  assign \$669  = ~ (* src = "myc64.py:236" *) u_cia1_o_pa[2];
+  assign \$668  = u_cia1_o_pa[2] ? (* src = "myc64.py:236" *) 8'h00 : i_keyboard_mask[23:16];
+  assign \$672  = \$666  | (* src = "myc64.py:231" *) \$668 ;
+  assign \$675  = ~ (* src = "myc64.py:237" *) u_cia1_o_pa[1];
+  assign \$674  = u_cia1_o_pa[1] ? (* src = "myc64.py:237" *) 8'h00 : i_keyboard_mask[15:8];
+  assign \$678  = \$672  | (* src = "myc64.py:231" *) \$674 ;
+  assign \$681  = ~ (* src = "myc64.py:238" *) u_cia1_o_pa[0];
+  assign \$680  = u_cia1_o_pa[0] ? (* src = "myc64.py:238" *) 8'h00 : i_keyboard_mask[7:0];
+  assign \$684  = \$678  | (* src = "myc64.py:231" *) \$680 ;
+  assign \$639  = ~ (* src = "myc64.py:230" *) \$684 ;
   always @(posedge clk)
     clk_cntr <= \clk_cntr$next ;
   always @(posedge clk)
     vic_cycle <= \vic_cycle$next ;
-  assign \$68  = cpu_po[2:0] == (* src = "myc64.py:163" *) 1'h1;
-  assign \$6  = clk_cntr == (* src = "myc64.py:63" *) 3'h4;
-  assign \$70  = \$66  | (* src = "myc64.py:163" *) \$68 ;
-  assign \$72  = cpu_addr >= (* src = "myc64.py:153" *) 16'hd000;
-  assign \$74  = cpu_addr <= (* src = "myc64.py:153" *) 16'hd3ff;
-  assign \$76  = \$72  & (* src = "myc64.py:153" *) \$74 ;
-  assign \$78  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd400;
-  assign \$80  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd7ff;
-  assign \$82  = \$78  & (* src = "myc64.py:155" *) \$80 ;
-  assign \$84  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd800;
-  assign \$86  = cpu_addr <= (* src = "myc64.py:157" *) 16'hdbff;
-  assign \$88  = \$84  & (* src = "myc64.py:157" *) \$86 ;
-  assign \$8  = ram_cs & (* src = "myc64.py:115" *) bus_we;
-  assign \$90  = cpu_addr >= (* src = "myc64.py:159" *) 16'hdc00;
-  assign \$92  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdcff;
-  assign \$94  = \$90  & (* src = "myc64.py:159" *) \$92 ;
-  assign \$96  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdd00;
-  assign \$98  = cpu_addr <= (* src = "myc64.py:161" *) 16'hddff;
+  assign \$68  = cpu_po[2:0] == (* src = "myc64.py:165" *) 1'h1;
+  assign \$6  = clk_cntr == (* src = "myc64.py:64" *) 3'h4;
+  assign \$70  = \$66  | (* src = "myc64.py:165" *) \$68 ;
+  assign \$72  = cpu_addr >= (* src = "myc64.py:155" *) 16'hd000;
+  assign \$74  = cpu_addr <= (* src = "myc64.py:155" *) 16'hd3ff;
+  assign \$76  = \$72  & (* src = "myc64.py:155" *) \$74 ;
+  assign \$78  = cpu_addr >= (* src = "myc64.py:157" *) 16'hd400;
+  assign \$80  = cpu_addr <= (* src = "myc64.py:157" *) 16'hd7ff;
+  assign \$82  = \$78  & (* src = "myc64.py:157" *) \$80 ;
+  assign \$84  = cpu_addr >= (* src = "myc64.py:159" *) 16'hd800;
+  assign \$86  = cpu_addr <= (* src = "myc64.py:159" *) 16'hdbff;
+  assign \$88  = \$84  & (* src = "myc64.py:159" *) \$86 ;
+  assign \$8  = ram_cs & (* src = "myc64.py:117" *) bus_we;
+  assign \$90  = cpu_addr >= (* src = "myc64.py:161" *) 16'hdc00;
+  assign \$92  = cpu_addr <= (* src = "myc64.py:161" *) 16'hdcff;
+  assign \$94  = \$90  & (* src = "myc64.py:161" *) \$92 ;
+  assign \$96  = cpu_addr >= (* src = "myc64.py:163" *) 16'hdd00;
+  assign \$98  = cpu_addr <= (* src = "myc64.py:163" *) 16'hddff;
   u_cia1 u_cia1 (
     .clk(clk),
     .clk_1mhz_ph_en(u_cia1_clk_1mhz_ph_en),
@@ -2302,6 +2314,17 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
     .o_we(u_cpu_o_we),
     .rst(rst)
   );
+  u_sid u_sid (
+    .clk(clk),
+    .i_addr(u_sid_i_addr),
+    .i_clk_1mhz_ph1_en(u_sid_i_clk_1mhz_ph1_en),
+    .i_cs(u_sid_i_cs),
+    .i_data(u_sid_i_data),
+    .i_we(u_sid_i_we),
+    .o_data(u_sid_o_data),
+    .o_wave(u_sid_o_wave),
+    .rst(rst)
+  );
   u_vic u_vic (
     .BA(u_vic_BA),
     .BM(u_vic_BM),
@@ -2335,73 +2358,73 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     cpu_di = 8'h00;
-    (* src = "myc64.py:132" *)
+    (* src = "myc64.py:134" *)
     casez ({ \$44 , \$42 , \$36 , \$30 , \$24 , \$18 , \$12  })
-      /* src = "myc64.py:132" */
+      /* src = "myc64.py:134" */
       7'b??????1:
           cpu_di = i_ram_main_data;
-      /* src = "myc64.py:135" */
+      /* src = "myc64.py:137" */
       7'b?????1?:
           cpu_di = i_ram_main_data;
-      /* src = "myc64.py:138" */
+      /* src = "myc64.py:140" */
       7'b????1??:
           cpu_di = i_ram_main_data;
-      /* src = "myc64.py:141" */
+      /* src = "myc64.py:143" */
       7'b???1???:
           (* full_case = 32'd1 *)
-          (* src = "myc64.py:142" *)
+          (* src = "myc64.py:144" *)
           casez (\$50 )
-            /* src = "myc64.py:142" */
+            /* src = "myc64.py:144" */
             1'h1:
                 cpu_di = i_rom_basic_data;
-            /* src = "myc64.py:144" */
+            /* src = "myc64.py:146" */
             default:
                 cpu_di = i_ram_main_data;
           endcase
-      /* src = "myc64.py:147" */
+      /* src = "myc64.py:149" */
       7'b??1????:
           cpu_di = i_ram_main_data;
-      /* src = "myc64.py:150" */
+      /* src = "myc64.py:152" */
       7'b?1?????:
           (* full_case = 32'd1 *)
-          (* src = "myc64.py:151" *)
+          (* src = "myc64.py:153" *)
           casez ({ \$70 , \$60  })
-            /* src = "myc64.py:151" */
+            /* src = "myc64.py:153" */
             2'b?1:
-                (* src = "myc64.py:153" *)
+                (* src = "myc64.py:155" *)
                 casez ({ \$100 , \$94 , \$88 , \$82 , \$76  })
-                  /* src = "myc64.py:153" */
+                  /* src = "myc64.py:155" */
                   5'b????1:
                       cpu_di = u_vic_o_reg_data;
-                  /* src = "myc64.py:155" */
-                  5'b???1?:
-                      cpu_di = 8'h00;
                   /* src = "myc64.py:157" */
+                  5'b???1?:
+                      cpu_di = u_sid_o_data;
+                  /* src = "myc64.py:159" */
                   5'b??1??:
                       cpu_di = \$102 ;
-                  /* src = "myc64.py:159" */
+                  /* src = "myc64.py:161" */
                   5'b?1???:
                       cpu_di = u_cia1_o_data;
-                  /* src = "myc64.py:161" */
+                  /* src = "myc64.py:163" */
                   5'h1?:
                       cpu_di = u_cia2_o_data;
                 endcase
-            /* src = "myc64.py:163" */
+            /* src = "myc64.py:165" */
             2'b1?:
                 cpu_di = i_rom_char_data;
-            /* src = "myc64.py:166" */
+            /* src = "myc64.py:168" */
             default:
                 cpu_di = i_ram_main_data;
           endcase
-      /* src = "myc64.py:170" */
+      /* src = "myc64.py:172" */
       7'b1??????:
           (* full_case = 32'd1 *)
-          (* src = "myc64.py:171" *)
+          (* src = "myc64.py:173" *)
           casez (\$116 )
-            /* src = "myc64.py:171" */
+            /* src = "myc64.py:173" */
             1'h1:
                 cpu_di = i_rom_kernal_data;
-            /* src = "myc64.py:173" */
+            /* src = "myc64.py:175" */
             default:
                 cpu_di = i_ram_main_data;
           endcase
@@ -2410,56 +2433,56 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     ram_cs = 1'h0;
-    (* src = "myc64.py:132" *)
+    (* src = "myc64.py:134" *)
     casez ({ \$150 , \$148 , \$142 , \$136 , \$130 , \$124 , \$118  })
-      /* src = "myc64.py:132" */
+      /* src = "myc64.py:134" */
       7'b??????1:
           ram_cs = 1'h1;
-      /* src = "myc64.py:135" */
+      /* src = "myc64.py:137" */
       7'b?????1?:
           ram_cs = 1'h1;
-      /* src = "myc64.py:138" */
+      /* src = "myc64.py:140" */
       7'b????1??:
           ram_cs = 1'h1;
-      /* src = "myc64.py:141" */
+      /* src = "myc64.py:143" */
       7'b???1???:
           (* full_case = 32'd1 *)
-          (* src = "myc64.py:142" *)
+          (* src = "myc64.py:144" *)
           casez (\$156 )
-            /* src = "myc64.py:142" */
+            /* src = "myc64.py:144" */
             1'h1:
                 /* empty */;
-            /* src = "myc64.py:144" */
+            /* src = "myc64.py:146" */
             default:
                 ram_cs = 1'h1;
           endcase
-      /* src = "myc64.py:147" */
+      /* src = "myc64.py:149" */
       7'b??1????:
           ram_cs = 1'h1;
-      /* src = "myc64.py:150" */
+      /* src = "myc64.py:152" */
       7'b?1?????:
           (* full_case = 32'd1 *)
-          (* src = "myc64.py:151" *)
+          (* src = "myc64.py:153" *)
           casez ({ \$176 , \$166  })
-            /* src = "myc64.py:151" */
+            /* src = "myc64.py:153" */
             2'b?1:
                 /* empty */;
-            /* src = "myc64.py:163" */
+            /* src = "myc64.py:165" */
             2'b1?:
                 /* empty */;
-            /* src = "myc64.py:166" */
+            /* src = "myc64.py:168" */
             default:
                 ram_cs = 1'h1;
           endcase
-      /* src = "myc64.py:170" */
+      /* src = "myc64.py:172" */
       7'b1??????:
           (* full_case = 32'd1 *)
-          (* src = "myc64.py:171" *)
+          (* src = "myc64.py:173" *)
           casez (\$190 )
-            /* src = "myc64.py:171" */
+            /* src = "myc64.py:173" */
             1'h1:
                 /* empty */;
-            /* src = "myc64.py:173" */
+            /* src = "myc64.py:175" */
             default:
                 ram_cs = 1'h1;
           endcase
@@ -2468,32 +2491,32 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     u_vic_i_reg_cs = 1'h0;
-    (* src = "myc64.py:132" *)
+    (* src = "myc64.py:134" *)
     casez ({ \$224 , \$222 , \$216 , \$210 , \$204 , \$198 , \$192  })
-      /* src = "myc64.py:132" */
+      /* src = "myc64.py:134" */
       7'b??????1:
           /* empty */;
-      /* src = "myc64.py:135" */
+      /* src = "myc64.py:137" */
       7'b?????1?:
           /* empty */;
-      /* src = "myc64.py:138" */
+      /* src = "myc64.py:140" */
       7'b????1??:
           /* empty */;
-      /* src = "myc64.py:141" */
+      /* src = "myc64.py:143" */
       7'b???1???:
           /* empty */;
-      /* src = "myc64.py:147" */
+      /* src = "myc64.py:149" */
       7'b??1????:
           /* empty */;
-      /* src = "myc64.py:150" */
+      /* src = "myc64.py:152" */
       7'b?1?????:
-          (* src = "myc64.py:151" *)
+          (* src = "myc64.py:153" *)
           casez ({ \$244 , \$234  })
-            /* src = "myc64.py:151" */
+            /* src = "myc64.py:153" */
             2'b?1:
-                (* src = "myc64.py:153" *)
+                (* src = "myc64.py:155" *)
                 casez ({ \$274 , \$268 , \$262 , \$256 , \$250  })
-                  /* src = "myc64.py:153" */
+                  /* src = "myc64.py:155" */
                   5'b????1:
                       u_vic_i_reg_cs = 1'h1;
                 endcase
@@ -2503,35 +2526,35 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     sid_cs = 1'h0;
-    (* src = "myc64.py:132" *)
+    (* src = "myc64.py:134" *)
     casez ({ \$308 , \$306 , \$300 , \$294 , \$288 , \$282 , \$276  })
-      /* src = "myc64.py:132" */
+      /* src = "myc64.py:134" */
       7'b??????1:
           /* empty */;
-      /* src = "myc64.py:135" */
+      /* src = "myc64.py:137" */
       7'b?????1?:
           /* empty */;
-      /* src = "myc64.py:138" */
+      /* src = "myc64.py:140" */
       7'b????1??:
           /* empty */;
-      /* src = "myc64.py:141" */
+      /* src = "myc64.py:143" */
       7'b???1???:
           /* empty */;
-      /* src = "myc64.py:147" */
+      /* src = "myc64.py:149" */
       7'b??1????:
           /* empty */;
-      /* src = "myc64.py:150" */
+      /* src = "myc64.py:152" */
       7'b?1?????:
-          (* src = "myc64.py:151" *)
+          (* src = "myc64.py:153" *)
           casez ({ \$328 , \$318  })
-            /* src = "myc64.py:151" */
+            /* src = "myc64.py:153" */
             2'b?1:
-                (* src = "myc64.py:153" *)
+                (* src = "myc64.py:155" *)
                 casez ({ \$358 , \$352 , \$346 , \$340 , \$334  })
-                  /* src = "myc64.py:153" */
+                  /* src = "myc64.py:155" */
                   5'b????1:
                       /* empty */;
-                  /* src = "myc64.py:155" */
+                  /* src = "myc64.py:157" */
                   5'b???1?:
                       sid_cs = 1'h1;
                 endcase
@@ -2541,41 +2564,41 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     cia1_cs = 1'h0;
-    (* src = "myc64.py:132" *)
+    (* src = "myc64.py:134" *)
     casez ({ \$392 , \$390 , \$384 , \$378 , \$372 , \$366 , \$360  })
-      /* src = "myc64.py:132" */
+      /* src = "myc64.py:134" */
       7'b??????1:
           /* empty */;
-      /* src = "myc64.py:135" */
+      /* src = "myc64.py:137" */
       7'b?????1?:
           /* empty */;
-      /* src = "myc64.py:138" */
+      /* src = "myc64.py:140" */
       7'b????1??:
           /* empty */;
-      /* src = "myc64.py:141" */
+      /* src = "myc64.py:143" */
       7'b???1???:
           /* empty */;
-      /* src = "myc64.py:147" */
+      /* src = "myc64.py:149" */
       7'b??1????:
           /* empty */;
-      /* src = "myc64.py:150" */
+      /* src = "myc64.py:152" */
       7'b?1?????:
-          (* src = "myc64.py:151" *)
+          (* src = "myc64.py:153" *)
           casez ({ \$412 , \$402  })
-            /* src = "myc64.py:151" */
+            /* src = "myc64.py:153" */
             2'b?1:
-                (* src = "myc64.py:153" *)
+                (* src = "myc64.py:155" *)
                 casez ({ \$442 , \$436 , \$430 , \$424 , \$418  })
-                  /* src = "myc64.py:153" */
+                  /* src = "myc64.py:155" */
                   5'b????1:
                       /* empty */;
-                  /* src = "myc64.py:155" */
+                  /* src = "myc64.py:157" */
                   5'b???1?:
                       /* empty */;
-                  /* src = "myc64.py:157" */
+                  /* src = "myc64.py:159" */
                   5'b??1??:
                       /* empty */;
-                  /* src = "myc64.py:159" */
+                  /* src = "myc64.py:161" */
                   5'b?1???:
                       cia1_cs = 1'h1;
                 endcase
@@ -2585,44 +2608,44 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     cia2_cs = 1'h0;
-    (* src = "myc64.py:132" *)
+    (* src = "myc64.py:134" *)
     casez ({ \$476 , \$474 , \$468 , \$462 , \$456 , \$450 , \$444  })
-      /* src = "myc64.py:132" */
+      /* src = "myc64.py:134" */
       7'b??????1:
           /* empty */;
-      /* src = "myc64.py:135" */
+      /* src = "myc64.py:137" */
       7'b?????1?:
           /* empty */;
-      /* src = "myc64.py:138" */
+      /* src = "myc64.py:140" */
       7'b????1??:
           /* empty */;
-      /* src = "myc64.py:141" */
+      /* src = "myc64.py:143" */
       7'b???1???:
           /* empty */;
-      /* src = "myc64.py:147" */
+      /* src = "myc64.py:149" */
       7'b??1????:
           /* empty */;
-      /* src = "myc64.py:150" */
+      /* src = "myc64.py:152" */
       7'b?1?????:
-          (* src = "myc64.py:151" *)
+          (* src = "myc64.py:153" *)
           casez ({ \$496 , \$486  })
-            /* src = "myc64.py:151" */
+            /* src = "myc64.py:153" */
             2'b?1:
-                (* src = "myc64.py:153" *)
+                (* src = "myc64.py:155" *)
                 casez ({ \$526 , \$520 , \$514 , \$508 , \$502  })
-                  /* src = "myc64.py:153" */
+                  /* src = "myc64.py:155" */
                   5'b????1:
                       /* empty */;
-                  /* src = "myc64.py:155" */
+                  /* src = "myc64.py:157" */
                   5'b???1?:
                       /* empty */;
-                  /* src = "myc64.py:157" */
+                  /* src = "myc64.py:159" */
                   5'b??1??:
                       /* empty */;
-                  /* src = "myc64.py:159" */
+                  /* src = "myc64.py:161" */
                   5'b?1???:
                       /* empty */;
-                  /* src = "myc64.py:161" */
+                  /* src = "myc64.py:163" */
                   5'h1?:
                       cia2_cs = 1'h1;
                 endcase
@@ -2632,38 +2655,38 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     color_cs = 1'h0;
-    (* src = "myc64.py:132" *)
+    (* src = "myc64.py:134" *)
     casez ({ \$560 , \$558 , \$552 , \$546 , \$540 , \$534 , \$528  })
-      /* src = "myc64.py:132" */
+      /* src = "myc64.py:134" */
       7'b??????1:
           /* empty */;
-      /* src = "myc64.py:135" */
+      /* src = "myc64.py:137" */
       7'b?????1?:
           /* empty */;
-      /* src = "myc64.py:138" */
+      /* src = "myc64.py:140" */
       7'b????1??:
           /* empty */;
-      /* src = "myc64.py:141" */
+      /* src = "myc64.py:143" */
       7'b???1???:
           /* empty */;
-      /* src = "myc64.py:147" */
+      /* src = "myc64.py:149" */
       7'b??1????:
           /* empty */;
-      /* src = "myc64.py:150" */
+      /* src = "myc64.py:152" */
       7'b?1?????:
-          (* src = "myc64.py:151" *)
+          (* src = "myc64.py:153" *)
           casez ({ \$580 , \$570  })
-            /* src = "myc64.py:151" */
+            /* src = "myc64.py:153" */
             2'b?1:
-                (* src = "myc64.py:153" *)
+                (* src = "myc64.py:155" *)
                 casez ({ \$610 , \$604 , \$598 , \$592 , \$586  })
-                  /* src = "myc64.py:153" */
+                  /* src = "myc64.py:155" */
                   5'b????1:
                       /* empty */;
-                  /* src = "myc64.py:155" */
+                  /* src = "myc64.py:157" */
                   5'b???1?:
                       /* empty */;
-                  /* src = "myc64.py:157" */
+                  /* src = "myc64.py:159" */
                   5'b??1??:
                       color_cs = 1'h1;
                 endcase
@@ -2673,12 +2696,12 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     \vic_cycle$next  = vic_cycle;
-    (* src = "myc64.py:66" *)
+    (* src = "myc64.py:67" *)
     casez ({ clk_1mhz_ph2_en, clk_1mhz_ph1_en })
-      /* src = "myc64.py:66" */
+      /* src = "myc64.py:67" */
       2'b?1:
           \vic_cycle$next  = 1'h0;
-      /* src = "myc64.py:68" */
+      /* src = "myc64.py:69" */
       2'b1?:
           \vic_cycle$next  = 1'h1;
     endcase
@@ -2691,12 +2714,12 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "myc64.py:216" *)
+    (* src = "myc64.py:224" *)
     casez (\$637 )
-      /* src = "myc64.py:216" */
+      /* src = "myc64.py:224" */
       1'h1:
           u_vic_i_data = { u_ram_color_r_data, i_rom_char_data };
-      /* src = "myc64.py:218" */
+      /* src = "myc64.py:226" */
       default:
           u_vic_i_data = { u_ram_color_r_data, i_ram_main_data };
     endcase
@@ -2704,61 +2727,61 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$1 ) begin end
     (* full_case = 32'd1 *)
-    (* src = "myc64.py:234" *)
+    (* src = "myc64.py:242" *)
     casez (u_vic_o_color)
-      /* src = "myc64.py:235" */
+      /* src = "myc64.py:243" */
       4'h0:
           o_vid_rgb = 24'h000000;
-      /* src = "myc64.py:237" */
+      /* src = "myc64.py:245" */
       4'h1:
           o_vid_rgb = 24'hffffff;
-      /* src = "myc64.py:239" */
+      /* src = "myc64.py:247" */
       4'h2:
           o_vid_rgb = 24'h880000;
-      /* src = "myc64.py:241" */
+      /* src = "myc64.py:249" */
       4'h3:
           o_vid_rgb = 24'haaffee;
-      /* src = "myc64.py:243" */
+      /* src = "myc64.py:251" */
       4'h4:
           o_vid_rgb = 24'hcc44cc;
-      /* src = "myc64.py:245" */
+      /* src = "myc64.py:253" */
       4'h5:
           o_vid_rgb = 24'h00cc55;
-      /* src = "myc64.py:247" */
+      /* src = "myc64.py:255" */
       4'h6:
           o_vid_rgb = 24'h0000aa;
-      /* src = "myc64.py:249" */
+      /* src = "myc64.py:257" */
       4'h7:
           o_vid_rgb = 24'heeee77;
-      /* src = "myc64.py:251" */
+      /* src = "myc64.py:259" */
       4'h8:
           o_vid_rgb = 24'hdd8855;
-      /* src = "myc64.py:253" */
+      /* src = "myc64.py:261" */
       4'h9:
           o_vid_rgb = 24'h664400;
-      /* src = "myc64.py:255" */
+      /* src = "myc64.py:263" */
       4'ha:
           o_vid_rgb = 24'hff7777;
-      /* src = "myc64.py:257" */
+      /* src = "myc64.py:265" */
       4'hb:
           o_vid_rgb = 24'h333333;
-      /* src = "myc64.py:259" */
+      /* src = "myc64.py:267" */
       4'hc:
           o_vid_rgb = 24'h777777;
-      /* src = "myc64.py:261" */
+      /* src = "myc64.py:269" */
       4'hd:
           o_vid_rgb = 24'haaff66;
-      /* src = "myc64.py:263" */
+      /* src = "myc64.py:271" */
       4'he:
           o_vid_rgb = 24'h0088ff;
-      /* src = "myc64.py:265" */
+      /* src = "myc64.py:273" */
       4'hf:
           o_vid_rgb = 24'hbbbbbb;
     endcase
   end
   assign \$1  = \$2 ;
   assign u_ram_color_r_en = 1'h1;
-  assign sid_do = 8'h00;
+  assign o_wave = u_sid_o_wave;
   assign o_vid_en = u_vic_o_visib;
   assign o_vid_vsync = u_vic_o_vsync;
   assign o_vid_hsync = u_vic_o_hsync;
@@ -2776,6 +2799,11 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   assign u_cia1_i_addr = bus_addr[3:0];
   assign u_cia1_i_cs = cia1_cs;
   assign u_cia1_clk_1mhz_ph_en = clk_1mhz_ph2_en;
+  assign u_sid_i_we = bus_we;
+  assign u_sid_i_data = bus_do;
+  assign u_sid_i_addr = bus_addr[4:0];
+  assign u_sid_i_cs = sid_cs;
+  assign u_sid_i_clk_1mhz_ph1_en = clk_1mhz_ph2_en;
   assign u_vic_i_reg_we = bus_we;
   assign u_vic_i_reg_data = bus_do;
   assign u_vic_i_reg_addr = bus_addr[5:0];
@@ -3725,6 +3753,49 @@ module u_cpu(i_data, i_irq, o_addr, o_we, o_data, o_port, clk_1mhz_ph2_en, i_BA,
   assign i_nmi = 1'h0;
   assign data_i = \$15 ;
   assign rdy = \$3 ;
+endmodule
+
+(* \amaranth.hierarchy  = "myc64_top.u_sid" *)
+(* generator = "Amaranth" *)
+module u_sid(i_clk_1mhz_ph1_en, i_cs, i_addr, i_data, i_we, o_wave, rst, clk, o_data);
+  (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/ir.py:508" *)
+  input clk;
+  wire clk;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:28" *)
+  input [4:0] i_addr;
+  wire [4:0] i_addr;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:26" *)
+  input i_clk_1mhz_ph1_en;
+  wire i_clk_1mhz_ph1_en;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:27" *)
+  input i_cs;
+  wire i_cs;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:30" *)
+  input [7:0] i_data;
+  wire [7:0] i_data;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:29" *)
+  input i_we;
+  wire i_we;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:31" *)
+  output [7:0] o_data;
+  wire [7:0] o_data;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/sid.py:32" *)
+  output [15:0] o_wave;
+  wire [15:0] o_wave;
+  (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/ir.py:508" *)
+  input rst;
+  wire rst;
+  sid u_sid (
+    .clk(clk),
+    .clk_1mhz_ph1_en(i_clk_1mhz_ph1_en),
+    .i_addr(i_addr),
+    .i_cs(i_cs),
+    .i_data(i_data),
+    .i_we(i_we),
+    .o_data(o_data),
+    .o_wave(o_wave),
+    .rst(rst)
+  );
 endmodule
 
 (* \amaranth.hierarchy  = "myc64_top.u_vic" *)

@@ -22,6 +22,7 @@ from amaranth import *
 from cpu6510 import Cpu6510
 from cia import Cia
 from vicii import VicII
+from sid import Sid
 
 
 class MyC64(Elaboratable):
@@ -74,6 +75,9 @@ class MyC64(Elaboratable):
     # Vic-II.
     m.submodules.u_vic = u_vic = VicII()
 
+    # SID.
+    m.submodules.u_sid = u_sid = Sid()
+
     # CIA-1.
     m.submodules.u_cia1 = u_cia1 = Cia()
 
@@ -98,8 +102,6 @@ class MyC64(Elaboratable):
     cpu_di = Signal(8)
     cpu_do = Signal(8)
     cpu_po = Signal(6)
-
-    sid_do = Signal(8)
 
     bus_addr = Signal(16)
     bus_we = Signal()
@@ -153,7 +155,7 @@ class MyC64(Elaboratable):
         with m.If((0xD000 <= cpu_addr) & (cpu_addr <= 0xD3FF)):  # VIC-II
           m.d.comb += [cpu_di.eq(u_vic.o_reg_data), u_vic.i_reg_cs.eq(1)]
         with m.Elif((0xD400 <= cpu_addr) & (cpu_addr <= 0xD7FF)):  # SID
-          m.d.comb += [cpu_di.eq(sid_do), sid_cs.eq(1)]
+          m.d.comb += [cpu_di.eq(u_sid.o_data), sid_cs.eq(1)]
         with m.Elif((0xD800 <= cpu_addr) & (cpu_addr <= 0xDBFF)):  # COLOR-RAM
           m.d.comb += [cpu_di.eq(u_ram_color_rp.data), color_cs.eq(1)]
         with m.Elif((0xDC00 <= cpu_addr) & (cpu_addr <= 0xDCFF)):  # CIA1
@@ -195,6 +197,12 @@ class MyC64(Elaboratable):
         u_vic.i_reg_addr.eq(bus_addr),
         u_vic.i_reg_data.eq(bus_do),
         u_vic.i_reg_we.eq(bus_we),
+        # SID
+        u_sid.i_clk_1mhz_ph1_en.eq(clk_1mhz_ph2_en),
+        u_sid.i_cs.eq(sid_cs),
+        u_sid.i_addr.eq(bus_addr),
+        u_sid.i_data.eq(bus_do),
+        u_sid.i_we.eq(bus_we),
         # CIA-1
         u_cia1.clk_1mhz_ph_en.eq(clk_1mhz_ph2_en),
         u_cia1.i_cs.eq(cia1_cs),
@@ -229,7 +237,7 @@ class MyC64(Elaboratable):
         Mux(~u_cia1.o_pa[1], self.i_keyboard_mask[8:16], 0) |  #
         Mux(~u_cia1.o_pa[0], self.i_keyboard_mask[0:8], 0)))
 
-    m.d.comb += [self.o_vid_hsync.eq(u_vic.o_hsync), self.o_vid_vsync.eq(u_vic.o_vsync), self.o_vid_en.eq(u_vic.o_visib)]
+    m.d.comb += [self.o_vid_hsync.eq(u_vic.o_hsync), self.o_vid_vsync.eq(u_vic.o_vsync), self.o_vid_en.eq(u_vic.o_visib), self.o_wave.eq(u_sid.o_wave)]
 
     with m.Switch(u_vic.o_color):
       with m.Case(0x0):
