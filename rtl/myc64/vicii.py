@@ -162,7 +162,7 @@ class VicII(Elaboratable):
 
     m.d.comb += [self.o_hsync.eq(x == p_x_raster_last),
                  self.o_vsync.eq((y == 0) & (x == (p_x_raster_last - 3))),
-                 self.o_visib.eq((cycle >= p_cycle_first_disp - 4) & (cycle < p_cycle_first_disp + 40 + 4) & (raster >= 0x30 - 32) & (raster <= 0xf7))]
+                 self.o_visib.eq((cycle >= p_cycle_first_disp - 2) & (cycle < p_cycle_first_disp + 40 + 4) & (raster >= 0x30 - 32) & (raster <= 0xf7 + 32))]
 
     sprite_idx = Signal(range(8))
     refresh_idx = Signal(range(5))

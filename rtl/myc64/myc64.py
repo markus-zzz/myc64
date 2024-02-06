@@ -24,35 +24,30 @@ from cia import Cia
 from vicii import VicII
 
 
-def readMemInit(path):
-  init = []
-  with open(path, 'rb') as f:
-    while True:
-      bytes = f.read(1)
-      if len(bytes) > 0:
-        init.append(int.from_bytes(bytes, byteorder='little', signed=False))
-      else:
-        break
-    f.close()
-  return init
-
-
 class MyC64(Elaboratable):
   def __init__(self):
-    self.o_color_idx = Signal(4)
+    self.o_vid_rgb = Signal(24)
     self.o_vid_hsync = Signal()
     self.o_vid_vsync = Signal()
     self.o_vid_en = Signal()
     self.o_wave = Signal(16)
     self.i_keyboard_mask = Signal(64)
-    self.i_ext_we = Signal()
-    self.i_ext_addr = Signal(16)
-    self.i_ext_data = Signal(8)
-    self.o_ext_ready = Signal()
+
+    self.o_bus_addr = Signal(16)
+    self.i_rom_char_data = Signal(8)
+    self.i_rom_basic_data = Signal(8)
+    self.i_rom_kernal_data = Signal(8)
+    self.i_ram_main_data = Signal(8)
+    self.o_ram_main_data = Signal(8)
+    self.o_ram_main_we = Signal()
+
+    self.o_clk_1mhz_ph1_en = Signal()
+    self.o_clk_1mhz_ph2_en = Signal()
 
     self.ports = [
-        self.o_color_idx, self.o_hsync, self.o_vsync, self.o_wave, self.i_keyboard_mask, self.i_ext_we, self.i_ext_addr,
-        self.i_ext_data, self.o_ext_ready
+        self.o_vid_rgb, self.o_vid_hsync, self.o_vid_vsync, self.o_vid_en, self.o_wave, self.i_keyboard_mask,
+        self.o_bus_addr, self.i_rom_char_data, self.i_rom_basic_data, self.i_rom_kernal_data,
+        self.i_ram_main_data, self.o_ram_main_data, self.o_ram_main_we, self.o_clk_1mhz_ph1_en, self.o_clk_1mhz_ph2_en
     ]
 
   def elaborate(self, platform):
@@ -85,27 +80,6 @@ class MyC64(Elaboratable):
     # CIA-2.
     m.submodules.u_cia2 = u_cia2 = Cia()
 
-    # Character generator ROM.
-    u_rom_char = Memory(width=8, depth=4096, init=readMemInit('../roms/characters.901225-01.bin'))
-    u_rom_char_rp = u_rom_char.read_port()
-    m.submodules += u_rom_char_rp
-
-    # BASIC ROM.
-    u_rom_basic = Memory(width=8, depth=8192, init=readMemInit('../roms/basic.901226-01.bin'))
-    u_rom_basic_rp = u_rom_basic.read_port()
-    m.submodules += u_rom_basic_rp
-
-    # KERNAL ROM.
-    u_rom_kernal = Memory(width=8, depth=8192, init=readMemInit('../roms/kernal.901227-03.bin'))
-    u_rom_kernal_rp = u_rom_kernal.read_port()
-    m.submodules += u_rom_kernal_rp
-
-    # Main RAM.
-    u_ram_main = Memory(width=8, depth=pow(2, 16))
-    u_ram_main_rp = u_ram_main.read_port()
-    u_ram_main_wp = u_ram_main.write_port()
-    m.submodules += [u_ram_main_rp, u_ram_main_wp]
-
     # Color RAM.
     u_ram_color = Memory(width=4, depth=pow(2, 10))
     u_ram_color_rp = u_ram_color.read_port()
@@ -132,15 +106,13 @@ class MyC64(Elaboratable):
     bus_di = Signal(8)
     bus_do = Signal(8)
 
-    m.d.comb += [u_rom_char_rp.addr.eq(bus_addr), u_rom_basic_rp.addr.eq(bus_addr), u_rom_kernal_rp.addr.eq(bus_addr)]
+    m.d.comb += [self.o_bus_addr.eq(bus_addr), self.o_clk_1mhz_ph1_en.eq(clk_1mhz_ph1_en), self.o_clk_1mhz_ph2_en.eq(clk_1mhz_ph2_en)]
     m.d.comb += [
-        u_ram_main_rp.addr.eq(bus_addr),
         u_ram_color_rp.addr.eq(bus_addr),
-        u_ram_main_wp.addr.eq(bus_addr),
         u_ram_color_wp.addr.eq(bus_addr),
-        u_ram_main_wp.data.eq(bus_do),
         u_ram_color_wp.data.eq(bus_do),
-        u_ram_main_wp.en.eq(ram_cs & bus_we),
+        self.o_ram_main_data.eq(bus_do),
+        self.o_ram_main_we.eq(ram_cs & bus_we),
         u_ram_color_wp.en.eq(color_cs & bus_we)
     ]
 
@@ -158,22 +130,22 @@ class MyC64(Elaboratable):
 
     # RAM (which the system requires and must appear in each mode)
     with m.If(cpu_addr <= 0x0FFF):
-      m.d.comb += [cpu_di.eq(u_ram_main_rp.data), ram_cs.eq(1)]
+      m.d.comb += [cpu_di.eq(self.i_ram_main_data), ram_cs.eq(1)]
     #RAM or is unmapped
     with m.Elif((0x1000 <= cpu_addr) & (cpu_addr <= 0x7FFF)):
-      m.d.comb += [cpu_di.eq(u_ram_main_rp.data), ram_cs.eq(1)]
+      m.d.comb += [cpu_di.eq(self.i_ram_main_data), ram_cs.eq(1)]
     # RAM or cartridge ROM
     with m.Elif((0x8000 <= cpu_addr) & (cpu_addr <= 0x9FFF)):
-      m.d.comb += [cpu_di.eq(u_ram_main_rp.data), ram_cs.eq(1)]
+      m.d.comb += [cpu_di.eq(self.i_ram_main_data), ram_cs.eq(1)]
     # RAM, BASIC interpretor ROM, cartridge ROM or is unmapped
     with m.Elif((0xA000 <= cpu_addr) & (cpu_addr <= 0xBFFF)):
       with m.If((cpu_po[0:3] == 0b111) | (cpu_po[0:3] == 0b011)):
-        m.d.comb += [cpu_di.eq(u_rom_basic_rp.data)]
+        m.d.comb += [cpu_di.eq(self.i_rom_basic_data)]
       with m.Else():
-        m.d.comb += [cpu_di.eq(u_ram_main_rp.data), ram_cs.eq(1)]
+        m.d.comb += [cpu_di.eq(self.i_ram_main_data), ram_cs.eq(1)]
     # RAM or is unmapped
     with m.Elif((0xC000 <= cpu_addr) & (cpu_addr <= 0xCFFF)):
-      m.d.comb += [cpu_di.eq(u_ram_main_rp.data), ram_cs.eq(1)]
+      m.d.comb += [cpu_di.eq(self.i_ram_main_data), ram_cs.eq(1)]
     # RAM, Character generator ROM, or I/O registers and Color RAM
     with m.Elif((0xD000 <= cpu_addr) & (cpu_addr <= 0xDFFF)):
       with m.If((cpu_po[0:3] == 0b111) | (cpu_po[0:3] == 0b110) | (cpu_po[0:3] == 0b101)):
@@ -190,16 +162,16 @@ class MyC64(Elaboratable):
           m.d.comb += [cpu_di.eq(u_cia2.o_data), cia2_cs.eq(1)]
       with m.Elif((cpu_po[0:3] == 0b011) | (cpu_po[0:3] == 0b010) | (cpu_po[0:3] == 0b001)):
         # CHAR ROM
-        m.d.comb += [cpu_di.eq(u_rom_char_rp.data)]
+        m.d.comb += [cpu_di.eq(self.i_rom_char_data)]
       with m.Else():
         # RAM
-        m.d.comb += [cpu_di.eq(u_ram_main_rp.data), ram_cs.eq(1)]
+        m.d.comb += [cpu_di.eq(self.i_ram_main_data), ram_cs.eq(1)]
     # RAM, KERNAL ROM or cartridge ROM
     with m.Elif(0xE000 <= cpu_addr):
       with m.If((cpu_po[0:3] == 0b111) | (cpu_po[0:3] == 0b110) | (cpu_po[0:3] == 0b011) | (cpu_po[0:3] == 0b010)):
-        m.d.comb += [cpu_di.eq(u_rom_kernal_rp.data)]
+        m.d.comb += [cpu_di.eq(self.i_rom_kernal_data)]
       with m.Else():
-        m.d.comb += [cpu_di.eq(u_ram_main_rp.data), ram_cs.eq(1)]
+        m.d.comb += [cpu_di.eq(self.i_ram_main_data), ram_cs.eq(1)]
 
     #
     #
@@ -242,9 +214,9 @@ class MyC64(Elaboratable):
     ]
 
     with m.If((bus_addr[12:16] == 0b0001) | (bus_addr[12:16] == 0b1001)):
-      m.d.comb += u_vic.i_data.eq(Cat(u_rom_char_rp.data, u_ram_color_rp.data))
+      m.d.comb += u_vic.i_data.eq(Cat(self.i_rom_char_data, u_ram_color_rp.data))
     with m.Else():
-      m.d.comb += u_vic.i_data.eq(Cat(u_ram_main_rp.data, u_ram_color_rp.data))
+      m.d.comb += u_vic.i_data.eq(Cat(self.i_ram_main_data, u_ram_color_rp.data))
 
     # Keyboard matrix.
     m.d.comb += u_cia1.i_pb.eq(~(
@@ -257,7 +229,41 @@ class MyC64(Elaboratable):
         Mux(~u_cia1.o_pa[1], self.i_keyboard_mask[8:16], 0) |  #
         Mux(~u_cia1.o_pa[0], self.i_keyboard_mask[0:8], 0)))
 
-    m.d.comb += [self.o_color_idx.eq(u_vic.o_color), self.o_vid_hsync.eq(u_vic.o_hsync), self.o_vid_vsync.eq(u_vic.o_vsync), self.o_vid_en(u_vic.o_visib)]
+    m.d.comb += [self.o_vid_hsync.eq(u_vic.o_hsync), self.o_vid_vsync.eq(u_vic.o_vsync), self.o_vid_en.eq(u_vic.o_visib)]
+
+    with m.Switch(u_vic.o_color):
+      with m.Case(0x0):
+        m.d.comb += self.o_vid_rgb.eq(0x000000)
+      with m.Case(0x1):
+        m.d.comb += self.o_vid_rgb.eq(0xffffff)
+      with m.Case(0x2):
+        m.d.comb += self.o_vid_rgb.eq(0x880000)
+      with m.Case(0x3):
+        m.d.comb += self.o_vid_rgb.eq(0xaaffee)
+      with m.Case(0x4):
+        m.d.comb += self.o_vid_rgb.eq(0xcc44cc)
+      with m.Case(0x5):
+        m.d.comb += self.o_vid_rgb.eq(0x00cc55)
+      with m.Case(0x6):
+        m.d.comb += self.o_vid_rgb.eq(0x0000aa)
+      with m.Case(0x7):
+        m.d.comb += self.o_vid_rgb.eq(0xeeee77)
+      with m.Case(0x8):
+        m.d.comb += self.o_vid_rgb.eq(0xdd8855)
+      with m.Case(0x9):
+        m.d.comb += self.o_vid_rgb.eq(0x664400)
+      with m.Case(0xa):
+        m.d.comb += self.o_vid_rgb.eq(0xff7777)
+      with m.Case(0xb):
+        m.d.comb += self.o_vid_rgb.eq(0x333333)
+      with m.Case(0xc):
+        m.d.comb += self.o_vid_rgb.eq(0x777777)
+      with m.Case(0xd):
+        m.d.comb += self.o_vid_rgb.eq(0xaaff66)
+      with m.Case(0xe):
+        m.d.comb += self.o_vid_rgb.eq(0x0088ff)
+      with m.Case(0xf):
+        m.d.comb += self.o_vid_rgb.eq(0xbbbbbb)
 
     return m
 
@@ -273,5 +279,5 @@ if __name__ == "__main__":
 
   myc64 = MyC64()
 
-  with open("amaranth.v", "w") as f:
+  with open("myc64.v", "w") as f:
     f.write(verilog.convert(elaboratable=myc64, name='myc64_top', ports=myc64.ports))
