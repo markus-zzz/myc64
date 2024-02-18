@@ -778,37 +778,37 @@ module myc64_top(o_vid_hsync, o_vid_vsync, o_vid_en, o_wave, i_keyboard_mask, o_
   wire rst;
   (* src = "myc64.py:95" *)
   reg sid_cs;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:25" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:26" *)
   wire u_cia1_clk_1mhz_ph_en;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:27" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:28" *)
   wire [3:0] u_cia1_i_addr;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:26" *)
-  wire u_cia1_i_cs;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:29" *)
-  wire [7:0] u_cia1_i_data;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:32" *)
-  wire [7:0] u_cia1_i_pb;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:28" *)
-  wire u_cia1_i_we;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:30" *)
-  wire [7:0] u_cia1_o_data;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:33" *)
-  wire u_cia1_o_irq;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:31" *)
-  wire [7:0] u_cia1_o_pa;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:25" *)
-  wire u_cia2_clk_1mhz_ph_en;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:27" *)
-  wire [3:0] u_cia2_i_addr;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:26" *)
-  wire u_cia2_i_cs;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:29" *)
-  wire [7:0] u_cia2_i_data;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:28" *)
-  wire u_cia2_i_we;
+  wire u_cia1_i_cs;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:30" *)
-  wire [7:0] u_cia2_o_data;
+  wire [7:0] u_cia1_i_data;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:34" *)
+  wire [7:0] u_cia1_i_pb;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:29" *)
+  wire u_cia1_i_we;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:31" *)
+  wire [7:0] u_cia1_o_data;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:36" *)
+  wire u_cia1_o_irq;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:33" *)
+  wire [7:0] u_cia1_o_pa;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:26" *)
+  wire u_cia2_clk_1mhz_ph_en;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:28" *)
+  wire [3:0] u_cia2_i_addr;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:27" *)
+  wire u_cia2_i_cs;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:30" *)
+  wire [7:0] u_cia2_i_data;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:29" *)
+  wire u_cia2_i_we;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:31" *)
+  wire [7:0] u_cia2_o_data;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:33" *)
   wire [7:0] u_cia2_o_pa;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cpu6510.py:26" *)
   wire u_cpu_clk_1mhz_ph2_en;
@@ -2837,324 +2837,946 @@ endmodule
 (* generator = "Amaranth" *)
 module u_cia1(o_irq, clk_1mhz_ph_en, i_cs, i_addr, i_we, i_data, i_pb, o_pa, rst, clk, o_data);
   reg \$auto$verilog_backend.cc:2083:dump_module$2  = 0;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:104" *)
   wire \$1 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" *)
+  wire \$100 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" *)
+  wire \$102 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *)
   wire \$11 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *)
   wire \$13 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$15 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$17 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$19 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:104" *)
+  wire [4:0] \$2 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$21 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$23 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$25 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$27 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$29 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-  wire \$3 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *)
-  wire \$31 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:81" *)
-  wire [16:0] \$33 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:81" *)
-  wire [16:0] \$34 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:139" *)
+  wire [16:0] \$31 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:139" *)
+  wire [16:0] \$32 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$34 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$36 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$38 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$40 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$42 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$44 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$46 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$48 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *)
   wire \$5 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$50 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$52 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$54 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$56 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$58 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$60 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$62 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$64 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$66 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$68 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *)
   wire \$7 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:166" *)
+  wire [4:0] \$70 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:168" *)
+  wire [4:0] \$72 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:168" *)
+  wire [4:0] \$74 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$76 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$78 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$80 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$82 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$84 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$86 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$88 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *)
   wire \$9 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$90 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$92 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$94 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$96 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$98 ;
   (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/ir.py:508" *)
   input clk;
   wire clk;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:25" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:26" *)
   input clk_1mhz_ph_en;
   wire clk_1mhz_ph_en;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:27" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:28" *)
   input [3:0] i_addr;
   wire [3:0] i_addr;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:26" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:27" *)
   input i_cs;
   wire i_cs;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:29" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:30" *)
   input [7:0] i_data;
   wire [7:0] i_data;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:32" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:34" *)
   input [7:0] i_pb;
   wire [7:0] i_pb;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:28" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:29" *)
   input i_we;
   wire i_we;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:30" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:98" *)
+  reg icr_mask_alrm = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:98" *)
+  reg \icr_mask_alrm$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:100" *)
+  reg icr_mask_flg = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:100" *)
+  reg \icr_mask_flg$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:99" *)
+  reg icr_mask_sp = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:99" *)
+  reg \icr_mask_sp$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:96" *)
+  reg icr_mask_ta = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:96" *)
+  reg \icr_mask_ta$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:97" *)
+  reg icr_mask_tb = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:97" *)
+  reg \icr_mask_tb$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:90" *)
+  reg icr_status_alrm = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:90" *)
+  reg \icr_status_alrm$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:92" *)
+  reg icr_status_flg = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:92" *)
+  reg \icr_status_flg$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:91" *)
+  reg icr_status_sp = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:91" *)
+  reg \icr_status_sp$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:88" *)
+  reg icr_status_ta = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:88" *)
+  reg \icr_status_ta$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:89" *)
+  reg icr_status_tb = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:89" *)
+  reg \icr_status_tb$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:103" *)
+  wire irq;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:31" *)
   output [7:0] o_data;
   reg [7:0] o_data;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:33" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:36" *)
   output o_irq;
-  reg o_irq = 1'h0;
+  wire o_irq;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:33" *)
-  reg \o_irq$next ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:31" *)
   output [7:0] o_pa;
   reg [7:0] o_pa = 8'h00;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:31" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:33" *)
   reg [7:0] \o_pa$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:82" *)
+  reg [7:0] reg_cra = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:82" *)
+  reg [7:0] \reg_cra$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:83" *)
+  reg [7:0] reg_crb = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:83" *)
+  reg [7:0] \reg_crb$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:66" *)
+  reg [7:0] reg_ddra = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:66" *)
+  reg [7:0] \reg_ddra$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:67" *)
+  reg [7:0] reg_ddrb = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:67" *)
+  reg [7:0] \reg_ddrb$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:64" *)
+  reg [7:0] reg_pra = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:64" *)
+  reg [7:0] \reg_pra$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:65" *)
+  reg [7:0] reg_prb = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:65" *)
+  reg [7:0] \reg_prb$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:70" *)
+  reg [7:0] reg_ta_hi = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:70" *)
+  reg [7:0] \reg_ta_hi$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:69" *)
+  reg [7:0] reg_ta_lo = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:69" *)
+  reg [7:0] \reg_ta_lo$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:73" *)
+  reg [7:0] reg_tb_hi = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:73" *)
+  reg [7:0] \reg_tb_hi$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" *)
+  reg [7:0] reg_tb_lo = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" *)
+  reg [7:0] \reg_tb_lo$next ;
   (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/ir.py:508" *)
   input rst;
   wire rst;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:43" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" *)
   reg [15:0] timer_a_cntr = 16'h0000;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:43" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" *)
   reg [15:0] \timer_a_cntr$next ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:45" *)
-  reg [7:0] timer_a_hi_latch = 8'h00;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:45" *)
-  reg [7:0] \timer_a_hi_latch$next ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:44" *)
-  reg [7:0] timer_a_lo_latch = 8'h00;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:44" *)
-  reg [7:0] \timer_a_lo_latch$next ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:49" *)
-  reg timer_a_load;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:48" *)
-  reg timer_a_runmode = 1'h0;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:48" *)
-  reg \timer_a_runmode$next ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:47" *)
-  reg timer_a_start = 1'h0;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:47" *)
-  reg \timer_a_start$next ;
-  assign \$9  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_cs;
-  assign \$11  = \$9  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_we;
-  assign \$13  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_cs;
-  assign \$15  = \$13  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_we;
-  assign \$17  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_cs;
-  assign \$1  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_cs;
-  assign \$19  = \$17  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_we;
-  assign \$21  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" *) i_cs;
-  assign \$23  = \$21  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" *) i_we;
-  assign \$25  = i_addr == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" *) 4'he;
-  assign \$27  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *) timer_a_runmode;
-  assign \$29  = ! (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *) timer_a_cntr;
-  assign \$31  = \$27  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *) \$29 ;
-  assign \$34  = timer_a_cntr - (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:81" *) 1'h1;
-  assign \$36  = ! (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" *) timer_a_cntr;
-  assign \$38  = i_addr == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *) 4'hd;
-  assign \$3  = \$1  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_we;
-  assign \$40  = i_cs & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *) \$38 ;
-  assign \$42  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *) i_we;
-  assign \$44  = \$40  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *) \$42 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:126" *)
+  reg timer_a_force_load;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:131" *)
+  wire timer_a_reload;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:130" *)
+  wire timer_a_zero;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:86" *)
+  wire [15:0] timer_b_cntr;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:127" *)
+  reg timer_b_force_load;
+  assign \$9  = reg_cra[0] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *) \$7 ;
+  assign \$100  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" *) i_cs;
+  assign \$102  = \$100  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" *) i_we;
   always @(posedge clk)
-    o_pa <= \o_pa$next ;
+    icr_status_ta <= \icr_status_ta$next ;
   always @(posedge clk)
-    timer_a_lo_latch <= \timer_a_lo_latch$next ;
-  always @(posedge clk)
-    timer_a_hi_latch <= \timer_a_hi_latch$next ;
-  always @(posedge clk)
-    timer_a_start <= \timer_a_start$next ;
-  always @(posedge clk)
-    timer_a_runmode <= \timer_a_runmode$next ;
+    reg_cra <= \reg_cra$next ;
   always @(posedge clk)
     timer_a_cntr <= \timer_a_cntr$next ;
   always @(posedge clk)
-    o_irq <= \o_irq$next ;
-  assign \$5  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_cs;
-  assign \$7  = \$5  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_we;
+    reg_pra <= \reg_pra$next ;
+  always @(posedge clk)
+    reg_prb <= \reg_prb$next ;
+  always @(posedge clk)
+    reg_ddra <= \reg_ddra$next ;
+  always @(posedge clk)
+    reg_ddrb <= \reg_ddrb$next ;
+  always @(posedge clk)
+    reg_ta_lo <= \reg_ta_lo$next ;
+  always @(posedge clk)
+    reg_ta_hi <= \reg_ta_hi$next ;
+  always @(posedge clk)
+    reg_tb_lo <= \reg_tb_lo$next ;
+  always @(posedge clk)
+    reg_tb_hi <= \reg_tb_hi$next ;
+  always @(posedge clk)
+    icr_mask_ta <= \icr_mask_ta$next ;
+  always @(posedge clk)
+    icr_mask_tb <= \icr_mask_tb$next ;
+  always @(posedge clk)
+    icr_mask_alrm <= \icr_mask_alrm$next ;
+  always @(posedge clk)
+    icr_mask_sp <= \icr_mask_sp$next ;
+  always @(posedge clk)
+    icr_mask_flg <= \icr_mask_flg$next ;
+  assign \$11  = \$9  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *) timer_a_zero;
+  always @(posedge clk)
+    reg_crb <= \reg_crb$next ;
+  always @(posedge clk)
+    icr_status_tb <= \icr_status_tb$next ;
+  always @(posedge clk)
+    icr_status_alrm <= \icr_status_alrm$next ;
+  always @(posedge clk)
+    icr_status_sp <= \icr_status_sp$next ;
+  always @(posedge clk)
+    icr_status_flg <= \icr_status_flg$next ;
+  always @(posedge clk)
+    o_pa <= \o_pa$next ;
+  assign \$13  = timer_a_force_load | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *) \$11 ;
+  assign \$15  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_cs;
+  assign \$17  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_we;
+  assign \$19  = \$15  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) \$17 ;
+  assign \$21  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$23  = \$21  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$25  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_cs;
+  assign \$27  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_we;
+  assign \$2  = { icr_status_flg, icr_status_sp, icr_status_alrm, icr_status_tb, icr_status_ta } & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:104" *) { icr_mask_flg, icr_mask_sp, icr_mask_alrm, icr_mask_tb, icr_mask_ta };
+  assign \$29  = \$25  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) \$27 ;
+  assign \$32  = timer_a_cntr - (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:139" *) 1'h1;
+  assign \$34  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$36  = \$34  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$38  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$1  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:104" *) \$2 ;
+  assign \$40  = \$38  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$42  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$44  = \$42  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$46  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$48  = \$46  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$50  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$52  = \$50  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$54  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$56  = \$54  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$58  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$5  = ! (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *) timer_a_cntr;
+  assign \$60  = \$58  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$62  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$64  = \$62  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$66  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$68  = \$66  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$70  = { icr_mask_flg, icr_mask_sp, icr_mask_alrm, icr_mask_tb, icr_mask_ta } | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:166" *) i_data[4:0];
+  assign \$72  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:168" *) i_data[4:0];
+  assign \$74  = { icr_mask_flg, icr_mask_sp, icr_mask_alrm, icr_mask_tb, icr_mask_ta } & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:168" *) \$72 ;
+  assign \$76  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$78  = \$76  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$7  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *) reg_cra[3];
+  assign \$80  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$82  = \$80  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$84  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$86  = \$84  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$88  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_cs;
+  assign \$90  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_we;
+  assign \$92  = \$88  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) \$90 ;
+  assign \$94  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_cs;
+  assign \$96  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_we;
+  assign \$98  = \$94  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) \$96 ;
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
-    \o_pa$next  = o_pa;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-    casez (\$3 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" */
+    \reg_ddrb$next  = reg_ddrb;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$48 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:52" *)
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
           casez (i_addr)
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:53" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
             4'h0:
-                \o_pa$next  = i_data;
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                \reg_ddrb$next  = i_data;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
     casez (rst)
       1'h1:
-          \o_pa$next  = 8'h00;
+          \reg_ddrb$next  = 8'h00;
     endcase
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
-    \timer_a_lo_latch$next  = timer_a_lo_latch;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-    casez (\$7 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" */
+    \reg_ta_lo$next  = reg_ta_lo;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$52 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:52" *)
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
           casez (i_addr)
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:53" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
             4'h0:
                 /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:55" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
             4'h4:
-                \timer_a_lo_latch$next  = i_data;
+                \reg_ta_lo$next  = i_data;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
     casez (rst)
       1'h1:
-          \timer_a_lo_latch$next  = 8'h00;
+          \reg_ta_lo$next  = 8'h00;
     endcase
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
-    \timer_a_hi_latch$next  = timer_a_hi_latch;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-    casez (\$11 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" */
+    \reg_ta_hi$next  = reg_ta_hi;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$56 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:52" *)
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
           casez (i_addr)
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:53" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
             4'h0:
                 /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:55" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
             4'h4:
                 /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:57" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
             4'h5:
-                \timer_a_hi_latch$next  = i_data;
+                \reg_ta_hi$next  = i_data;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
     casez (rst)
       1'h1:
-          \timer_a_hi_latch$next  = 8'h00;
+          \reg_ta_hi$next  = 8'h00;
     endcase
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
-    \timer_a_start$next  = timer_a_start;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-    casez (\$15 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" */
+    \reg_tb_lo$next  = reg_tb_lo;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$60 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:52" *)
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
           casez (i_addr)
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:53" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
             4'h0:
                 /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:55" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
             4'h4:
                 /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:57" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
             4'h5:
                 /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:59" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                \reg_tb_lo$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_tb_lo$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
+    \reg_tb_hi$next  = reg_tb_hi;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$64 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                \reg_tb_hi$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_tb_hi$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
+    \icr_mask_ta$next  = icr_mask_ta;
+    \icr_mask_tb$next  = icr_mask_tb;
+    \icr_mask_alrm$next  = icr_mask_alrm;
+    \icr_mask_sp$next  = icr_mask_sp;
+    \icr_mask_flg$next  = icr_mask_flg;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$68 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:164" */
+            4'hd:
+                (* full_case = 32'd1 *)
+                (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:165" *)
+                casez (i_data[7])
+                  /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:165" */
+                  1'h1:
+                      { \icr_mask_flg$next , \icr_mask_sp$next , \icr_mask_alrm$next , \icr_mask_tb$next , \icr_mask_ta$next  } = \$70 ;
+                  /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:167" */
+                  default:
+                      { \icr_mask_flg$next , \icr_mask_sp$next , \icr_mask_alrm$next , \icr_mask_tb$next , \icr_mask_ta$next  } = \$74 ;
+                endcase
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+        begin
+          \icr_mask_ta$next  = 1'h0;
+          \icr_mask_tb$next  = 1'h0;
+          \icr_mask_alrm$next  = 1'h0;
+          \icr_mask_sp$next  = 1'h0;
+          \icr_mask_flg$next  = 1'h0;
+        end
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
+    timer_a_force_load = 1'h0;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$78 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:164" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:169" */
             4'he:
-                \timer_a_start$next  = i_data[0];
+                timer_a_force_load = i_data[4];
           endcase
-    endcase
-    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
-    casez (rst)
-      1'h1:
-          \timer_a_start$next  = 1'h0;
     endcase
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
-    \timer_a_runmode$next  = timer_a_runmode;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-    casez (\$19 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" */
+    timer_b_force_load = 1'h0;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$82 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:52" *)
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
           casez (i_addr)
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:53" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
             4'h0:
                 /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:55" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
             4'h4:
                 /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:57" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
             4'h5:
                 /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:59" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:164" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:169" */
             4'he:
-                \timer_a_runmode$next  = i_data[3];
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:172" */
+            4'hf:
+                timer_b_force_load = i_data[4];
+          endcase
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
+    \reg_crb$next  = reg_crb;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$86 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:164" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:169" */
+            4'he:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:172" */
+            4'hf:
+                \reg_crb$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+    casez (\$92 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:178" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:179" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:181" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:183" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:185" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:188" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:191" */
+            4'he:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:193" */
+            4'hf:
+                \reg_crb$next  = i_data;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
     casez (rst)
       1'h1:
-          \timer_a_runmode$next  = 1'h0;
+          \reg_crb$next  = 8'h00;
     endcase
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
     o_data = 8'h00;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:64" *)
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:210" *)
     casez (i_addr)
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:65" */
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:211" */
       4'h0:
           o_data = 8'hff;
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:67" */
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:213" */
       4'h1:
           o_data = i_pb;
     endcase
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
-    timer_a_load = 1'h0;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" *)
-    casez (\$23 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" */
+    \o_pa$next  = o_pa;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" *)
+    casez (\$102 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" *)
-          casez (\$25 )
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" */
-            1'h1:
-                timer_a_load = i_data[4];
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:205" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:206" */
+            4'h0:
+                \o_pa$next  = i_data;
           endcase
     endcase
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *)
-    casez (\$31 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" */
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
       1'h1:
-          timer_a_load = 1'h1;
+          \o_pa$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
+    \icr_status_ta$next  = icr_status_ta;
+    \icr_status_tb$next  = icr_status_tb;
+    \icr_status_alrm$next  = icr_status_alrm;
+    \icr_status_sp$next  = icr_status_sp;
+    \icr_status_flg$next  = icr_status_flg;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" *)
+    casez (clk_1mhz_ph_en)
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" *)
+          casez (reg_cra[0])
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" */
+            1'h1:
+                (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:135" *)
+                casez (timer_a_zero)
+                  /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:135" */
+                  1'h1:
+                      \icr_status_ta$next  = 1'h1;
+                endcase
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+    casez (\$19 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:178" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:179" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:181" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:183" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:185" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:188" */
+            4'hd:
+                { \icr_status_flg$next , \icr_status_sp$next , \icr_status_alrm$next , \icr_status_tb$next , \icr_status_ta$next  } = 5'h00;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+        begin
+          \icr_status_ta$next  = 1'h0;
+          \icr_status_tb$next  = 1'h0;
+          \icr_status_alrm$next  = 1'h0;
+          \icr_status_sp$next  = 1'h0;
+          \icr_status_flg$next  = 1'h0;
+        end
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
+    \reg_cra$next  = reg_cra;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" *)
+    casez (clk_1mhz_ph_en)
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" *)
+          casez (reg_cra[0])
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" */
+            1'h1:
+                (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:135" *)
+                casez (timer_a_zero)
+                  /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:135" */
+                  1'h1:
+                      (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:137" *)
+                      casez (reg_cra[3])
+                        /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:137" */
+                        1'h1:
+                            \reg_cra$next [0] = 1'h0;
+                      endcase
+                endcase
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$23 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:164" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:169" */
+            4'he:
+                \reg_cra$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+    casez (\$29 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:178" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:179" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:181" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:183" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:185" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:188" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:191" */
+            4'he:
+                \reg_cra$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_cra$next  = 8'h00;
     endcase
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
     \timer_a_cntr$next  = timer_a_cntr;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:77" *)
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" *)
     casez (clk_1mhz_ph_en)
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:77" */
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:78" *)
-          casez ({ timer_a_start, timer_a_load })
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:78" */
-            2'b?1:
-                \timer_a_cntr$next  = { timer_a_hi_latch, timer_a_lo_latch };
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:80" */
-            2'b1?:
-                \timer_a_cntr$next  = \$34 [15:0];
+        begin
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" *)
+          casez (reg_cra[0])
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" */
+            1'h1:
+                \timer_a_cntr$next  = \$32 [15:0];
           endcase
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:140" *)
+          casez (timer_a_reload)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:140" */
+            1'h1:
+                \timer_a_cntr$next  = { reg_ta_hi, reg_ta_lo };
+          endcase
+        end
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
     casez (rst)
@@ -3164,183 +3786,840 @@ module u_cia1(o_irq, clk_1mhz_ph_en, i_cs, i_addr, i_we, i_data, i_pb, o_pa, rst
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
-    \o_irq$next  = o_irq;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:84" *)
-    casez (clk_1mhz_ph_en)
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:84" */
+    \reg_pra$next  = reg_pra;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$36 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" *)
-          casez ({ \$44 , \$36  })
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" */
-            2'b?1:
-                \o_irq$next  = 1'h1;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" */
-            2'b1?:
-                \o_irq$next  = 1'h0;
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                \reg_pra$next  = i_data;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
     casez (rst)
       1'h1:
-          \o_irq$next  = 1'h0;
+          \reg_pra$next  = 8'h00;
     endcase
   end
-  assign \$33  = \$34 ;
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
+    \reg_prb$next  = reg_prb;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$40 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                \reg_prb$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_prb$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$2 ) begin end
+    \reg_ddra$next  = reg_ddra;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$44 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                \reg_ddra$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_ddra$next  = 8'h00;
+    endcase
+  end
+  assign \$31  = \$32 ;
+  assign timer_b_cntr = 16'h0000;
+  assign timer_a_reload = \$13 ;
+  assign timer_a_zero = \$5 ;
+  assign o_irq = irq;
+  assign irq = \$1 ;
 endmodule
 
 (* \amaranth.hierarchy  = "myc64_top.u_cia2" *)
 (* generator = "Amaranth" *)
 module u_cia2(clk_1mhz_ph_en, i_cs, i_addr, i_we, i_data, o_pa, rst, clk, o_data);
   reg \$auto$verilog_backend.cc:2083:dump_module$3  = 0;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:104" *)
   wire \$1 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" *)
+  wire \$100 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" *)
+  wire \$102 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *)
   wire \$11 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *)
   wire \$13 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$15 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$17 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$19 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:104" *)
+  wire [4:0] \$2 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$21 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$23 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$25 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$27 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
   wire \$29 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-  wire \$3 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *)
-  wire \$31 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:81" *)
-  wire [16:0] \$33 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:81" *)
-  wire [16:0] \$34 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:139" *)
+  wire [16:0] \$31 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:139" *)
+  wire [16:0] \$32 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$34 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$36 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$38 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$40 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$42 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
   wire \$44 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$46 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$48 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *)
   wire \$5 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$50 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$52 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$54 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$56 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$58 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$60 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$62 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$64 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$66 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$68 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *)
   wire \$7 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:166" *)
+  wire [4:0] \$70 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:168" *)
+  wire [4:0] \$72 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:168" *)
+  wire [4:0] \$74 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$76 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$78 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$80 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$82 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$84 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+  wire \$86 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$88 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *)
   wire \$9 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$90 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$92 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$94 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$96 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+  wire \$98 ;
   (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/ir.py:508" *)
   input clk;
   wire clk;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:25" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:26" *)
   input clk_1mhz_ph_en;
   wire clk_1mhz_ph_en;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:27" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:28" *)
   input [3:0] i_addr;
   wire [3:0] i_addr;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:26" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:27" *)
   input i_cs;
   wire i_cs;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:29" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:30" *)
   input [7:0] i_data;
   wire [7:0] i_data;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:32" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:34" *)
   wire [7:0] i_pb;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:28" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:29" *)
   input i_we;
   wire i_we;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:30" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:98" *)
+  reg icr_mask_alrm = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:98" *)
+  reg \icr_mask_alrm$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:100" *)
+  reg icr_mask_flg = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:100" *)
+  reg \icr_mask_flg$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:99" *)
+  reg icr_mask_sp = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:99" *)
+  reg \icr_mask_sp$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:96" *)
+  reg icr_mask_ta = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:96" *)
+  reg \icr_mask_ta$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:97" *)
+  reg icr_mask_tb = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:97" *)
+  reg \icr_mask_tb$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:90" *)
+  reg icr_status_alrm = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:90" *)
+  reg \icr_status_alrm$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:92" *)
+  reg icr_status_flg = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:92" *)
+  reg \icr_status_flg$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:91" *)
+  reg icr_status_sp = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:91" *)
+  reg \icr_status_sp$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:88" *)
+  reg icr_status_ta = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:88" *)
+  reg \icr_status_ta$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:89" *)
+  reg icr_status_tb = 1'h0;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:89" *)
+  reg \icr_status_tb$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:103" *)
+  wire irq;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:31" *)
   output [7:0] o_data;
   reg [7:0] o_data;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:36" *)
+  wire o_irq;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:33" *)
-  reg o_irq = 1'h0;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:33" *)
-  reg \o_irq$next ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:31" *)
   output [7:0] o_pa;
   reg [7:0] o_pa = 8'h00;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:31" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:33" *)
   reg [7:0] \o_pa$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:82" *)
+  reg [7:0] reg_cra = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:82" *)
+  reg [7:0] \reg_cra$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:83" *)
+  reg [7:0] reg_crb = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:83" *)
+  reg [7:0] \reg_crb$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:66" *)
+  reg [7:0] reg_ddra = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:66" *)
+  reg [7:0] \reg_ddra$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:67" *)
+  reg [7:0] reg_ddrb = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:67" *)
+  reg [7:0] \reg_ddrb$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:64" *)
+  reg [7:0] reg_pra = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:64" *)
+  reg [7:0] \reg_pra$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:65" *)
+  reg [7:0] reg_prb = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:65" *)
+  reg [7:0] \reg_prb$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:70" *)
+  reg [7:0] reg_ta_hi = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:70" *)
+  reg [7:0] \reg_ta_hi$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:69" *)
+  reg [7:0] reg_ta_lo = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:69" *)
+  reg [7:0] \reg_ta_lo$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:73" *)
+  reg [7:0] reg_tb_hi = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:73" *)
+  reg [7:0] \reg_tb_hi$next ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" *)
+  reg [7:0] reg_tb_lo = 8'h00;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" *)
+  reg [7:0] \reg_tb_lo$next ;
   (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/ir.py:508" *)
   input rst;
   wire rst;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:43" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" *)
   reg [15:0] timer_a_cntr = 16'h0000;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:43" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" *)
   reg [15:0] \timer_a_cntr$next ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:45" *)
-  reg [7:0] timer_a_hi_latch = 8'h00;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:45" *)
-  reg [7:0] \timer_a_hi_latch$next ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:44" *)
-  reg [7:0] timer_a_lo_latch = 8'h00;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:44" *)
-  reg [7:0] \timer_a_lo_latch$next ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:49" *)
-  reg timer_a_load;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:48" *)
-  reg timer_a_runmode = 1'h0;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:48" *)
-  reg \timer_a_runmode$next ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:47" *)
-  reg timer_a_start = 1'h0;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:47" *)
-  reg \timer_a_start$next ;
-  assign \$9  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_cs;
-  assign \$11  = \$9  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_we;
-  assign \$13  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_cs;
-  assign \$15  = \$13  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_we;
-  assign \$17  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_cs;
-  assign \$1  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_cs;
-  assign \$19  = \$17  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_we;
-  assign \$21  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" *) i_cs;
-  assign \$23  = \$21  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" *) i_we;
-  assign \$25  = i_addr == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" *) 4'he;
-  assign \$27  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *) timer_a_runmode;
-  assign \$29  = ! (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *) timer_a_cntr;
-  assign \$31  = \$27  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *) \$29 ;
-  assign \$34  = timer_a_cntr - (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:81" *) 1'h1;
-  assign \$36  = ! (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" *) timer_a_cntr;
-  assign \$38  = i_addr == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *) 4'hd;
-  assign \$3  = \$1  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_we;
-  assign \$40  = i_cs & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *) \$38 ;
-  assign \$42  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *) i_we;
-  assign \$44  = \$40  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" *) \$42 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:126" *)
+  reg timer_a_force_load;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:131" *)
+  wire timer_a_reload;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:130" *)
+  wire timer_a_zero;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:86" *)
+  wire [15:0] timer_b_cntr;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:127" *)
+  reg timer_b_force_load;
+  assign \$9  = reg_cra[0] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *) \$7 ;
+  assign \$100  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" *) i_cs;
+  assign \$102  = \$100  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" *) i_we;
   always @(posedge clk)
-    o_pa <= \o_pa$next ;
+    icr_status_ta <= \icr_status_ta$next ;
   always @(posedge clk)
-    timer_a_lo_latch <= \timer_a_lo_latch$next ;
-  always @(posedge clk)
-    timer_a_hi_latch <= \timer_a_hi_latch$next ;
-  always @(posedge clk)
-    timer_a_start <= \timer_a_start$next ;
-  always @(posedge clk)
-    timer_a_runmode <= \timer_a_runmode$next ;
+    reg_cra <= \reg_cra$next ;
   always @(posedge clk)
     timer_a_cntr <= \timer_a_cntr$next ;
   always @(posedge clk)
-    o_irq <= \o_irq$next ;
-  assign \$5  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_cs;
-  assign \$7  = \$5  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *) i_we;
+    reg_pra <= \reg_pra$next ;
+  always @(posedge clk)
+    reg_prb <= \reg_prb$next ;
+  always @(posedge clk)
+    reg_ddra <= \reg_ddra$next ;
+  always @(posedge clk)
+    reg_ddrb <= \reg_ddrb$next ;
+  always @(posedge clk)
+    reg_ta_lo <= \reg_ta_lo$next ;
+  always @(posedge clk)
+    reg_ta_hi <= \reg_ta_hi$next ;
+  always @(posedge clk)
+    reg_tb_lo <= \reg_tb_lo$next ;
+  always @(posedge clk)
+    reg_tb_hi <= \reg_tb_hi$next ;
+  always @(posedge clk)
+    icr_mask_ta <= \icr_mask_ta$next ;
+  always @(posedge clk)
+    icr_mask_tb <= \icr_mask_tb$next ;
+  always @(posedge clk)
+    icr_mask_alrm <= \icr_mask_alrm$next ;
+  always @(posedge clk)
+    icr_mask_sp <= \icr_mask_sp$next ;
+  always @(posedge clk)
+    icr_mask_flg <= \icr_mask_flg$next ;
+  assign \$11  = \$9  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *) timer_a_zero;
+  always @(posedge clk)
+    reg_crb <= \reg_crb$next ;
+  always @(posedge clk)
+    icr_status_tb <= \icr_status_tb$next ;
+  always @(posedge clk)
+    icr_status_alrm <= \icr_status_alrm$next ;
+  always @(posedge clk)
+    icr_status_sp <= \icr_status_sp$next ;
+  always @(posedge clk)
+    icr_status_flg <= \icr_status_flg$next ;
+  always @(posedge clk)
+    o_pa <= \o_pa$next ;
+  assign \$13  = timer_a_force_load | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *) \$11 ;
+  assign \$15  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_cs;
+  assign \$17  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_we;
+  assign \$19  = \$15  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) \$17 ;
+  assign \$21  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$23  = \$21  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$25  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_cs;
+  assign \$27  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_we;
+  assign \$2  = { icr_status_flg, icr_status_sp, icr_status_alrm, icr_status_tb, icr_status_ta } & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:104" *) { icr_mask_flg, icr_mask_sp, icr_mask_alrm, icr_mask_tb, icr_mask_ta };
+  assign \$29  = \$25  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) \$27 ;
+  assign \$32  = timer_a_cntr - (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:139" *) 1'h1;
+  assign \$34  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$36  = \$34  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$38  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$1  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:104" *) \$2 ;
+  assign \$40  = \$38  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$42  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$44  = \$42  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$46  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$48  = \$46  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$50  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$52  = \$50  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$54  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$56  = \$54  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$58  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$5  = ! (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *) timer_a_cntr;
+  assign \$60  = \$58  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$62  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$64  = \$62  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$66  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$68  = \$66  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$70  = { icr_mask_flg, icr_mask_sp, icr_mask_alrm, icr_mask_tb, icr_mask_ta } | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:166" *) i_data[4:0];
+  assign \$72  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:168" *) i_data[4:0];
+  assign \$74  = { icr_mask_flg, icr_mask_sp, icr_mask_alrm, icr_mask_tb, icr_mask_ta } & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:168" *) \$72 ;
+  assign \$76  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$78  = \$76  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$7  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:132" *) reg_cra[3];
+  assign \$80  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$82  = \$80  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$84  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_cs;
+  assign \$86  = \$84  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *) i_we;
+  assign \$88  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_cs;
+  assign \$90  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_we;
+  assign \$92  = \$88  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) \$90 ;
+  assign \$94  = clk_1mhz_ph_en & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_cs;
+  assign \$96  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) i_we;
+  assign \$98  = \$94  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *) \$96 ;
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    \reg_ddrb$next  = reg_ddrb;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$48 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                \reg_ddrb$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_ddrb$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    \reg_ta_lo$next  = reg_ta_lo;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$52 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                \reg_ta_lo$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_ta_lo$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    \reg_ta_hi$next  = reg_ta_hi;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$56 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                \reg_ta_hi$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_ta_hi$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    \reg_tb_lo$next  = reg_tb_lo;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$60 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                \reg_tb_lo$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_tb_lo$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    \reg_tb_hi$next  = reg_tb_hi;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$64 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                \reg_tb_hi$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_tb_hi$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    \icr_mask_ta$next  = icr_mask_ta;
+    \icr_mask_tb$next  = icr_mask_tb;
+    \icr_mask_alrm$next  = icr_mask_alrm;
+    \icr_mask_sp$next  = icr_mask_sp;
+    \icr_mask_flg$next  = icr_mask_flg;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$68 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:164" */
+            4'hd:
+                (* full_case = 32'd1 *)
+                (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:165" *)
+                casez (i_data[7])
+                  /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:165" */
+                  1'h1:
+                      { \icr_mask_flg$next , \icr_mask_sp$next , \icr_mask_alrm$next , \icr_mask_tb$next , \icr_mask_ta$next  } = \$70 ;
+                  /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:167" */
+                  default:
+                      { \icr_mask_flg$next , \icr_mask_sp$next , \icr_mask_alrm$next , \icr_mask_tb$next , \icr_mask_ta$next  } = \$74 ;
+                endcase
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+        begin
+          \icr_mask_ta$next  = 1'h0;
+          \icr_mask_tb$next  = 1'h0;
+          \icr_mask_alrm$next  = 1'h0;
+          \icr_mask_sp$next  = 1'h0;
+          \icr_mask_flg$next  = 1'h0;
+        end
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    timer_a_force_load = 1'h0;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$78 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:164" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:169" */
+            4'he:
+                timer_a_force_load = i_data[4];
+          endcase
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    timer_b_force_load = 1'h0;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$82 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:164" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:169" */
+            4'he:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:172" */
+            4'hf:
+                timer_b_force_load = i_data[4];
+          endcase
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    \reg_crb$next  = reg_crb;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$86 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:164" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:169" */
+            4'he:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:172" */
+            4'hf:
+                \reg_crb$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+    casez (\$92 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:178" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:179" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:181" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:183" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:185" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:188" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:191" */
+            4'he:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:193" */
+            4'hf:
+                \reg_crb$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_crb$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    o_data = 8'h00;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:210" *)
+    casez (i_addr)
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:211" */
+      4'h0:
+          o_data = 8'hff;
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:213" */
+      4'h1:
+          o_data = 8'h00;
+    endcase
+  end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
     \o_pa$next  = o_pa;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-    casez (\$3 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" */
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" *)
+    casez (\$102 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:204" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:52" *)
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:205" *)
           casez (i_addr)
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:53" */
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:206" */
             4'h0:
                 \o_pa$next  = i_data;
           endcase
@@ -3353,161 +4632,177 @@ module u_cia2(clk_1mhz_ph_en, i_cs, i_addr, i_we, i_data, o_pa, rst, clk, o_data
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
-    \timer_a_lo_latch$next  = timer_a_lo_latch;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-    casez (\$7 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" */
+    \icr_status_ta$next  = icr_status_ta;
+    \icr_status_tb$next  = icr_status_tb;
+    \icr_status_alrm$next  = icr_status_alrm;
+    \icr_status_sp$next  = icr_status_sp;
+    \icr_status_flg$next  = icr_status_flg;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" *)
+    casez (clk_1mhz_ph_en)
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:52" *)
-          casez (i_addr)
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:53" */
-            4'h0:
-                /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:55" */
-            4'h4:
-                \timer_a_lo_latch$next  = i_data;
-          endcase
-    endcase
-    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
-    casez (rst)
-      1'h1:
-          \timer_a_lo_latch$next  = 8'h00;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
-    \timer_a_hi_latch$next  = timer_a_hi_latch;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-    casez (\$11 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" */
-      1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:52" *)
-          casez (i_addr)
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:53" */
-            4'h0:
-                /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:55" */
-            4'h4:
-                /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:57" */
-            4'h5:
-                \timer_a_hi_latch$next  = i_data;
-          endcase
-    endcase
-    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
-    casez (rst)
-      1'h1:
-          \timer_a_hi_latch$next  = 8'h00;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
-    \timer_a_start$next  = timer_a_start;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-    casez (\$15 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" */
-      1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:52" *)
-          casez (i_addr)
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:53" */
-            4'h0:
-                /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:55" */
-            4'h4:
-                /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:57" */
-            4'h5:
-                /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:59" */
-            4'he:
-                \timer_a_start$next  = i_data[0];
-          endcase
-    endcase
-    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
-    casez (rst)
-      1'h1:
-          \timer_a_start$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
-    \timer_a_runmode$next  = timer_a_runmode;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" *)
-    casez (\$19 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:51" */
-      1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:52" *)
-          casez (i_addr)
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:53" */
-            4'h0:
-                /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:55" */
-            4'h4:
-                /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:57" */
-            4'h5:
-                /* empty */;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:59" */
-            4'he:
-                \timer_a_runmode$next  = i_data[3];
-          endcase
-    endcase
-    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
-    casez (rst)
-      1'h1:
-          \timer_a_runmode$next  = 1'h0;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
-    o_data = 8'h00;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:64" *)
-    casez (i_addr)
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:65" */
-      4'h0:
-          o_data = 8'hff;
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:67" */
-      4'h1:
-          o_data = 8'h00;
-    endcase
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
-    timer_a_load = 1'h0;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" *)
-    casez (\$23 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:71" */
-      1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" *)
-          casez (\$25 )
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:72" */
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" *)
+          casez (reg_cra[0])
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" */
             1'h1:
-                timer_a_load = i_data[4];
+                (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:135" *)
+                casez (timer_a_zero)
+                  /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:135" */
+                  1'h1:
+                      \icr_status_ta$next  = 1'h1;
+                endcase
           endcase
     endcase
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" *)
-    casez (\$31 )
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:74" */
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+    casez (\$19 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" */
       1'h1:
-          timer_a_load = 1'h1;
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:178" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:179" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:181" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:183" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:185" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:188" */
+            4'hd:
+                { \icr_status_flg$next , \icr_status_sp$next , \icr_status_alrm$next , \icr_status_tb$next , \icr_status_ta$next  } = 5'h00;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+        begin
+          \icr_status_ta$next  = 1'h0;
+          \icr_status_tb$next  = 1'h0;
+          \icr_status_alrm$next  = 1'h0;
+          \icr_status_sp$next  = 1'h0;
+          \icr_status_flg$next  = 1'h0;
+        end
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    \reg_cra$next  = reg_cra;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" *)
+    casez (clk_1mhz_ph_en)
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" *)
+          casez (reg_cra[0])
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" */
+            1'h1:
+                (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:135" *)
+                casez (timer_a_zero)
+                  /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:135" */
+                  1'h1:
+                      (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:137" *)
+                      casez (reg_cra[3])
+                        /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:137" */
+                        1'h1:
+                            \reg_cra$next [0] = 1'h0;
+                      endcase
+                endcase
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$23 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:153" */
+            4'h3:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:155" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:157" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:159" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:161" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:164" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:169" */
+            4'he:
+                \reg_cra$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" *)
+    casez (\$29 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:177" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:178" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:179" */
+            4'h4:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:181" */
+            4'h5:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:183" */
+            4'h6:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:185" */
+            4'h7:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:188" */
+            4'hd:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:191" */
+            4'he:
+                \reg_cra$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_cra$next  = 8'h00;
     endcase
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
     \timer_a_cntr$next  = timer_a_cntr;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:77" *)
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" *)
     casez (clk_1mhz_ph_en)
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:77" */
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:133" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:78" *)
-          casez ({ timer_a_start, timer_a_load })
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:78" */
-            2'b?1:
-                \timer_a_cntr$next  = { timer_a_hi_latch, timer_a_lo_latch };
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:80" */
-            2'b1?:
-                \timer_a_cntr$next  = \$34 [15:0];
+        begin
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" *)
+          casez (reg_cra[0])
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:134" */
+            1'h1:
+                \timer_a_cntr$next  = \$32 [15:0];
           endcase
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:140" *)
+          casez (timer_a_reload)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:140" */
+            1'h1:
+                \timer_a_cntr$next  = { reg_ta_hi, reg_ta_lo };
+          endcase
+        end
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
     casez (rst)
@@ -3517,29 +4812,80 @@ module u_cia2(clk_1mhz_ph_en, i_cs, i_addr, i_we, i_data, o_pa, rst, clk, o_data
   end
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
-    \o_irq$next  = o_irq;
-    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:84" *)
-    casez (clk_1mhz_ph_en)
-      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:84" */
+    \reg_pra$next  = reg_pra;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$36 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
       1'h1:
-          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" *)
-          casez ({ \$44 , \$36  })
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:85" */
-            2'b?1:
-                \o_irq$next  = 1'h1;
-            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:87" */
-            2'b1?:
-                \o_irq$next  = 1'h0;
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                \reg_pra$next  = i_data;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
     casez (rst)
       1'h1:
-          \o_irq$next  = 1'h0;
+          \reg_pra$next  = 8'h00;
     endcase
   end
-  assign \$33  = \$34 ;
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    \reg_prb$next  = reg_prb;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$40 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                \reg_prb$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_prb$next  = 8'h00;
+    endcase
+  end
+  always @* begin
+    if (\$auto$verilog_backend.cc:2083:dump_module$3 ) begin end
+    \reg_ddra$next  = reg_ddra;
+    (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" *)
+    casez (\$44 )
+      /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:145" */
+      1'h1:
+          (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:146" *)
+          casez (i_addr)
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:147" */
+            4'h0:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:149" */
+            4'h1:
+                /* empty */;
+            /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/cia.py:151" */
+            4'h2:
+                \reg_ddra$next  = i_data;
+          endcase
+    endcase
+    (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
+    casez (rst)
+      1'h1:
+          \reg_ddra$next  = 8'h00;
+    endcase
+  end
+  assign \$31  = \$32 ;
+  assign timer_b_cntr = 16'h0000;
   assign i_pb = 8'h00;
+  assign timer_a_reload = \$13 ;
+  assign timer_a_zero = \$5 ;
+  assign o_irq = irq;
+  assign irq = \$1 ;
 endmodule
 
 (* \amaranth.hierarchy  = "myc64_top.u_cpu" *)
