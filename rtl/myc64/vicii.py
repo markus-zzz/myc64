@@ -139,6 +139,10 @@ class VicII(Elaboratable):
     r_d01a = rf.addRegRW(addr=0xd01a, width=4)
     sprites_color = Array([rf.addRegRW(addr=addr, width=4) for addr in range(0xd027, 0xd02f, 1)])
 
+    mode_ecm = r_d011[6] # Extended Color Mode
+    mode_bmm = r_d011[5] # Bit Map Mode
+    mode_mcm = r_d016[4] # Multi Color Mode
+
     # Raster IRQ
     with m.If(self.clk_8mhz_en):
       with m.If(
@@ -153,12 +157,13 @@ class VicII(Elaboratable):
 
     m.d.comb += [bad_line_cond.eq((raster >= 0x30) & (raster <= 0xf7) & (y[0:3] == r_d011[0:3]))]
 
-    fgcolor = Signal(4)
+    fgcolor = Signal(12)
 
     with m.If(self.clk_1mhz_ph1_en):
-      m.d.sync += [fgcolor.eq(vml[vmli][8:12])]
+      m.d.sync += [fgcolor.eq(vml[vmli])]
 
-    pixshift = Signal(8)
+    pixshift0 = Signal(8)
+    pixshift1 = Signal(8)
 
     m.d.comb += [self.o_hsync.eq(x == p_x_raster_last),
                  self.o_vsync.eq((y == 0) & (x == (p_x_raster_last - 3))),
@@ -175,10 +180,22 @@ class VicII(Elaboratable):
     with m.If(display_window_x & display_window_y):
       # XXX: This is as temporary hack for testing and not how the priorities
       # are supposed to work.
+      m.d.comb += color.eq(0)
       with m.If(sprite_shift_on[0] & sprite_shift[0][23]):
         m.d.comb += [color.eq(sprites_color[0])]
-      with m.Else():
-        m.d.comb += [color.eq(Mux(pixshift[7], fgcolor, r_d021))]
+      with m.Elif(~mode_ecm & ~mode_bmm & ~mode_mcm):
+        m.d.comb += [color.eq(Mux(pixshift0[7], fgcolor[8:12], r_d021))]
+      with m.Elif(~mode_ecm & mode_bmm & mode_mcm):
+        with m.Switch(Cat(pixshift0[7], pixshift1[7])):
+          with m.Case(0b00):
+            m.d.comb += color.eq(r_d021)
+          with m.Case(0b01):
+            m.d.comb += color.eq(fgcolor[4:8])
+          with m.Case(0b10):
+            m.d.comb += color.eq(fgcolor[0:4])
+          with m.Case(0b11):
+            m.d.comb += color.eq(fgcolor[8:12])
+
 
     m.d.comb += [self.o_color.eq(color)]
 
@@ -204,7 +221,8 @@ class VicII(Elaboratable):
           m.d.sync += [sprite_shift_on[idx].eq(1)]
 
     with m.If(self.clk_8mhz_en):
-      m.d.sync += [pixshift.eq(Cat(Const(0, 1), pixshift[0:7]))]
+      m.d.sync += [pixshift0.eq(Cat(Const(0, 1), pixshift0[0:7])),
+                   pixshift1.eq(Cat(Const(0, 1), pixshift1[0:7]))]
       for idx in range(8):
         with m.If(sprite_shift_on[idx]):
           m.d.sync += [sprite_shift[idx].eq(Cat(Const(0, 1), sprite_shift[idx][0:23]))]
@@ -229,7 +247,7 @@ class VicII(Elaboratable):
             m.next = 'p-access'
 
       with m.State('p-access'):
-        m.d.comb += [self.o_addr.eq(Cat(sprite_idx, 0b11_1111_1, r_d018[4:8]))]  # Sprite Pointers.
+        m.d.comb += [self.o_addr.eq(Cat(sprite_idx, C(0b11_1111_1, 7), r_d018[4:8]))]  # Sprite Pointers.
         with m.If(self.clk_1mhz_ph1_en):
           m.d.sync += [sprite_ptr.eq(self.i_data[0:8])]
           m.next = 's-access-0'
@@ -285,9 +303,18 @@ class VicII(Elaboratable):
 
       with m.State('g-access'):
         m.d.comb += [vic_owns_ph1.eq(bad_line_cond)]
-        m.d.comb += [self.o_addr.eq(Cat(rc[0:3], vml[vmli][0:8], r_d018[1:4]))]
+        with m.If(mode_bmm):
+          m.d.comb += [self.o_addr.eq(Cat(rc[0:3], vc[0:10], r_d018[3]))]
+        with m.Else():
+          m.d.comb += [self.o_addr.eq(Cat(rc[0:3], vml[vmli][0:8], r_d018[1:4]))]
         with m.If(self.clk_1mhz_ph1_en):
-          m.d.sync += [pixshift.eq(Mux(display_not_idle_state, self.i_data[0:8], 0))]
+          m.d.sync += [pixshift0.eq(0), pixshift1.eq(0)]
+          with m.If(display_not_idle_state):
+            with m.If(mode_mcm):
+              m.d.sync += [pixshift0.eq(Cat(Repl(self.i_data[0], 2), Repl(self.i_data[2], 2), Repl(self.i_data[4], 2), Repl(self.i_data[6], 2)))]
+              m.d.sync += [pixshift1.eq(Cat(Repl(self.i_data[1], 2), Repl(self.i_data[3], 2), Repl(self.i_data[5], 2), Repl(self.i_data[7], 2)))]
+            with m.Else():
+              m.d.sync += [pixshift0.eq(self.i_data[0:8])]
           with m.If(bad_line_cond):
             m.d.sync += [vc.eq(vc + 1)]
           with m.If(vmli == 39):
