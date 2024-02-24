@@ -142,7 +142,7 @@ class MyC64(Elaboratable):
     # RAM, BASIC interpretor ROM, cartridge ROM or is unmapped
     with m.Elif((0xA000 <= cpu_addr) & (cpu_addr <= 0xBFFF)):
       with m.If((cpu_po[0:3] == 0b111) | (cpu_po[0:3] == 0b011)):
-        m.d.comb += [cpu_di.eq(self.i_rom_basic_data)]
+        m.d.comb += [cpu_di.eq(self.i_rom_basic_data), ram_cs.eq(1)]
       with m.Else():
         m.d.comb += [cpu_di.eq(self.i_ram_main_data), ram_cs.eq(1)]
     # RAM or is unmapped
@@ -164,14 +164,14 @@ class MyC64(Elaboratable):
           m.d.comb += [cpu_di.eq(u_cia2.o_data), cia2_cs.eq(1)]
       with m.Elif((cpu_po[0:3] == 0b011) | (cpu_po[0:3] == 0b010) | (cpu_po[0:3] == 0b001)):
         # CHAR ROM
-        m.d.comb += [cpu_di.eq(self.i_rom_char_data)]
+        m.d.comb += [cpu_di.eq(self.i_rom_char_data), ram_cs.eq(1)]
       with m.Else():
         # RAM
         m.d.comb += [cpu_di.eq(self.i_ram_main_data), ram_cs.eq(1)]
     # RAM, KERNAL ROM or cartridge ROM
     with m.Elif(0xE000 <= cpu_addr):
       with m.If((cpu_po[0:3] == 0b111) | (cpu_po[0:3] == 0b110) | (cpu_po[0:3] == 0b011) | (cpu_po[0:3] == 0b010)):
-        m.d.comb += [cpu_di.eq(self.i_rom_kernal_data)]
+        m.d.comb += [cpu_di.eq(self.i_rom_kernal_data), ram_cs.eq(1)]
       with m.Else():
         m.d.comb += [cpu_di.eq(self.i_ram_main_data), ram_cs.eq(1)]
 

@@ -126,21 +126,6 @@ class Cia(Elaboratable):
     timer_a_force_load = Signal()
     timer_b_force_load = Signal()
 
-    # Timer A
-    timer_a_zero = Signal()
-    timer_a_reload = Signal()
-    m.d.comb += [timer_a_zero.eq(timer_a_cntr == 0), timer_a_reload.eq(timer_a_force_load | (cra_start & ~cra_runmode & timer_a_zero))]
-    with m.If(self.clk_1mhz_ph_en):
-      with m.If(cra_start):
-        with m.If(timer_a_zero):
-          m.d.sync += icr_status_ta.eq(1) # XXX: Should be moved down to have highest priority (priority over bus read at least)
-          with m.If(cra_runmode): # ONE-SHOT
-            m.d.sync += cra_start.eq(0)
-        m.d.sync += timer_a_cntr.eq(timer_a_cntr - 1)
-      with m.If(timer_a_reload):
-        m.d.sync += timer_a_cntr.eq(Cat(reg_ta_lo, reg_ta_hi))
-
-
     # bus writes
     with m.If(self.clk_1mhz_ph_en & self.i_cs & self.i_we):
       with m.Switch(self.i_addr):
@@ -192,6 +177,21 @@ class Cia(Elaboratable):
           m.d.sync += reg_cra.eq(self.i_data)
         with m.Case(Reg.CRB):
           m.d.sync += reg_crb.eq(self.i_data)
+
+    # Timer A
+    timer_a_zero = Signal()
+    timer_a_reload = Signal()
+    m.d.comb += [timer_a_zero.eq(timer_a_cntr == 0), timer_a_reload.eq(timer_a_force_load | (cra_start & ~cra_runmode & timer_a_zero))]
+    with m.If(self.clk_1mhz_ph_en):
+      with m.If(cra_start):
+        with m.If(timer_a_zero):
+          m.d.sync += icr_status_ta.eq(1) # XXX: Should be moved down to have highest priority (priority over bus read at least)
+          with m.If(cra_runmode): # ONE-SHOT
+            m.d.sync += cra_start.eq(0)
+        m.d.sync += timer_a_cntr.eq(timer_a_cntr - 1)
+      with m.If(timer_a_reload):
+        m.d.sync += timer_a_cntr.eq(Cat(reg_ta_lo, reg_ta_hi))
+
 
 
 

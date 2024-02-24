@@ -235,7 +235,7 @@ class VicII(Elaboratable):
         with m.If(self.clk_1mhz_ph2_en):
           m.d.sync += [sprite_idx.eq(0), refresh_idx.eq(0), vmli.eq(0)]
           with m.If(y == 0):
-            m.d.sync += [vc.eq(0)]
+            m.d.sync += [vcbase.eq(0)]
           with m.If(cycle == 58):
             # Disable all sprite shifters.
             m.d.sync += [sprite_shift_on.eq(0)]
@@ -288,6 +288,7 @@ class VicII(Elaboratable):
       with m.State('refresh'):
         with m.If(self.clk_1mhz_ph1_en):
           with m.If(refresh_idx == 4):
+            m.d.sync += vc.eq(vcbase)
             m.next = 'c-access'
           with m.Else():
             m.d.sync += [refresh_idx.eq(refresh_idx + 1)]
@@ -315,8 +316,7 @@ class VicII(Elaboratable):
               m.d.sync += [pixshift1.eq(Cat(Repl(self.i_data[1], 2), Repl(self.i_data[3], 2), Repl(self.i_data[5], 2), Repl(self.i_data[7], 2)))]
             with m.Else():
               m.d.sync += [pixshift0.eq(self.i_data[0:8])]
-          with m.If(bad_line_cond):
-            m.d.sync += [vc.eq(vc + 1)]
+          m.d.sync += [vc.eq(vc + 1)]
           with m.If(vmli == 39):
             m.next = 'eol'
           with m.Else():
@@ -326,6 +326,8 @@ class VicII(Elaboratable):
 
       with m.State('eol'):
         with m.If(self.clk_1mhz_ph1_en):
+          with m.If(display_not_idle_state & (rc == 0b111)):
+            m.d.sync += vcbase.eq(vc)
           m.d.sync += [display_window_x.eq(0)]
           m.next = 'idle'
 
