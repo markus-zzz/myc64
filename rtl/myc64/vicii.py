@@ -54,7 +54,6 @@ class VicII(Elaboratable):
   def elaborate(self, platform):
     m = Module()
     p_x_raster_last = 0x190
-    p_cycle_first_disp = 15
 
     x = Signal(9)
     y = Signal(9)
@@ -167,7 +166,7 @@ class VicII(Elaboratable):
 
     m.d.comb += [self.o_hsync.eq(x == p_x_raster_last),
                  self.o_vsync.eq((y == 0) & (x == (p_x_raster_last - 3))),
-                 self.o_visib.eq((cycle >= p_cycle_first_disp - 2) & (cycle < p_cycle_first_disp + 40 + 4) & (raster >= 0x30 - 32) & (raster <= 0xf7 + 32))]
+                 self.o_visib.eq((cycle >= 13) & (cycle < 13 + 4 + 40 + 4) & (raster >= 0x30 - 32) & (raster <= 0xf7 + 32))]
 
     sprite_idx = Signal(range(8))
     refresh_idx = Signal(range(5))

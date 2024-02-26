@@ -174,9 +174,9 @@ class Cia(Elaboratable):
           m.d.comb += self.o_data.eq(Cat(icr_status, C(0, 2), irq))
           m.d.sync += icr_status.eq(0) # Reads clear interrupt status
         with m.Case(Reg.CRA):
-          m.d.sync += reg_cra.eq(self.i_data)
+          m.d.comb += self.o_data.eq(reg_cra)
         with m.Case(Reg.CRB):
-          m.d.sync += reg_crb.eq(self.i_data)
+          m.d.comb += self.o_data.eq(reg_crb)
 
     # Timer A
     timer_a_zero = Signal()
