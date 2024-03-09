@@ -30,14 +30,13 @@ class Cpu6510(Elaboratable):
     self.o_we = Signal()  # write enable
     self.i_irq = Signal()  # interrupt request
     self.i_nmi = Signal()  # non-maskable interrupt request
-    self.i_rdy = Signal()  # Ready signal. Pauses CPU when RDY=0
+    self.i_stun = Signal() # Stun the CPU for this cycle
     self.o_port = Signal(6, reset=0b11_1111)
     self.i_port = Signal(6)
-    self.i_BA = Signal()
 
     self.ports = [
         self.clk_1mhz_ph1_en, self.clk_1mhz_ph2_en, self.o_addr, self.i_data, self.o_data, self.o_we, self.i_irq,
-        self.i_nmi, self.i_rdy, self.o_port, self.i_port
+        self.i_nmi, self.i_stun, self.o_port, self.i_port
     ]
 
   def elaborate(self, platform):
@@ -46,39 +45,45 @@ class Cpu6510(Elaboratable):
     clk = ClockSignal('sync')
     rst = ResetSignal('sync')
 
-    addr = Signal(16)
+    clk_enable = Signal()
+    addr = Signal(24)
     data_i = Signal(8)
     data_o = Signal(8)
     we = Signal()
-    rdy = Signal()
+    we_n = Signal()
     rdy_mask = Signal()
 
-    with m.If(~self.i_BA):
+    with m.If(self.i_stun):
       m.d.sync += rdy_mask.eq(0)
     with m.Elif(self.clk_1mhz_ph2_en):
       m.d.sync += rdy_mask.eq(1)
 
-    m.d.comb += rdy.eq(self.i_rdy & rdy_mask)
+    m.d.comb += clk_enable.eq(self.clk_1mhz_ph1_en & ~self.i_stun & rdy_mask)
 
-    m.submodules.u_6502 = Instance('cpu',
-                                   i_clk=clk,
-                                   i_reset=rst,
-                                   o_AB=addr,
+    m.submodules.u_6502 = Instance('T65',
+                                   i_Clk=clk,
+                                   i_Enable=clk_enable,
+                                   i_Res_n=~rst,
+                                   i_Mode=C(0b00, 2),
+                                   i_BCD_en=C(0b1, 1),
+                                   i_Rdy=C(0b1, 1),
+                                   i_Abort_n=C(0b1, 1),
+                                   i_IRQ_n=~self.i_irq,
+                                   i_NMI_n=~self.i_nmi,
+                                   i_SO_n=C(0b1, 1),
+                                   o_R_W_n=we_n,
+                                   o_A=addr,
                                    i_DI=data_i,
-                                   o_DO=data_o,
-                                   o_WE=we,
-                                   i_IRQ=self.i_irq,
-                                   i_NMI=self.i_nmi,
-                                   i_RDY=rdy)
+                                   o_DO=data_o)
 
-    with m.If(rdy):
-      m.d.sync += [self.o_addr.eq(addr), self.o_data.eq(data_o), self.o_we.eq(we)]
+    m.d.comb += we.eq(~we_n)
+    m.d.comb += [self.o_addr.eq(addr), self.o_data.eq(data_o), self.o_we.eq(we)]
 
-    with m.If(rdy & we & (addr == 0x0001)):
+    with m.If(clk_enable & we & (self.o_addr == 0x0001)):
       m.d.sync += self.o_port.eq(data_o[0:6])
 
     data_ir = Signal(8)
-    with m.If(self.clk_1mhz_ph2_en & self.i_BA):
+    with m.If(self.clk_1mhz_ph2_en & ~self.i_stun):
       m.d.sync += data_ir.eq(self.i_data)
 
     m.d.comb += data_i.eq(Mux(self.o_addr == 0x0001, self.o_port, data_ir))

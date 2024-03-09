@@ -180,16 +180,15 @@ class MyC64(Elaboratable):
     #
 
     m.d.comb += [
-        u_cpu.i_rdy.eq(clk_1mhz_ph1_en & u_vic.BA),
         u_cpu.i_data.eq(cpu_di),
-        u_cpu.i_irq.eq(u_cia1.o_irq | ~u_vic.IRQ),
+        u_cpu.i_irq.eq(u_cia1.o_irq | u_vic.o_irq),
         cpu_addr.eq(u_cpu.o_addr),
         cpu_we.eq(u_cpu.o_we),
         cpu_do.eq(u_cpu.o_data),
         cpu_po.eq(u_cpu.o_port),
         u_cpu.clk_1mhz_ph1_en.eq(clk_1mhz_ph1_en),
         u_cpu.clk_1mhz_ph2_en.eq(clk_1mhz_ph2_en),
-        u_cpu.i_BA.eq(u_vic.BA),
+        u_cpu.i_stun.eq(u_vic.o_steal_bus),
         # VIC-II
         u_vic.clk_8mhz_en.eq(1),
         u_vic.clk_1mhz_ph1_en.eq(clk_1mhz_ph1_en),
@@ -216,8 +215,8 @@ class MyC64(Elaboratable):
         u_cia2.i_we.eq(bus_we),
         u_cia2.i_data.eq(bus_do),
         # Bus matrix
-        bus_addr.eq(Mux(vic_cycle | ~u_vic.BM, Cat(u_vic.o_addr, ~u_cia2.o_pa[0:2]), cpu_addr)),
-        bus_we.eq(cpu_we & u_vic.BM & ~vic_cycle),
+        bus_addr.eq(Mux(vic_cycle | u_vic.o_steal_bus, Cat(u_vic.o_addr, ~u_cia2.o_pa[0:2]), cpu_addr)),
+        bus_we.eq(cpu_we & ~vic_cycle & ~u_vic.o_steal_bus),
         bus_do.eq(cpu_do)
     ]
 

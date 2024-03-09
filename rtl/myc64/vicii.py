@@ -37,9 +37,8 @@ class VicII(Elaboratable):
     self.i_reg_we = Signal()
     self.i_reg_data = Signal(8)
     self.o_reg_data = Signal(8)
-    self.BA = Signal()
-    self.BM = Signal()
-    self.IRQ = Signal()
+    self.o_steal_bus = Signal()
+    self.o_irq = Signal()
     self.o_color = Signal(4)
     self.o_hsync = Signal()
     self.o_vsync = Signal()
@@ -47,7 +46,7 @@ class VicII(Elaboratable):
 
     self.ports = [
         self.clk_8mhz_en, self.clk_1mhz_ph1_en, self.clk_1mhz_ph2_en, self.o_addr, self.i_data, self.i_reg_addr,
-        self.i_reg_cs, self.i_reg_we, self.i_reg_data, self.o_reg_data, self.BA, self.BM, self.IRQ, self.o_color,
+        self.i_reg_cs, self.i_reg_we, self.i_reg_data, self.o_reg_data, self.o_steal_bus, self.o_irq, self.o_color,
         self.o_hsync, self.o_vsync
     ]
 
@@ -200,7 +199,7 @@ class VicII(Elaboratable):
 
     vic_owns_ph1 = Signal()
 
-    m.d.comb += [self.BA.eq(~vic_owns_ph1), self.BM.eq(~vic_owns_ph1)]
+    m.d.comb += [self.o_steal_bus.eq(vic_owns_ph1)]
 
     # DEBUG - begin
     for idx in range(8):
@@ -347,6 +346,6 @@ class VicII(Elaboratable):
     with m.If(tmp_bus_wen & r_d019_writeStrobe):
       m.d.sync += [irq.eq(irq ^ (irq & r_d019_writeSignal))]
 
-    m.d.comb += [self.IRQ.eq(~((irq & r_d01a).any()))]
+    m.d.comb += [self.o_irq.eq((irq & r_d01a).any())]
 
     return m
