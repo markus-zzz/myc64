@@ -160,8 +160,7 @@ class VicII(Elaboratable):
     with m.If(self.clk_1mhz_ph1_en):
       m.d.sync += [fgcolor.eq(vml[vmli])]
 
-    pixshift0 = Signal(8)
-    pixshift1 = Signal(8)
+    pixshift = Signal(8)
 
     m.d.comb += [self.o_hsync.eq(x == p_x_raster_last),
                  self.o_vsync.eq((y == 0) & (x == (p_x_raster_last - 3))),
@@ -172,6 +171,10 @@ class VicII(Elaboratable):
     sprite_ptr = Signal(8)
     sprite_dma_on = Signal(8)
     sprite_shift_on = Signal(8)
+
+    pixpair = Signal(2)
+    with m.If(~x[0]):
+      m.d.sync += pixpair.eq(pixshift[6:8])
 
     color = Signal(4)
     m.d.comb += [color.eq(r_d020)]  # Border color.
@@ -185,9 +188,11 @@ class VicII(Elaboratable):
         with m.Elif(sprite_shift_on[idx] & sprite_shift[idx][23]):
           m.d.comb += [color.eq(sprites_color[idx])]
       with m.Elif(~mode_ecm & ~mode_bmm & ~mode_mcm):
-        m.d.comb += [color.eq(Mux(pixshift0[7], fgcolor[8:12], r_d021))]
+        m.d.comb += [color.eq(Mux(pixshift[7], fgcolor[8:12], r_d021))]
+      with m.Elif(~mode_ecm & ~mode_bmm & mode_mcm):
+        m.d.comb += [color.eq(Mux(pixshift[7], fgcolor[8:12], r_d021))]
       with m.Elif(~mode_ecm & mode_bmm & mode_mcm):
-        with m.Switch(Cat(pixshift0[7], pixshift1[7])):
+        with m.Switch(Mux(x[0], pixpair, pixshift[6:8])):
           with m.Case(0b00):
             m.d.comb += color.eq(r_d021)
           with m.Case(0b01):
@@ -222,8 +227,7 @@ class VicII(Elaboratable):
           m.d.sync += [sprite_shift_on[idx].eq(1)]
 
     with m.If(self.clk_8mhz_en):
-      m.d.sync += [pixshift0.eq(Cat(Const(0, 1), pixshift0[0:7])),
-                   pixshift1.eq(Cat(Const(0, 1), pixshift1[0:7]))]
+      m.d.sync += pixshift.eq(Cat(Const(0, 1), pixshift[0:7]))
       for idx in range(8):
         with m.If(sprite_shift_on[idx]):
           m.d.sync += [sprite_shift[idx].eq(Cat(Const(0, 1), sprite_shift[idx][0:23]))]
@@ -310,13 +314,9 @@ class VicII(Elaboratable):
         with m.Else():
           m.d.comb += [self.o_addr.eq(Cat(rc[0:3], vml[vmli][0:8], r_d018[1:4]))]
         with m.If(self.clk_1mhz_ph1_en):
-          m.d.sync += [pixshift0.eq(0), pixshift1.eq(0)]
+          m.d.sync += [pixshift.eq(0)]
           with m.If(display_not_idle_state):
-            with m.If(mode_mcm):
-              m.d.sync += [pixshift0.eq(Cat(Repl(self.i_data[0], 2), Repl(self.i_data[2], 2), Repl(self.i_data[4], 2), Repl(self.i_data[6], 2)))]
-              m.d.sync += [pixshift1.eq(Cat(Repl(self.i_data[1], 2), Repl(self.i_data[3], 2), Repl(self.i_data[5], 2), Repl(self.i_data[7], 2)))]
-            with m.Else():
-              m.d.sync += [pixshift0.eq(self.i_data[0:8])]
+            m.d.sync += [pixshift.eq(self.i_data[0:8])]
           m.d.sync += [vc.eq(vc + 1)]
           with m.If(vmli == 39):
             m.next = 'eol'
