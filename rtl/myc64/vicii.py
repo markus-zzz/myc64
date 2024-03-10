@@ -190,10 +190,12 @@ class VicII(Elaboratable):
       for idx in range(8):
         with m.Elif(sprite_shift_on[idx] & sprite_shift[idx][23]):
           m.d.comb += [color.eq(sprites_color[idx])]
+
       with m.Elif(~mode_ecm & ~mode_bmm & ~mode_mcm): # Standard text mode (ECM/BMM/MCM=0/0/0)
         m.d.comb += [color.eq(Mux(pixshift[7], fgcolor[8:12], r_d021))]
+
       with m.Elif(~mode_ecm & ~mode_bmm & mode_mcm): # Multicolor text mode (ECM/BMM/MCM=0/0/1)
-        with m.If(fgcolor[11]): # MC
+        with m.If(fgcolor[11]):
           with m.Switch(Mux(x[0], pixpair, pixshift[6:8])):
             with m.Case(0b00):
               m.d.comb += color.eq(r_d021)
@@ -205,6 +207,10 @@ class VicII(Elaboratable):
               m.d.comb += color.eq(fgcolor[8:11])
         with m.Else():
           m.d.comb += [color.eq(Mux(pixshift[7], fgcolor[8:12], r_d021))]
+
+      with m.Elif(~mode_ecm & mode_bmm & ~mode_mcm): # Standard bitmap mode (ECM/BMM/MCM=0/1/0)
+        m.d.comb += [color.eq(Mux(pixshift[7], fgcolor[4:8], fgcolor[0:4]))]
+
       with m.Elif(~mode_ecm & mode_bmm & mode_mcm): # Multicolor bitmap mode (ECM/BMM/MCM=0/1/1)
         with m.Switch(Mux(x[0], pixpair, pixshift[6:8])):
           with m.Case(0b00):
