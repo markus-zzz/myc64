@@ -128,6 +128,9 @@ class VicII(Elaboratable):
 
     r_d020 = rf.addRegRW(addr=0xd020, width=4)  # Border color.
     r_d021 = rf.addRegRW(addr=0xd021, width=4)  # Background color.
+    r_d022 = rf.addRegRW(addr=0xd022, width=4)  # Extra background color #1.
+    r_d023 = rf.addRegRW(addr=0xd023, width=4)  # Extra background color #2.
+    r_d024 = rf.addRegRW(addr=0xd024, width=4)  # Extra background color #3.
 
     sprites_x_bit_0_7 = Array([rf.addRegRW(addr=addr, width=8) for addr in range(0xd000, 0xd010, 2)])
     sprites_y = Array([rf.addRegRW(addr=addr, width=8) for addr in range(0xd001, 0xd010, 2)])
@@ -187,11 +190,22 @@ class VicII(Elaboratable):
       for idx in range(8):
         with m.Elif(sprite_shift_on[idx] & sprite_shift[idx][23]):
           m.d.comb += [color.eq(sprites_color[idx])]
-      with m.Elif(~mode_ecm & ~mode_bmm & ~mode_mcm):
+      with m.Elif(~mode_ecm & ~mode_bmm & ~mode_mcm): # Standard text mode (ECM/BMM/MCM=0/0/0)
         m.d.comb += [color.eq(Mux(pixshift[7], fgcolor[8:12], r_d021))]
-      with m.Elif(~mode_ecm & ~mode_bmm & mode_mcm):
-        m.d.comb += [color.eq(Mux(pixshift[7], fgcolor[8:12], r_d021))]
-      with m.Elif(~mode_ecm & mode_bmm & mode_mcm):
+      with m.Elif(~mode_ecm & ~mode_bmm & mode_mcm): # Multicolor text mode (ECM/BMM/MCM=0/0/1)
+        with m.If(fgcolor[11]): # MC
+          with m.Switch(Mux(x[0], pixpair, pixshift[6:8])):
+            with m.Case(0b00):
+              m.d.comb += color.eq(r_d021)
+            with m.Case(0b01):
+              m.d.comb += color.eq(r_d022)
+            with m.Case(0b10):
+              m.d.comb += color.eq(r_d023)
+            with m.Case(0b11):
+              m.d.comb += color.eq(fgcolor[8:11])
+        with m.Else():
+          m.d.comb += [color.eq(Mux(pixshift[7], fgcolor[8:12], r_d021))]
+      with m.Elif(~mode_ecm & mode_bmm & mode_mcm): # Multicolor bitmap mode (ECM/BMM/MCM=0/1/1)
         with m.Switch(Mux(x[0], pixpair, pixshift[6:8])):
           with m.Case(0b00):
             m.d.comb += color.eq(r_d021)
