@@ -179,8 +179,11 @@ class VicII(Elaboratable):
       # XXX: This is as temporary hack for testing and not how the priorities
       # are supposed to work.
       m.d.comb += color.eq(0)
-      with m.If(sprite_shift_on[0] & sprite_shift[0][23]):
-        m.d.comb += [color.eq(sprites_color[0])]
+      with m.If(False):
+        pass
+      for idx in range(8):
+        with m.Elif(sprite_shift_on[idx] & sprite_shift[idx][23]):
+          m.d.comb += [color.eq(sprites_color[idx])]
       with m.Elif(~mode_ecm & ~mode_bmm & ~mode_mcm):
         m.d.comb += [color.eq(Mux(pixshift0[7], fgcolor[8:12], r_d021))]
       with m.Elif(~mode_ecm & mode_bmm & mode_mcm):
