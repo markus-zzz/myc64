@@ -222,6 +222,20 @@ class VicII(Elaboratable):
           with m.Case(0b11):
             m.d.comb += color.eq(fgcolor[8:12])
 
+      with m.Elif(mode_ecm & ~mode_bmm & ~mode_mcm): # ECM text mode (ECM/BMM/MCM=1/0/0)
+        with m.If(pixshift[7]):
+          m.d.comb += color.eq(fgcolor[8:12])
+        with m.Else():
+          with m.Switch(fgcolor[6:8]):
+            with m.Case(0b00):
+              m.d.comb += color.eq(r_d021)
+            with m.Case(0b01):
+              m.d.comb += color.eq(r_d022)
+            with m.Case(0b10):
+              m.d.comb += color.eq(r_d023)
+            with m.Case(0b11):
+              m.d.comb += color.eq(r_d024)
+
 
     m.d.comb += [self.o_color.eq(color)]
 
@@ -332,7 +346,10 @@ class VicII(Elaboratable):
         with m.If(mode_bmm):
           m.d.comb += [self.o_addr.eq(Cat(rc[0:3], vc[0:10], r_d018[3]))]
         with m.Else():
-          m.d.comb += [self.o_addr.eq(Cat(rc[0:3], vml[vmli][0:8], r_d018[1:4]))]
+          with m.If(mode_ecm):
+            m.d.comb += [self.o_addr.eq(Cat(rc[0:3], Cat(vml[vmli][0:6], C(0b00, 2)), r_d018[1:4]))]
+          with m.Else():
+            m.d.comb += [self.o_addr.eq(Cat(rc[0:3], vml[vmli][0:8], r_d018[1:4]))]
         with m.If(self.clk_1mhz_ph1_en):
           m.d.sync += [pixshift.eq(0)]
           with m.If(display_not_idle_state):
