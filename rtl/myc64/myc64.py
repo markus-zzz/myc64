@@ -33,6 +33,8 @@ class MyC64(Elaboratable):
     self.o_vid_en = Signal()
     self.o_wave = Signal(16)
     self.i_keyboard_mask = Signal(64)
+    self.i_joystick1 = Signal(5)
+    self.i_joystick2 = Signal(5)
 
     self.o_bus_addr = Signal(16)
     self.i_rom_char_data = Signal(8)
@@ -46,7 +48,7 @@ class MyC64(Elaboratable):
     self.o_clk_1mhz_ph2_en = Signal()
 
     self.ports = [
-        self.o_vid_rgb, self.o_vid_hsync, self.o_vid_vsync, self.o_vid_en, self.o_wave, self.i_keyboard_mask,
+        self.o_vid_rgb, self.o_vid_hsync, self.o_vid_vsync, self.o_vid_en, self.o_wave, self.i_keyboard_mask, self.i_joystick1, self.i_joystick2,
         self.o_bus_addr, self.i_rom_char_data, self.i_rom_basic_data, self.i_rom_kernal_data,
         self.i_ram_main_data, self.o_ram_main_data, self.o_ram_main_we, self.o_clk_1mhz_ph1_en, self.o_clk_1mhz_ph2_en
     ]
@@ -214,6 +216,7 @@ class MyC64(Elaboratable):
         u_cia2.i_addr.eq(bus_addr),
         u_cia2.i_we.eq(bus_we),
         u_cia2.i_data.eq(bus_do),
+        u_cia2.i_pa.eq(C(0xff, 8)),
         # Bus matrix
         bus_addr.eq(Mux(vic_cycle | u_vic.o_steal_bus, Cat(u_vic.o_addr, ~u_cia2.o_pa[0:2]), cpu_addr)),
         bus_we.eq(cpu_we & ~vic_cycle & ~u_vic.o_steal_bus),
@@ -225,7 +228,8 @@ class MyC64(Elaboratable):
     with m.Else():
       m.d.comb += u_vic.i_data.eq(Cat(self.i_ram_main_data, u_ram_color_rp.data))
 
-    # Keyboard matrix.
+    # Keyboard matrix and joysticks.
+    m.d.comb += u_cia1.i_pa.eq(Cat(~self.i_joystick2[0:5], C(0b111, 3)))
     m.d.comb += u_cia1.i_pb.eq(~(
         Mux(~u_cia1.o_pa[7], self.i_keyboard_mask[56:64], 0) |  #
         Mux(~u_cia1.o_pa[6], self.i_keyboard_mask[48:56], 0) |  #

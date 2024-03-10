@@ -209,7 +209,7 @@ class Cia(Elaboratable):
     m.d.comb += self.o_data.eq(0)
     with m.Switch(self.i_addr):
       with m.Case(0x0):
-        m.d.comb += self.o_data.eq(0xff)
+        m.d.comb += self.o_data.eq(self.i_pa)
       with m.Case(0x1):
         m.d.comb += self.o_data.eq(self.i_pb)
 
