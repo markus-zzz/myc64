@@ -71,6 +71,8 @@ class VicII(Elaboratable):
     # Sprite registers (internal)
     mc = Array([Signal(6) for _ in range(8)])
     sprite_shift = Array([Signal(24) for _ in range(8)])
+    sprite_shift_2msb = Array([Signal(2) for _ in range(8)])
+    sprite_shift_toggle = Array([Signal(1) for _ in range(8)])
 
     # X and Y counters with wrap logic.
     with m.If(self.clk_8mhz_en):
@@ -131,6 +133,8 @@ class VicII(Elaboratable):
     r_d022 = rf.addRegRW(addr=0xd022, width=4)  # Extra background color #1.
     r_d023 = rf.addRegRW(addr=0xd023, width=4)  # Extra background color #2.
     r_d024 = rf.addRegRW(addr=0xd024, width=4)  # Extra background color #3.
+    r_d025 = rf.addRegRW(addr=0xd025, width=4)  # Sprite extra color #1.
+    r_d026 = rf.addRegRW(addr=0xd026, width=4)  # Sprite extra color #2.
 
     sprites_x_bit_0_7 = Array([rf.addRegRW(addr=addr, width=8) for addr in range(0xd000, 0xd010, 2)])
     sprites_y = Array([rf.addRegRW(addr=addr, width=8) for addr in range(0xd001, 0xd010, 2)])
@@ -138,6 +142,7 @@ class VicII(Elaboratable):
     r_d015 = rf.addRegRW(addr=0xd015, width=8)
     r_d016 = rf.addRegRW(addr=0xd016, width=8)
     r_d01a = rf.addRegRW(addr=0xd01a, width=4)
+    r_d01c = rf.addRegRW(addr=0xd01c, width=8)
     sprites_color = Array([rf.addRegRW(addr=addr, width=4) for addr in range(0xd027, 0xd02f, 1)])
 
     mode_ecm = r_d011[6] # Extended Color Mode
@@ -164,6 +169,7 @@ class VicII(Elaboratable):
       m.d.sync += [fgcolor.eq(vml[vmli])]
 
     pixshift = Signal(8)
+    pixshift_2msb = Signal(2)
 
     m.d.comb += [self.o_hsync.eq(x == p_x_raster_last),
                  self.o_vsync.eq((y == 0) & (x == (p_x_raster_last - 3))),
@@ -175,9 +181,8 @@ class VicII(Elaboratable):
     sprite_dma_on = Signal(8)
     sprite_shift_on = Signal(8)
 
-    pixpair = Signal(2)
     with m.If(~x[0]):
-      m.d.sync += pixpair.eq(pixshift[6:8])
+      m.d.sync += pixshift_2msb.eq(pixshift[6:8])
 
     color = Signal(4)
     m.d.comb += [color.eq(r_d020)]  # Border color.
@@ -188,15 +193,28 @@ class VicII(Elaboratable):
       with m.If(False):
         pass
       for idx in range(8):
-        with m.Elif(sprite_shift_on[idx] & sprite_shift[idx][23]):
-          m.d.comb += [color.eq(sprites_color[idx])]
+        sprite_bit = sprite_shift_on[idx] & sprite_shift[idx][23]
+        sprite_bits = Mux(sprite_shift_toggle[idx], sprite_shift_2msb[idx], sprite_shift[idx][22:24])
+        with m.Elif(Mux(r_d01c[idx], sprite_bits != C(0b00, 2), sprite_bit != C(0b0, 1))):
+          with m.If(r_d01c[idx]):
+            with m.Switch(sprite_bits):
+              with m.Case(0b00):
+                pass
+              with m.Case(0b01):
+                m.d.comb += [color.eq(r_d025)]
+              with m.Case(0b10):
+                m.d.comb += [color.eq(sprites_color[idx])]
+              with m.Case(0b11):
+                m.d.comb += [color.eq(r_d026)]
+          with m.Else():
+            m.d.comb += [color.eq(sprites_color[idx])]
 
       with m.Elif(~mode_ecm & ~mode_bmm & ~mode_mcm): # Standard text mode (ECM/BMM/MCM=0/0/0)
         m.d.comb += [color.eq(Mux(pixshift[7], fgcolor[8:12], r_d021))]
 
       with m.Elif(~mode_ecm & ~mode_bmm & mode_mcm): # Multicolor text mode (ECM/BMM/MCM=0/0/1)
         with m.If(fgcolor[11]):
-          with m.Switch(Mux(x[0], pixpair, pixshift[6:8])):
+          with m.Switch(Mux(x[0], pixshift_2msb, pixshift[6:8])):
             with m.Case(0b00):
               m.d.comb += color.eq(r_d021)
             with m.Case(0b01):
@@ -212,7 +230,7 @@ class VicII(Elaboratable):
         m.d.comb += [color.eq(Mux(pixshift[7], fgcolor[4:8], fgcolor[0:4]))]
 
       with m.Elif(~mode_ecm & mode_bmm & mode_mcm): # Multicolor bitmap mode (ECM/BMM/MCM=0/1/1)
-        with m.Switch(Mux(x[0], pixpair, pixshift[6:8])):
+        with m.Switch(Mux(x[0], pixshift_2msb, pixshift[6:8])):
           with m.Case(0b00):
             m.d.comb += color.eq(r_d021)
           with m.Case(0b01):
@@ -253,18 +271,28 @@ class VicII(Elaboratable):
       m.d.comb += s.eq(Cat(sprites_x_bit_0_7[idx], r_d010[idx]))
       s = Signal(6, name='debug_mc_{}'.format(idx))
       m.d.comb += s.eq(mc[idx])
+      s = Signal(1, name='debug_sprite_shift_toggle_{}'.format(idx))
+      m.d.comb += s.eq(sprite_shift_toggle[idx])
+      s = Signal(2, name='debug_sprite_shift_2msb_{}'.format(idx))
+      m.d.comb += s.eq(sprite_shift_2msb[idx])
+      sprite_bits = Mux(sprite_shift_toggle[idx], sprite_shift_2msb[idx], sprite_shift[idx][22:24])
+      s = Signal(2, name='debug_sprite_bits_{}'.format(idx))
+      m.d.comb += s.eq(sprite_bits)
     # DEBUG - end
 
     with m.If(self.clk_8mhz_en):
       for idx in range(8):
         with m.If(Cat(sprites_x_bit_0_7[idx], r_d010[idx]) == x):
-          m.d.sync += [sprite_shift_on[idx].eq(1)]
+          m.d.sync += [sprite_shift_on[idx].eq(1), sprite_shift_toggle[idx].eq(0)]
 
     with m.If(self.clk_8mhz_en):
       m.d.sync += pixshift.eq(Cat(Const(0, 1), pixshift[0:7]))
       for idx in range(8):
         with m.If(sprite_shift_on[idx]):
-          m.d.sync += [sprite_shift[idx].eq(Cat(Const(0, 1), sprite_shift[idx][0:23]))]
+          m.d.sync += [sprite_shift[idx].eq(Cat(Const(0, 1), sprite_shift[idx][0:23])),
+                       sprite_shift_toggle[idx].eq(~sprite_shift_toggle[idx])]
+          with m.If(~sprite_shift_toggle[idx]):
+            m.d.sync += sprite_shift_2msb[idx].eq(sprite_shift[idx][22:24])
 
     m.d.comb += [vic_owns_ph1.eq(0)]
 
