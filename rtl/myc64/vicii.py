@@ -193,9 +193,9 @@ class VicII(Elaboratable):
       with m.If(False):
         pass
       for idx in range(8):
-        sprite_bit = sprite_shift_on[idx] & sprite_shift[idx][23]
+        sprite_bit = sprite_shift[idx][23]
         sprite_bits = Mux(sprite_shift_toggle[idx], sprite_shift_2msb[idx], sprite_shift[idx][22:24])
-        with m.Elif(Mux(r_d01c[idx], sprite_bits != C(0b00, 2), sprite_bit != C(0b0, 1))):
+        with m.Elif(sprite_shift_on[idx] & Mux(r_d01c[idx], sprite_bits != C(0b00, 2), sprite_bit != C(0b0, 1))):
           with m.If(r_d01c[idx]):
             with m.Switch(sprite_bits):
               with m.Case(0b00):
@@ -282,7 +282,7 @@ class VicII(Elaboratable):
 
     with m.If(self.clk_8mhz_en):
       for idx in range(8):
-        with m.If(Cat(sprites_x_bit_0_7[idx], r_d010[idx]) == x):
+        with m.If(r_d015[idx] & (Cat(sprites_x_bit_0_7[idx], r_d010[idx]) == x)):
           m.d.sync += [sprite_shift_on[idx].eq(1), sprite_shift_toggle[idx].eq(0)]
 
     with m.If(self.clk_8mhz_en):

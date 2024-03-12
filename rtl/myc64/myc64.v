@@ -5025,7 +5025,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire [1:0] \$146 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$149 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$151 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$153 ;
@@ -5035,7 +5035,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire [1:0] \$159 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$162 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$164 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$166 ;
@@ -5047,7 +5047,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire [1:0] \$172 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$175 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$177 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$179 ;
@@ -5059,7 +5059,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire \$188 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:87" *)
   wire [6:0] \$19 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$190 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$192 ;
@@ -5073,7 +5073,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire [6:0] \$20 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$201 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$203 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$205 ;
@@ -5083,7 +5083,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire [1:0] \$211 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$214 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$216 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$218 ;
@@ -5095,7 +5095,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire [1:0] \$224 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$227 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$229 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$231 ;
@@ -5107,7 +5107,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire \$24 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$240 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$242 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *)
   wire \$244 ;
@@ -5225,33 +5225,33 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire \$352 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$354 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$356 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$358 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$360 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$362 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$364 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$366 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$368 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:94" *)
   wire \$37 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$370 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
   wire \$372 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$374 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
-  wire \$376 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-  wire \$378 ;
+  wire \$376 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
+  wire \$378 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$380 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$382 ;
@@ -5259,127 +5259,127 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire \$384 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$386 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$388 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:155" *)
   wire \$39 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:327" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
   wire \$390 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:336" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$392 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$394 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
   wire \$396 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$398 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:79" *)
   wire [9:0] \$4 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$400 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
   wire \$402 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$404 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$406 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
   wire \$408 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:155" *)
   wire \$41 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$410 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:323" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$412 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:332" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
   wire \$414 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:341" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$416 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
   wire \$418 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:352" *)
-  wire [3:0] \$420 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:352" *)
-  wire [3:0] \$421 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *)
-  wire \$423 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:361" *)
-  wire [3:0] \$425 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:361" *)
-  wire [3:0] \$426 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *)
+  wire \$420 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:327" *)
+  wire \$422 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:336" *)
+  wire \$424 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" *)
+  wire \$426 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
   wire \$428 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:155" *)
   wire \$43 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:390" *)
-  wire [6:0] \$430 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:390" *)
-  wire [6:0] \$431 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:304" *)
-  wire \$433 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:395" *)
-  wire \$435 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:395" *)
-  wire \$437 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
-  wire \$439 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-  wire \$441 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-  wire \$443 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-  wire \$445 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-  wire \$447 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-  wire \$449 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  wire \$430 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  wire \$432 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  wire \$434 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  wire \$436 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  wire \$438 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  wire \$440 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
+  wire \$442 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:323" *)
+  wire \$444 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:332" *)
+  wire \$446 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:341" *)
+  wire \$448 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$45 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-  wire \$451 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-  wire \$453 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" *)
+  wire \$450 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:352" *)
+  wire [3:0] \$452 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:352" *)
+  wire [3:0] \$453 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *)
   wire \$455 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-  wire \$457 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-  wire \$459 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-  wire \$461 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-  wire \$463 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:361" *)
+  wire [3:0] \$457 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:361" *)
+  wire [3:0] \$458 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *)
+  wire \$460 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:390" *)
+  wire [6:0] \$462 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:390" *)
+  wire [6:0] \$463 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:304" *)
   wire \$465 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:395" *)
   wire \$467 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:395" *)
   wire \$469 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$47 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
   wire \$471 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$473 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$475 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$477 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$479 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$481 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$483 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$485 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$487 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$489 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$49 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$491 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$493 ;
@@ -5395,210 +5395,210 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire \$501 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$503 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" *)
   wire \$505 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
   wire \$507 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
   wire \$509 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:414" *)
   wire \$51 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
   wire \$511 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
   wire \$513 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
   wire \$515 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
   wire \$517 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
   wire \$519 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
   wire \$521 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
   wire \$523 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:327" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
   wire \$525 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$527 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$528 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$529 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$527 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$529 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:415" *)
   wire [3:0] \$53 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$531 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$532 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$534 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$535 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$537 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$538 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$540 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$541 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$543 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$544 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$546 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$547 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$549 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$531 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$533 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$535 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$537 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$539 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$541 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$543 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$545 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$547 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$549 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:415" *)
   wire [3:0] \$55 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$551 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$553 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
+  wire \$555 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:327" *)
+  wire \$557 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
-  wire [6:0] \$550 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:336" *)
-  wire \$552 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
-  wire [6:0] \$554 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
-  wire [6:0] \$555 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
-  wire [6:0] \$556 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
-  wire [6:0] \$558 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
   wire [6:0] \$559 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
+  wire [6:0] \$560 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
   wire [6:0] \$561 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
-  wire [6:0] \$562 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
+  wire [6:0] \$563 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
   wire [6:0] \$564 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
-  wire [6:0] \$565 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
+  wire [6:0] \$566 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
   wire [6:0] \$567 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
-  wire [6:0] \$568 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
+  wire [6:0] \$569 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:160" *)
   wire \$57 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
   wire [6:0] \$570 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
-  wire [6:0] \$571 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
+  wire [6:0] \$572 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
   wire [6:0] \$573 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
-  wire [6:0] \$574 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
+  wire [6:0] \$575 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
   wire [6:0] \$576 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
-  wire [6:0] \$577 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" *)
-  wire \$579 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
+  wire [6:0] \$578 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
+  wire [6:0] \$579 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
   wire [6:0] \$581 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
   wire [6:0] \$582 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
-  wire [6:0] \$583 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
-  wire [6:0] \$585 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:336" *)
+  wire \$584 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
   wire [6:0] \$586 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  wire [6:0] \$587 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
   wire [6:0] \$588 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
-  wire [6:0] \$589 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:160" *)
   wire \$59 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  wire [6:0] \$590 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
   wire [6:0] \$591 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
-  wire [6:0] \$592 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  wire [6:0] \$593 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
   wire [6:0] \$594 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
-  wire [6:0] \$595 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  wire [6:0] \$596 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
   wire [6:0] \$597 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
-  wire [6:0] \$598 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  wire [6:0] \$599 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
   wire [6:0] \$600 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
-  wire [6:0] \$601 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  wire [6:0] \$602 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
   wire [6:0] \$603 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
-  wire [6:0] \$604 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
-  wire \$606 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" *)
-  wire \$608 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  wire [6:0] \$605 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  wire [6:0] \$606 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  wire [6:0] \$608 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
+  wire [6:0] \$609 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:160" *)
   wire \$61 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *)
-  wire \$610 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *)
-  wire \$612 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:323" *)
-  wire \$614 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:332" *)
-  wire \$616 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:341" *)
-  wire \$618 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *)
-  wire \$620 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:385" *)
-  wire [10:0] \$622 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:385" *)
-  wire [10:0] \$623 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *)
-  wire \$625 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$627 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$629 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" *)
+  wire \$611 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$613 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$614 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$615 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$617 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$618 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$620 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$621 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$623 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$624 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$626 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$627 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$629 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:162" *)
   wire \$63 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$631 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$633 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$635 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$637 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$639 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$641 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$643 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$645 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$647 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$649 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$630 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$632 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$633 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$635 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
+  wire [6:0] \$636 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
+  wire \$638 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" *)
+  wire \$640 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *)
+  wire \$642 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *)
+  wire \$644 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:323" *)
+  wire \$646 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:332" *)
+  wire \$648 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:162" *)
   wire \$65 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$651 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$653 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$655 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:341" *)
+  wire \$650 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *)
+  wire \$652 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:385" *)
+  wire [10:0] \$654 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:385" *)
+  wire [10:0] \$655 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *)
   wire \$657 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$659 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$661 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:99" *)
-  wire [7:0] \$663 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$663 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$665 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
@@ -5633,8 +5633,8 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire \$691 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$693 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
-  wire \$695 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:99" *)
+  wire [7:0] \$695 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$697 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
@@ -5841,7 +5841,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire \$889 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$891 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$893 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$895 ;
@@ -5849,7 +5849,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire \$897 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$899 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$901 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$903 ;
@@ -5857,12 +5857,44 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   wire \$905 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$907 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:412" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$909 ;
-  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:417" *)
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
   wire \$911 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$913 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$915 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$917 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$919 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$921 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$923 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" *)
+  wire \$925 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$927 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$929 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$931 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" *)
+  wire \$933 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$935 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$937 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *)
+  wire \$939 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:412" *)
+  wire \$941 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:417" *)
-  wire [3:0] \$912 ;
+  wire \$943 ;
+  (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:417" *)
+  wire [3:0] \$944 ;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:62" *)
   reg [11:0] \$signal  = 12'h000;
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:62" *)
@@ -6572,6 +6604,70 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:58" *)
   reg [8:0] \y$next ;
   always @(posedge clk)
+    \$signal$81  <= \$signal$81$next ;
+  always @(posedge clk)
+    \$signal$82  <= \$signal$82$next ;
+  always @(posedge clk)
+    \$signal$83  <= \$signal$83$next ;
+  always @(posedge clk)
+    \$signal$84  <= \$signal$84$next ;
+  always @(posedge clk)
+    \$signal$85  <= \$signal$85$next ;
+  always @(posedge clk)
+    \$signal$86  <= \$signal$86$next ;
+  always @(posedge clk)
+    \$signal$87  <= \$signal$87$next ;
+  always @(posedge clk)
+    \$signal$88  <= \$signal$88$next ;
+  always @(posedge clk)
+    \$signal$89  <= \$signal$89$next ;
+  always @(posedge clk)
+    \$signal$90  <= \$signal$90$next ;
+  always @(posedge clk)
+    \$signal$91  <= \$signal$91$next ;
+  always @(posedge clk)
+    \$signal$92  <= \$signal$92$next ;
+  always @(posedge clk)
+    \$signal$93  <= \$signal$93$next ;
+  always @(posedge clk)
+    \$signal$94  <= \$signal$94$next ;
+  always @(posedge clk)
+    \$signal$95  <= \$signal$95$next ;
+  always @(posedge clk)
+    \$signal$96  <= \$signal$96$next ;
+  always @(posedge clk)
+    \$signal$97  <= \$signal$97$next ;
+  always @(posedge clk)
+    \$signal$98  <= \$signal$98$next ;
+  always @(posedge clk)
+    \$signal$99  <= \$signal$99$next ;
+  always @(posedge clk)
+    \$signal$100  <= \$signal$100$next ;
+  always @(posedge clk)
+    \$signal$101  <= \$signal$101$next ;
+  always @(posedge clk)
+    \$signal$102  <= \$signal$102$next ;
+  always @(posedge clk)
+    \$signal$103  <= \$signal$103$next ;
+  always @(posedge clk)
+    \$signal$104  <= \$signal$104$next ;
+  always @(posedge clk)
+    \$signal$105  <= \$signal$105$next ;
+  always @(posedge clk)
+    \$signal$106  <= \$signal$106$next ;
+  always @(posedge clk)
+    \$signal$107  <= \$signal$107$next ;
+  always @(posedge clk)
+    \$signal$108  <= \$signal$108$next ;
+  always @(posedge clk)
+    \$signal$109  <= \$signal$109$next ;
+  always @(posedge clk)
+    \$signal$110  <= \$signal$110$next ;
+  always @(posedge clk)
+    \$signal$111  <= \$signal$111$next ;
+  always @(posedge clk)
+    \$signal$112  <= \$signal$112$next ;
+  always @(posedge clk)
     \$signal$113  <= \$signal$113$next ;
   always @(posedge clk)
     \$signal$114  <= \$signal$114$next ;
@@ -6678,40 +6774,40 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   assign \$146  = \$signal$147  ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:197" *) \$signal$144  : \$signal$145 [23:22];
   assign \$14  = y == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:81" *) 9'h137;
   assign \$149  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$146 ;
-  assign \$151  = sprite_shift_on[0] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *) \$signal$145 [23];
-  assign \$155  = r_d01c[0] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$149  : \$153 ;
+  assign \$153  = r_d01c[0] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$149  : \$151 ;
+  assign \$155  = sprite_shift_on[0] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$153 ;
   assign \$13  = \$14  ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:81" *) 10'h000 : \$11 ;
   assign \$159  = \$signal$160  ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:197" *) \$signal$157  : \$signal$158 [23:22];
   assign \$162  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$159 ;
-  assign \$164  = sprite_shift_on[1] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *) \$signal$158 [23];
-  assign \$168  = r_d01c[1] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$162  : \$166 ;
+  assign \$166  = r_d01c[1] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$162  : \$164 ;
+  assign \$168  = sprite_shift_on[1] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$166 ;
   assign \$172  = \$signal$173  ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:197" *) \$signal$170  : \$signal$171 [23:22];
   assign \$175  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$172 ;
-  assign \$177  = sprite_shift_on[2] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *) \$signal$171 [23];
   assign \$17  = x == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:84" *) 9'h190;
-  assign \$181  = r_d01c[2] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$175  : \$179 ;
+  assign \$179  = r_d01c[2] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$175  : \$177 ;
+  assign \$181  = sprite_shift_on[2] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$179 ;
   assign \$185  = \$signal$186  ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:197" *) \$signal$183  : \$signal$184 [23:22];
   assign \$188  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$185 ;
-  assign \$190  = sprite_shift_on[3] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *) \$signal$184 [23];
-  assign \$194  = r_d01c[3] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$188  : \$192 ;
+  assign \$192  = r_d01c[3] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$188  : \$190 ;
+  assign \$194  = sprite_shift_on[3] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$192 ;
   assign \$198  = \$signal$199  ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:197" *) \$signal$196  : \$signal$197 [23:22];
   assign \$201  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$198 ;
-  assign \$203  = sprite_shift_on[4] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *) \$signal$197 [23];
-  assign \$207  = r_d01c[4] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$201  : \$205 ;
+  assign \$205  = r_d01c[4] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$201  : \$203 ;
+  assign \$207  = sprite_shift_on[4] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$205 ;
   assign \$20  = cycle + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:87" *) 1'h1;
   assign \$211  = \$signal$212  ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:197" *) \$signal$209  : \$signal$210 [23:22];
   assign \$214  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$211 ;
-  assign \$216  = sprite_shift_on[5] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *) \$signal$210 [23];
-  assign \$220  = r_d01c[5] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$214  : \$218 ;
+  assign \$218  = r_d01c[5] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$214  : \$216 ;
+  assign \$220  = sprite_shift_on[5] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$218 ;
   assign \$224  = \$signal$225  ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:197" *) \$signal$222  : \$signal$223 [23:22];
   assign \$227  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$224 ;
   assign \$22  = cycle == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:90" *) 4'he;
-  assign \$229  = sprite_shift_on[6] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *) \$signal$223 [23];
-  assign \$233  = r_d01c[6] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$227  : \$231 ;
+  assign \$231  = r_d01c[6] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$227  : \$229 ;
+  assign \$233  = sprite_shift_on[6] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$231 ;
   assign \$237  = \$signal$238  ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:197" *) \$signal$235  : \$signal$236 [23:22];
   assign \$240  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$237 ;
-  assign \$242  = sprite_shift_on[7] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:196" *) \$signal$236 [23];
-  assign \$246  = r_d01c[7] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$240  : \$244 ;
+  assign \$244  = r_d01c[7] ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$240  : \$242 ;
+  assign \$246  = sprite_shift_on[7] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:198" *) \$244 ;
   assign \$248  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:212" *) r_d011[6];
   assign \$24  = \$22  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:90" *) bad_line_cond;
   assign \$250  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:212" *) r_d011[5];
@@ -6761,169 +6857,169 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   assign \$338  = \$signal$238  ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:278" *) \$signal$235  : \$signal$236 [23:22];
   assign \$33  = \$31  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:90" *) bad_line_cond;
   assign \$340  = { r_d010[0], r_d000 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$342  = { r_d010[1], r_d002 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$344  = { r_d010[2], r_d004 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$346  = { r_d010[3], r_d006 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$348  = { r_d010[4], r_d008 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$350  = { r_d010[5], r_d00a } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$352  = { r_d010[6], r_d00c } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$354  = { r_d010[7], r_d00e } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$356  = cycle == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *) 6'h3a;
-  assign \$358  = { r_d010[0], r_d000 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$342  = r_d015[0] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$340 ;
+  assign \$344  = { r_d010[1], r_d002 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$346  = r_d015[1] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$344 ;
+  assign \$348  = { r_d010[2], r_d004 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$350  = r_d015[2] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$348 ;
+  assign \$352  = { r_d010[3], r_d006 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$354  = r_d015[3] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$352 ;
+  assign \$356  = { r_d010[4], r_d008 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$358  = r_d015[4] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$356 ;
   assign \$35  = cycle == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:92" *) 6'h3a;
-  assign \$360  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$147 ;
-  assign \$362  = { r_d010[1], r_d002 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$364  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$160 ;
-  assign \$366  = { r_d010[2], r_d004 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$368  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$173 ;
-  assign \$370  = { r_d010[3], r_d006 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$372  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$186 ;
-  assign \$374  = { r_d010[4], r_d008 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$376  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$199 ;
-  assign \$378  = { r_d010[5], r_d00a } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$360  = { r_d010[5], r_d00a } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$362  = r_d015[5] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$360 ;
+  assign \$364  = { r_d010[6], r_d00c } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$366  = r_d015[6] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$364 ;
+  assign \$368  = { r_d010[7], r_d00e } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$370  = r_d015[7] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$368 ;
+  assign \$372  = cycle == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *) 6'h3a;
+  assign \$374  = { r_d010[0], r_d000 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$376  = r_d015[0] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$374 ;
+  assign \$378  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$147 ;
   assign \$37  = rc == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:94" *) 3'h7;
-  assign \$380  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$212 ;
-  assign \$382  = { r_d010[6], r_d00c } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$384  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$225 ;
-  assign \$386  = { r_d010[7], r_d00e } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
-  assign \$388  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$238 ;
-  assign \$390  = sprite_dma_on >> sprite_idx;
-  assign \$392  = sprite_dma_on >> sprite_idx;
-  assign \$394  = sprite_dma_on >> sprite_idx;
-  assign \$396  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$147 ;
-  assign \$398  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$160 ;
+  assign \$380  = { r_d010[1], r_d002 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$382  = r_d015[1] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$380 ;
+  assign \$384  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$160 ;
+  assign \$386  = { r_d010[2], r_d004 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$388  = r_d015[2] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$386 ;
+  assign \$390  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$173 ;
+  assign \$392  = { r_d010[3], r_d006 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$394  = r_d015[3] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$392 ;
+  assign \$396  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$186 ;
+  assign \$398  = { r_d010[4], r_d008 } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
   assign \$39  = ! (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:155" *) cycle;
-  assign \$400  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$173 ;
-  assign \$402  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$186 ;
-  assign \$404  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$199 ;
-  assign \$406  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$212 ;
-  assign \$408  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$225 ;
-  assign \$410  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$238 ;
-  assign \$412  = sprite_dma_on >> sprite_idx;
-  assign \$414  = sprite_dma_on >> sprite_idx;
-  assign \$416  = sprite_dma_on >> sprite_idx;
-  assign \$418  = sprite_idx == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" *) 3'h7;
+  assign \$400  = r_d015[4] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$398 ;
+  assign \$402  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$199 ;
+  assign \$404  = { r_d010[5], r_d00a } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$406  = r_d015[5] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$404 ;
+  assign \$408  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$212 ;
+  assign \$410  = { r_d010[6], r_d00c } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$412  = r_d015[6] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$410 ;
+  assign \$414  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$225 ;
+  assign \$416  = { r_d010[7], r_d00e } == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) x;
+  assign \$418  = r_d015[7] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *) \$416 ;
   assign \$41  = raster == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:155" *) raster_irq;
-  assign \$421  = sprite_idx + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:352" *) 1'h1;
-  assign \$423  = refresh_idx == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *) 3'h4;
-  assign \$426  = refresh_idx + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:361" *) 1'h1;
-  assign \$428  = vmli == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *) 6'h27;
-  assign \$431  = vmli + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:390" *) 1'h1;
-  assign \$433  = ! (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:304" *) y;
-  assign \$435  = rc == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:395" *) 3'h7;
-  assign \$437  = display_not_idle_state & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:395" *) \$435 ;
+  assign \$420  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:293" *) \$signal$238 ;
+  assign \$422  = sprite_dma_on >> sprite_idx;
+  assign \$424  = sprite_dma_on >> sprite_idx;
+  assign \$426  = sprite_dma_on >> sprite_idx;
+  assign \$428  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$147 ;
+  assign \$430  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$160 ;
+  assign \$432  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$173 ;
+  assign \$434  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$186 ;
+  assign \$436  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$199 ;
+  assign \$438  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$212 ;
   assign \$43  = \$39  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:155" *) \$41 ;
-  assign \$439  = cycle == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *) 6'h3a;
-  assign \$441  = r_d001 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$443  = r_d015[0] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$441 ;
-  assign \$445  = r_d003 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$447  = r_d015[1] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$445 ;
-  assign \$449  = r_d005 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$451  = r_d015[2] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$449 ;
-  assign \$453  = r_d007 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$455  = r_d015[3] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$453 ;
-  assign \$457  = r_d009 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$440  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$225 ;
+  assign \$442  = ~ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *) \$signal$238 ;
+  assign \$444  = sprite_dma_on >> sprite_idx;
+  assign \$446  = sprite_dma_on >> sprite_idx;
+  assign \$448  = sprite_dma_on >> sprite_idx;
+  assign \$450  = sprite_idx == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" *) 3'h7;
+  assign \$453  = sprite_idx + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:352" *) 1'h1;
+  assign \$455  = refresh_idx == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *) 3'h4;
+  assign \$458  = refresh_idx + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:361" *) 1'h1;
   assign \$45  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$459  = r_d015[4] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$457 ;
-  assign \$461  = r_d00b == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$463  = r_d015[5] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$461 ;
-  assign \$465  = r_d00d == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$467  = r_d015[6] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$465 ;
-  assign \$469  = r_d00f == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$471  = r_d015[7] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$469 ;
-  assign \$473  = sprite_dma_on >> sprite_idx;
-  assign \$475  = \$signal$316  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
-  assign \$477  = \$signal$319  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
+  assign \$460  = vmli == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *) 6'h27;
+  assign \$463  = vmli + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:390" *) 1'h1;
+  assign \$465  = ! (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:304" *) y;
+  assign \$467  = rc == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:395" *) 3'h7;
+  assign \$469  = display_not_idle_state & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:395" *) \$467 ;
+  assign \$471  = cycle == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *) 6'h3a;
+  assign \$473  = r_d001 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$475  = r_d015[0] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$473 ;
+  assign \$477  = r_d003 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
   assign \$47  = \$45  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$479  = \$signal$322  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
-  assign \$481  = \$signal$325  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
-  assign \$483  = \$signal$328  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
-  assign \$485  = \$signal$331  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
-  assign \$487  = \$signal$334  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
-  assign \$489  = \$signal$337  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
-  assign \$491  = cycle == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *) 6'h3a;
-  assign \$493  = r_d001 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$495  = r_d015[0] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$493 ;
-  assign \$497  = r_d003 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$479  = r_d015[1] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$477 ;
+  assign \$481  = r_d005 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$483  = r_d015[2] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$481 ;
+  assign \$485  = r_d007 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$487  = r_d015[3] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$485 ;
+  assign \$489  = r_d009 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$491  = r_d015[4] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$489 ;
+  assign \$493  = r_d00b == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$495  = r_d015[5] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$493 ;
+  assign \$497  = r_d00d == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
   assign \$49  = \$47  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$499  = r_d015[1] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$497 ;
-  assign \$501  = r_d005 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$503  = r_d015[2] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$501 ;
-  assign \$505  = r_d007 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$507  = r_d015[3] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$505 ;
-  assign \$509  = r_d009 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$511  = r_d015[4] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$509 ;
-  assign \$513  = r_d00b == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$515  = r_d015[5] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$513 ;
-  assign \$517  = r_d00d == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$499  = r_d015[6] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$497 ;
+  assign \$501  = r_d00f == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$503  = r_d015[7] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$501 ;
+  assign \$505  = sprite_dma_on >> sprite_idx;
+  assign \$507  = \$signal$316  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
+  assign \$509  = \$signal$319  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
+  assign \$511  = \$signal$322  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
+  assign \$513  = \$signal$325  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
+  assign \$515  = \$signal$328  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
+  assign \$517  = \$signal$331  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
   assign \$51  = \$49  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:414" *) r_d019_writeStrobe;
-  assign \$519  = r_d015[6] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$517 ;
-  assign \$521  = r_d00f == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
-  assign \$523  = r_d015[7] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$521 ;
-  assign \$525  = sprite_dma_on >> sprite_idx;
-  assign \$529  = \$signal$316  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
-  assign \$532  = \$signal$319  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
-  assign \$535  = \$signal$322  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
-  assign \$538  = \$signal$325  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
+  assign \$519  = \$signal$334  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
+  assign \$521  = \$signal$337  == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *) 6'h3e;
+  assign \$523  = cycle == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *) 6'h3a;
+  assign \$525  = r_d001 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$527  = r_d015[0] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$525 ;
+  assign \$529  = r_d003 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$531  = r_d015[1] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$529 ;
+  assign \$533  = r_d005 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$535  = r_d015[2] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$533 ;
+  assign \$537  = r_d007 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
   assign \$53  = irq & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:415" *) r_d019_writeSignal;
-  assign \$541  = \$signal$328  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
-  assign \$544  = \$signal$331  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
-  assign \$547  = \$signal$334  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
-  assign \$550  = \$signal$337  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
-  assign \$552  = sprite_dma_on >> sprite_idx;
-  assign \$556  = \$signal$316  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
+  assign \$539  = r_d015[3] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$537 ;
+  assign \$541  = r_d009 == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$543  = r_d015[4] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$541 ;
+  assign \$545  = r_d00b == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$547  = r_d015[5] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$545 ;
+  assign \$549  = r_d00d == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$551  = r_d015[6] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$549 ;
+  assign \$553  = r_d00f == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) raster;
+  assign \$555  = r_d015[7] & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *) \$553 ;
+  assign \$557  = sprite_dma_on >> sprite_idx;
   assign \$55  = irq ^ (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:415" *) \$53 ;
-  assign \$559  = \$signal$319  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
-  assign \$562  = \$signal$322  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
-  assign \$565  = \$signal$325  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
-  assign \$568  = \$signal$328  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
-  assign \$571  = \$signal$331  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
-  assign \$574  = \$signal$334  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
-  assign \$577  = \$signal$337  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
+  assign \$561  = \$signal$316  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
+  assign \$564  = \$signal$319  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
+  assign \$567  = \$signal$322  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
+  assign \$570  = \$signal$325  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
+  assign \$573  = \$signal$328  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
+  assign \$576  = \$signal$331  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
   assign \$57  = raster >= (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:160" *) 6'h33;
-  assign \$579  = sprite_dma_on >> sprite_idx;
-  assign \$583  = \$signal$316  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
-  assign \$586  = \$signal$319  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
-  assign \$589  = \$signal$322  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
-  assign \$592  = \$signal$325  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
-  assign \$595  = \$signal$328  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
-  assign \$598  = \$signal$331  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
+  assign \$579  = \$signal$334  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
+  assign \$582  = \$signal$337  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *) 1'h1;
+  assign \$584  = sprite_dma_on >> sprite_idx;
+  assign \$588  = \$signal$316  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
+  assign \$591  = \$signal$319  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
+  assign \$594  = \$signal$322  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
+  assign \$597  = \$signal$325  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
   assign \$5  = x == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:79" *) 9'h1f7;
   assign \$59  = raster <= (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:160" *) 8'hfa;
-  assign \$601  = \$signal$334  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
-  assign \$604  = \$signal$337  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
-  assign \$606  = cycle == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *) 6'h3a;
-  assign \$608  = sprite_idx == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" *) 3'h7;
-  assign \$610  = refresh_idx == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *) 3'h4;
-  assign \$612  = vmli == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *) 6'h27;
-  assign \$614  = sprite_dma_on >> sprite_idx;
-  assign \$616  = sprite_dma_on >> sprite_idx;
-  assign \$618  = sprite_dma_on >> sprite_idx;
+  assign \$600  = \$signal$328  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
+  assign \$603  = \$signal$331  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
+  assign \$606  = \$signal$334  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
+  assign \$609  = \$signal$337  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *) 1'h1;
+  assign \$611  = sprite_dma_on >> sprite_idx;
+  assign \$615  = \$signal$316  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
+  assign \$618  = \$signal$319  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
   assign \$61  = \$57  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:160" *) \$59 ;
-  assign \$620  = refresh_idx == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *) 3'h4;
-  assign \$623  = vc + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:385" *) 1'h1;
-  assign \$625  = vmli == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *) 6'h27;
-  assign \$627  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$629  = \$627  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$631  = \$629  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$633  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$635  = \$633  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$637  = \$635  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$621  = \$signal$322  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
+  assign \$624  = \$signal$325  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
+  assign \$627  = \$signal$328  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
+  assign \$630  = \$signal$331  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
+  assign \$633  = \$signal$334  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
+  assign \$636  = \$signal$337  + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *) 1'h1;
+  assign \$638  = cycle == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *) 6'h3a;
   assign \$63  = raster >= (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:162" *) 6'h37;
-  assign \$639  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$641  = \$639  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$643  = \$641  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$645  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$647  = \$645  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$649  = \$647  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$651  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$653  = \$651  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$655  = \$653  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$657  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$640  = sprite_idx == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" *) 3'h7;
+  assign \$642  = refresh_idx == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *) 3'h4;
+  assign \$644  = vmli == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *) 6'h27;
+  assign \$646  = sprite_dma_on >> sprite_idx;
+  assign \$648  = sprite_dma_on >> sprite_idx;
+  assign \$650  = sprite_dma_on >> sprite_idx;
+  assign \$652  = refresh_idx == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *) 3'h4;
+  assign \$655  = vc + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:385" *) 1'h1;
+  assign \$657  = vmli == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *) 6'h27;
   assign \$65  = raster <= (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:162" *) 8'hf6;
-  assign \$659  = \$657  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$661  = \$659  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$663  = + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:99" *) irq;
+  assign \$659  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$661  = \$659  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$663  = \$661  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
   assign \$665  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
   assign \$667  = \$665  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
   assign \$669  = \$667  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
@@ -6940,123 +7036,139 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   assign \$689  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
   assign \$691  = \$689  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
   assign \$693  = \$691  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$695  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$697  = \$695  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$695  = + (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:99" *) irq;
+  assign \$697  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
   assign \$4  = \$5  ? (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:79" *) 10'h000 : \$2 ;
   assign \$69  = raster >= (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:164" *) 6'h30;
-  assign \$699  = \$697  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$701  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$703  = \$701  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$705  = \$703  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$707  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$709  = \$707  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$711  = \$709  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$713  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$715  = \$713  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$717  = \$715  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$699  = \$697  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$701  = \$699  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$703  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$705  = \$703  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$707  = \$705  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$709  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$711  = \$709  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$713  = \$711  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$715  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$717  = \$715  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
   assign \$71  = raster <= (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:164" *) 8'hf7;
-  assign \$719  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$721  = \$719  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$723  = \$721  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$725  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$727  = \$725  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$729  = \$727  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$731  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$733  = \$731  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$735  = \$733  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$737  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$719  = \$717  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$721  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$723  = \$721  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$725  = \$723  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$727  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$729  = \$727  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$731  = \$729  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$733  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$735  = \$733  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$737  = \$735  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
   assign \$73  = \$69  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:164" *) \$71 ;
-  assign \$739  = \$737  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$741  = \$739  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$743  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$745  = \$743  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$747  = \$745  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$749  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$751  = \$749  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$753  = \$751  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$755  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$757  = \$755  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$739  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$741  = \$739  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$743  = \$741  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$745  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$747  = \$745  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$749  = \$747  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$751  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$753  = \$751  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$755  = \$753  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$757  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
   assign \$75  = y[2:0] == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:164" *) r_d011[2:0];
-  assign \$759  = \$757  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$761  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$763  = \$761  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$765  = \$763  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$767  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$769  = \$767  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$771  = \$769  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$773  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$775  = \$773  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$777  = \$775  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$759  = \$757  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$761  = \$759  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$763  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$765  = \$763  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$767  = \$765  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$769  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$771  = \$769  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$773  = \$771  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$775  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$777  = \$775  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
   assign \$77  = \$73  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:164" *) \$75 ;
-  assign \$779  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$781  = \$779  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$783  = \$781  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$785  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$787  = \$785  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$789  = \$787  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$791  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$793  = \$791  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$795  = \$793  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$797  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$799  = \$797  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$801  = \$799  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$803  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$805  = \$803  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$807  = \$805  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$809  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$811  = \$809  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$813  = \$811  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$815  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$817  = \$815  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$819  = \$817  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$821  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$823  = \$821  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$825  = \$823  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$827  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$829  = \$827  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$831  = \$829  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$833  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$835  = \$833  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$837  = \$835  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$839  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$841  = \$839  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$843  = \$841  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$845  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$847  = \$845  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$849  = \$847  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$851  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$853  = \$851  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$855  = \$853  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$857  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$859  = \$857  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$861  = \$859  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$863  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$865  = \$863  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$867  = \$865  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$869  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$871  = \$869  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$873  = \$871  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$875  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$877  = \$875  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$879  = \$877  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$881  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$883  = \$881  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$885  = \$883  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$887  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$889  = \$887  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$891  = \$889  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$893  = \$891  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" *) r_d011_writeStrobe;
+  assign \$779  = \$777  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$781  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$783  = \$781  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$785  = \$783  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$787  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$789  = \$787  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$791  = \$789  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$793  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$795  = \$793  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$797  = \$795  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$799  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$801  = \$799  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$803  = \$801  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$805  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$807  = \$805  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$809  = \$807  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$811  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$813  = \$811  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$815  = \$813  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$817  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$819  = \$817  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$821  = \$819  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$823  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$825  = \$823  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$827  = \$825  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$829  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$831  = \$829  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$833  = \$831  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$835  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$837  = \$835  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$839  = \$837  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$841  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$843  = \$841  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$845  = \$843  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$847  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$849  = \$847  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$851  = \$849  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$853  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$855  = \$853  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$857  = \$855  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$859  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$861  = \$859  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$863  = \$861  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$865  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$867  = \$865  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$869  = \$867  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$871  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$873  = \$871  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$875  = \$873  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$877  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$879  = \$877  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$881  = \$879  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$883  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$885  = \$883  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$887  = \$885  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$889  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$891  = \$889  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$893  = \$891  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
   assign \$895  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
   assign \$897  = \$895  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
   assign \$8  = x == (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:80" *) 9'h190;
   assign \$899  = \$897  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$901  = \$899  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" *) r_d011_writeStrobe;
-  assign \$903  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
-  assign \$905  = \$903  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
-  assign \$907  = \$905  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
-  assign \$909  = \$907  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:412" *) r_d012_writeStrobe;
-  assign \$912  = irq & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:417" *) r_d01a;
-  assign \$911  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:417" *) \$912 ;
+  assign \$901  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$903  = \$901  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$905  = \$903  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$907  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$909  = \$907  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$911  = \$909  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$913  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$915  = \$913  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$917  = \$915  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$919  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$921  = \$919  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$923  = \$921  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$925  = \$923  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" *) r_d011_writeStrobe;
+  assign \$927  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$929  = \$927  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$931  = \$929  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$933  = \$931  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" *) r_d011_writeStrobe;
+  assign \$935  = clk_1mhz_ph1_en | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) clk_1mhz_ph2_en;
+  assign \$937  = \$935  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_cs;
+  assign \$939  = \$937  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:403" *) i_reg_we;
+  assign \$941  = \$939  & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:412" *) r_d012_writeStrobe;
+  assign \$944  = irq & (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:417" *) r_d01a;
+  assign \$943  = | (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:417" *) \$944 ;
   always @(posedge clk)
     x <= \x$next ;
   always @(posedge clk)
@@ -7163,70 +7275,6 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
     \$signal$79  <= \$signal$79$next ;
   always @(posedge clk)
     \$signal$80  <= \$signal$80$next ;
-  always @(posedge clk)
-    \$signal$81  <= \$signal$81$next ;
-  always @(posedge clk)
-    \$signal$82  <= \$signal$82$next ;
-  always @(posedge clk)
-    \$signal$83  <= \$signal$83$next ;
-  always @(posedge clk)
-    \$signal$84  <= \$signal$84$next ;
-  always @(posedge clk)
-    \$signal$85  <= \$signal$85$next ;
-  always @(posedge clk)
-    \$signal$86  <= \$signal$86$next ;
-  always @(posedge clk)
-    \$signal$87  <= \$signal$87$next ;
-  always @(posedge clk)
-    \$signal$88  <= \$signal$88$next ;
-  always @(posedge clk)
-    \$signal$89  <= \$signal$89$next ;
-  always @(posedge clk)
-    \$signal$90  <= \$signal$90$next ;
-  always @(posedge clk)
-    \$signal$91  <= \$signal$91$next ;
-  always @(posedge clk)
-    \$signal$92  <= \$signal$92$next ;
-  always @(posedge clk)
-    \$signal$93  <= \$signal$93$next ;
-  always @(posedge clk)
-    \$signal$94  <= \$signal$94$next ;
-  always @(posedge clk)
-    \$signal$95  <= \$signal$95$next ;
-  always @(posedge clk)
-    \$signal$96  <= \$signal$96$next ;
-  always @(posedge clk)
-    \$signal$97  <= \$signal$97$next ;
-  always @(posedge clk)
-    \$signal$98  <= \$signal$98$next ;
-  always @(posedge clk)
-    \$signal$99  <= \$signal$99$next ;
-  always @(posedge clk)
-    \$signal$100  <= \$signal$100$next ;
-  always @(posedge clk)
-    \$signal$101  <= \$signal$101$next ;
-  always @(posedge clk)
-    \$signal$102  <= \$signal$102$next ;
-  always @(posedge clk)
-    \$signal$103  <= \$signal$103$next ;
-  always @(posedge clk)
-    \$signal$104  <= \$signal$104$next ;
-  always @(posedge clk)
-    \$signal$105  <= \$signal$105$next ;
-  always @(posedge clk)
-    \$signal$106  <= \$signal$106$next ;
-  always @(posedge clk)
-    \$signal$107  <= \$signal$107$next ;
-  always @(posedge clk)
-    \$signal$108  <= \$signal$108$next ;
-  always @(posedge clk)
-    \$signal$109  <= \$signal$109$next ;
-  always @(posedge clk)
-    \$signal$110  <= \$signal$110$next ;
-  always @(posedge clk)
-    \$signal$111  <= \$signal$111$next ;
-  always @(posedge clk)
-    \$signal$112  <= \$signal$112$next ;
   always @* begin
     if (\$auto$verilog_backend.cc:2083:dump_module$5 ) begin end
     \x$next  = x;
@@ -7297,13 +7345,13 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             1'h1:
                 (* full_case = 32'd1 *)
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" *)
-                casez (\$418 )
+                casez (\$450 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" */
                   1'h1:
                       /* empty */;
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:351" */
                   default:
-                      \sprite_idx$next  = \$421 [2:0];
+                      \sprite_idx$next  = \$453 [2:0];
                 endcase
           endcase
     endcase
@@ -7352,13 +7400,13 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             1'h1:
                 (* full_case = 32'd1 *)
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *)
-                casez (\$423 )
+                casez (\$455 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" */
                   1'h1:
                       /* empty */;
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:360" */
                   default:
-                      \refresh_idx$next  = \$426 [2:0];
+                      \refresh_idx$next  = \$458 [2:0];
                 endcase
           endcase
     endcase
@@ -7415,13 +7463,13 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             1'h1:
                 (* full_case = 32'd1 *)
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *)
-                casez (\$428 )
+                casez (\$460 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" */
                   1'h1:
                       /* empty */;
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:388" */
                   default:
-                      \vmli$next  = \$431 [5:0];
+                      \vmli$next  = \$463 [5:0];
                 endcase
           endcase
     endcase
@@ -7444,7 +7492,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:302" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:304" *)
-                casez (\$433 )
+                casez (\$465 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:304" */
                   1'h1:
                       \vcbase$next  = 10'h000;
@@ -7486,7 +7534,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:394" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:395" *)
-                casez (\$437 )
+                casez (\$469 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:395" */
                   1'h1:
                       \vcbase$next  = vc;
@@ -7512,54 +7560,54 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:302" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
-                casez (\$439 )
+                casez (\$471 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" */
                   1'h1:
                     begin
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$443 )
+                      casez (\$475 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \sprite_dma_on$next [0] = 1'h1;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$447 )
+                      casez (\$479 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \sprite_dma_on$next [1] = 1'h1;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$451 )
+                      casez (\$483 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \sprite_dma_on$next [2] = 1'h1;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$455 )
+                      casez (\$487 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \sprite_dma_on$next [3] = 1'h1;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$459 )
+                      casez (\$491 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \sprite_dma_on$next [4] = 1'h1;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$463 )
+                      casez (\$495 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \sprite_dma_on$next [5] = 1'h1;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$467 )
+                      casez (\$499 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \sprite_dma_on$next [6] = 1'h1;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$471 )
+                      casez (\$503 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \sprite_dma_on$next [7] = 1'h1;
@@ -7587,7 +7635,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:344" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" *)
-                casez (\$473 )
+                casez (\$505 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" */
                   1'h1:
                       (* full_case = 32'd1 *)
@@ -7595,56 +7643,56 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
                       casez (sprite_idx)
                         3'h0:
                             (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
-                            casez (\$475 )
+                            casez (\$507 )
                               /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" */
                               1'h1:
                                   \sprite_dma_on$next [0] = 1'h0;
                             endcase
                         3'h1:
                             (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
-                            casez (\$477 )
+                            casez (\$509 )
                               /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" */
                               1'h1:
                                   \sprite_dma_on$next [1] = 1'h0;
                             endcase
                         3'h2:
                             (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
-                            casez (\$479 )
+                            casez (\$511 )
                               /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" */
                               1'h1:
                                   \sprite_dma_on$next [2] = 1'h0;
                             endcase
                         3'h3:
                             (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
-                            casez (\$481 )
+                            casez (\$513 )
                               /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" */
                               1'h1:
                                   \sprite_dma_on$next [3] = 1'h0;
                             endcase
                         3'h4:
                             (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
-                            casez (\$483 )
+                            casez (\$515 )
                               /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" */
                               1'h1:
                                   \sprite_dma_on$next [4] = 1'h0;
                             endcase
                         3'h5:
                             (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
-                            casez (\$485 )
+                            casez (\$517 )
                               /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" */
                               1'h1:
                                   \sprite_dma_on$next [5] = 1'h0;
                             endcase
                         3'h6:
                             (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
-                            casez (\$487 )
+                            casez (\$519 )
                               /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" */
                               1'h1:
                                   \sprite_dma_on$next [6] = 1'h0;
                             endcase
                         3'h?:
                             (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" *)
-                            casez (\$489 )
+                            casez (\$521 )
                               /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:347" */
                               1'h1:
                                   \sprite_dma_on$next [7] = 1'h0;
@@ -7679,54 +7727,54 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:302" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
-                casez (\$491 )
+                casez (\$523 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" */
                   1'h1:
                     begin
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$495 )
+                      casez (\$527 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \$signal$316$next  = 6'h00;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$499 )
+                      casez (\$531 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \$signal$319$next  = 6'h00;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$503 )
+                      casez (\$535 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \$signal$322$next  = 6'h00;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$507 )
+                      casez (\$539 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \$signal$325$next  = 6'h00;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$511 )
+                      casez (\$543 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \$signal$328$next  = 6'h00;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$515 )
+                      casez (\$547 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \$signal$331$next  = 6'h00;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$519 )
+                      casez (\$551 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \$signal$334$next  = 6'h00;
                       endcase
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" *)
-                      casez (\$523 )
+                      casez (\$555 )
                         /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:312" */
                         1'h1:
                             \$signal$337$next  = 6'h00;
@@ -7746,28 +7794,28 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:326" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:327" *)
-                casez (\$525 )
+                casez (\$557 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:327" */
                   1'h1:
                       (* full_case = 32'd1 *)
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:328" *)
                       casez (sprite_idx)
                         3'h0:
-                            \$signal$316$next  = \$529 [5:0];
+                            \$signal$316$next  = \$561 [5:0];
                         3'h1:
-                            \$signal$319$next  = \$532 [5:0];
+                            \$signal$319$next  = \$564 [5:0];
                         3'h2:
-                            \$signal$322$next  = \$535 [5:0];
+                            \$signal$322$next  = \$567 [5:0];
                         3'h3:
-                            \$signal$325$next  = \$538 [5:0];
+                            \$signal$325$next  = \$570 [5:0];
                         3'h4:
-                            \$signal$328$next  = \$541 [5:0];
+                            \$signal$328$next  = \$573 [5:0];
                         3'h5:
-                            \$signal$331$next  = \$544 [5:0];
+                            \$signal$331$next  = \$576 [5:0];
                         3'h6:
-                            \$signal$334$next  = \$547 [5:0];
+                            \$signal$334$next  = \$579 [5:0];
                         3'h?:
-                            \$signal$337$next  = \$550 [5:0];
+                            \$signal$337$next  = \$582 [5:0];
                       endcase
                 endcase
           endcase
@@ -7779,28 +7827,28 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:335" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:336" *)
-                casez (\$552 )
+                casez (\$584 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:336" */
                   1'h1:
                       (* full_case = 32'd1 *)
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:337" *)
                       casez (sprite_idx)
                         3'h0:
-                            \$signal$316$next  = \$556 [5:0];
+                            \$signal$316$next  = \$588 [5:0];
                         3'h1:
-                            \$signal$319$next  = \$559 [5:0];
+                            \$signal$319$next  = \$591 [5:0];
                         3'h2:
-                            \$signal$322$next  = \$562 [5:0];
+                            \$signal$322$next  = \$594 [5:0];
                         3'h3:
-                            \$signal$325$next  = \$565 [5:0];
+                            \$signal$325$next  = \$597 [5:0];
                         3'h4:
-                            \$signal$328$next  = \$568 [5:0];
+                            \$signal$328$next  = \$600 [5:0];
                         3'h5:
-                            \$signal$331$next  = \$571 [5:0];
+                            \$signal$331$next  = \$603 [5:0];
                         3'h6:
-                            \$signal$334$next  = \$574 [5:0];
+                            \$signal$334$next  = \$606 [5:0];
                         3'h?:
-                            \$signal$337$next  = \$577 [5:0];
+                            \$signal$337$next  = \$609 [5:0];
                       endcase
                 endcase
           endcase
@@ -7812,28 +7860,28 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:344" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" *)
-                casez (\$579 )
+                casez (\$611 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" */
                   1'h1:
                       (* full_case = 32'd1 *)
                       (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:346" *)
                       casez (sprite_idx)
                         3'h0:
-                            \$signal$316$next  = \$583 [5:0];
+                            \$signal$316$next  = \$615 [5:0];
                         3'h1:
-                            \$signal$319$next  = \$586 [5:0];
+                            \$signal$319$next  = \$618 [5:0];
                         3'h2:
-                            \$signal$322$next  = \$589 [5:0];
+                            \$signal$322$next  = \$621 [5:0];
                         3'h3:
-                            \$signal$325$next  = \$592 [5:0];
+                            \$signal$325$next  = \$624 [5:0];
                         3'h4:
-                            \$signal$328$next  = \$595 [5:0];
+                            \$signal$328$next  = \$627 [5:0];
                         3'h5:
-                            \$signal$331$next  = \$598 [5:0];
+                            \$signal$331$next  = \$630 [5:0];
                         3'h6:
-                            \$signal$334$next  = \$601 [5:0];
+                            \$signal$334$next  = \$633 [5:0];
                         3'h?:
-                            \$signal$337$next  = \$604 [5:0];
+                            \$signal$337$next  = \$636 [5:0];
                       endcase
                 endcase
           endcase
@@ -7866,7 +7914,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:302" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
-                casez (\$606 )
+                casez (\$638 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" */
                   1'h1:
                       \fsm_state$next  = 4'h1;
@@ -7908,7 +7956,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             1'h1:
                 (* full_case = 32'd1 *)
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" *)
-                casez (\$608 )
+                casez (\$640 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:349" */
                   1'h1:
                       \fsm_state$next  = 4'h5;
@@ -7926,7 +7974,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             1'h1:
                 (* full_case = 32'd1 *)
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *)
-                casez (\$610 )
+                casez (\$642 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" */
                   1'h1:
                       \fsm_state$next  = 4'h6;
@@ -7953,7 +8001,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             1'h1:
                 (* full_case = 32'd1 *)
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *)
-                casez (\$612 )
+                casez (\$644 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" */
                   1'h1:
                       \fsm_state$next  = 4'h8;
@@ -7995,7 +8043,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* \amaranth.decoding  = "s-access-0/2" */
       4'h2:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:323" *)
-          casez (\$614 )
+          casez (\$646 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:323" */
             1'h1:
                 (* full_case = 32'd1 *)
@@ -8023,7 +8071,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* \amaranth.decoding  = "s-access-1/3" */
       4'h3:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:332" *)
-          casez (\$616 )
+          casez (\$648 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:332" */
             1'h1:
                 (* full_case = 32'd1 *)
@@ -8051,7 +8099,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* \amaranth.decoding  = "s-access-2/4" */
       4'h4:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:341" *)
-          casez (\$618 )
+          casez (\$650 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:341" */
             1'h1:
                 (* full_case = 32'd1 *)
@@ -8331,7 +8379,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:356" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" *)
-                casez (\$620 )
+                casez (\$652 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:357" */
                   1'h1:
                       \vc$next  = vcbase;
@@ -8348,7 +8396,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
           casez (clk_1mhz_ph1_en)
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:381" */
             1'h1:
-                \vc$next  = \$623 [9:0];
+                \vc$next  = \$655 [9:0];
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
@@ -8936,7 +8984,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             1'h1:
                 (* full_case = 32'd1 *)
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" *)
-                casez (\$625 )
+                casez (\$657 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:386" */
                   1'h1:
                       /* empty */;
@@ -8969,7 +9017,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h11:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" *)
-          casez (\$631 )
+          casez (\$663 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" */
             1'h1:
                 r_d011_writeStrobe = 1'h1;
@@ -8984,7 +9032,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h11:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" *)
-          casez (\$637 )
+          casez (\$669 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" */
             1'h1:
                 r_d011_writeSignal = i_reg_data;
@@ -9002,7 +9050,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h12:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" *)
-          casez (\$643 )
+          casez (\$675 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" */
             1'h1:
                 r_d012_writeStrobe = 1'h1;
@@ -9020,7 +9068,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h12:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" *)
-          casez (\$649 )
+          casez (\$681 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" */
             1'h1:
                 r_d012_writeSignal = i_reg_data;
@@ -9044,7 +9092,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h19:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" *)
-          casez (\$655 )
+          casez (\$687 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" */
             1'h1:
                 r_d019_writeStrobe = 1'h1;
@@ -9068,7 +9116,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h19:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" *)
-          casez (\$661 )
+          casez (\$693 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:54" */
             1'h1:
                 r_d019_writeSignal = i_reg_data[3:0];
@@ -9091,7 +9139,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
           o_reg_data = r_d018;
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h19:
-          o_reg_data = \$663 ;
+          o_reg_data = \$695 ;
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h20:
           o_reg_data = { 4'hf, r_d020 };
@@ -9216,7 +9264,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h18:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$669 )
+          casez (\$701 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d018$next  = i_reg_data;
@@ -9248,7 +9296,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h20:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$675 )
+          casez (\$707 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d020$next  = i_reg_data[3:0];
@@ -9283,7 +9331,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h21:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$681 )
+          casez (\$713 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d021$next  = i_reg_data[3:0];
@@ -9321,7 +9369,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h22:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$687 )
+          casez (\$719 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d022$next  = i_reg_data[3:0];
@@ -9362,7 +9410,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h23:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$693 )
+          casez (\$725 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d023$next  = i_reg_data[3:0];
@@ -9406,7 +9454,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h24:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$699 )
+          casez (\$731 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d024$next  = i_reg_data[3:0];
@@ -9453,7 +9501,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h25:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$705 )
+          casez (\$737 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d025$next  = i_reg_data[3:0];
@@ -9503,7 +9551,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h26:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$711 )
+          casez (\$743 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d026$next  = i_reg_data[3:0];
@@ -9556,7 +9604,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h00:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$717 )
+          casez (\$749 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d000$next  = i_reg_data;
@@ -9612,7 +9660,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h02:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$723 )
+          casez (\$755 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d002$next  = i_reg_data;
@@ -9671,7 +9719,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h04:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$729 )
+          casez (\$761 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d004$next  = i_reg_data;
@@ -9733,7 +9781,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h06:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$735 )
+          casez (\$767 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d006$next  = i_reg_data;
@@ -9798,7 +9846,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h08:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$741 )
+          casez (\$773 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d008$next  = i_reg_data;
@@ -9866,7 +9914,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h0a:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$747 )
+          casez (\$779 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d00a$next  = i_reg_data;
@@ -9937,7 +9985,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h0c:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$753 )
+          casez (\$785 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d00c$next  = i_reg_data;
@@ -10011,7 +10059,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h0e:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$759 )
+          casez (\$791 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d00e$next  = i_reg_data;
@@ -10088,7 +10136,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h01:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$765 )
+          casez (\$797 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d001$next  = i_reg_data;
@@ -10168,7 +10216,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h03:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$771 )
+          casez (\$803 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d003$next  = i_reg_data;
@@ -10251,7 +10299,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h05:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$777 )
+          casez (\$809 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d005$next  = i_reg_data;
@@ -10337,7 +10385,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h07:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$783 )
+          casez (\$815 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d007$next  = i_reg_data;
@@ -10426,7 +10474,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h09:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$789 )
+          casez (\$821 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d009$next  = i_reg_data;
@@ -10518,7 +10566,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h0b:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$795 )
+          casez (\$827 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d00b$next  = i_reg_data;
@@ -10613,7 +10661,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h0d:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$801 )
+          casez (\$833 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d00d$next  = i_reg_data;
@@ -10711,7 +10759,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h0f:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$807 )
+          casez (\$839 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d00f$next  = i_reg_data;
@@ -10812,7 +10860,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h10:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$813 )
+          casez (\$845 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d010$next  = i_reg_data;
@@ -10916,7 +10964,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h15:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$819 )
+          casez (\$851 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d015$next  = i_reg_data;
@@ -11023,7 +11071,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h16:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$825 )
+          casez (\$857 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d016$next  = i_reg_data;
@@ -11133,7 +11181,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h1a:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$831 )
+          casez (\$863 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d01a$next  = i_reg_data[3:0];
@@ -11246,7 +11294,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h1c:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$837 )
+          casez (\$869 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d01c$next  = i_reg_data;
@@ -11362,7 +11410,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h27:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$843 )
+          casez (\$875 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d027$next  = i_reg_data[3:0];
@@ -11481,7 +11529,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h28:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$849 )
+          casez (\$881 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d028$next  = i_reg_data[3:0];
@@ -11603,7 +11651,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h29:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$855 )
+          casez (\$887 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d029$next  = i_reg_data[3:0];
@@ -11728,7 +11776,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h2a:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$861 )
+          casez (\$893 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d02a$next  = i_reg_data[3:0];
@@ -11856,7 +11904,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h2b:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$867 )
+          casez (\$899 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d02b$next  = i_reg_data[3:0];
@@ -11987,7 +12035,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h2c:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$873 )
+          casez (\$905 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d02c$next  = i_reg_data[3:0];
@@ -12144,7 +12192,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h2d:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$879 )
+          casez (\$911 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d02d$next  = i_reg_data[3:0];
@@ -12281,7 +12329,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:83" */
       6'h2e:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" *)
-          casez (\$885 )
+          casez (\$917 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/utils/regs.py:34" */
             1'h1:
                 \r_d02e$next  = i_reg_data[3:0];
@@ -12297,7 +12345,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
     if (\$auto$verilog_backend.cc:2083:dump_module$5 ) begin end
     \r_d011$next  = r_d011;
     (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" *)
-    casez (\$893 )
+    casez (\$925 )
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" */
       1'h1:
           \r_d011$next  = r_d011_writeSignal[6:0];
@@ -12312,13 +12360,13 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
     if (\$auto$verilog_backend.cc:2083:dump_module$5 ) begin end
     \raster_irq$next  = raster_irq;
     (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" *)
-    casez (\$901 )
+    casez (\$933 )
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:410" */
       1'h1:
           \raster_irq$next [8] = r_d011_writeSignal[7];
     endcase
     (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:412" *)
-    casez (\$909 )
+    casez (\$941 )
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:412" */
       1'h1:
           \raster_irq$next [7:0] = r_d012_writeSignal;
@@ -12428,49 +12476,49 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       1'h1:
         begin
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$340 )
+          casez (\$342 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \sprite_shift_on$next [0] = 1'h1;
           endcase
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$342 )
+          casez (\$346 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \sprite_shift_on$next [1] = 1'h1;
           endcase
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$344 )
+          casez (\$350 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \sprite_shift_on$next [2] = 1'h1;
           endcase
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$346 )
+          casez (\$354 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \sprite_shift_on$next [3] = 1'h1;
           endcase
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$348 )
+          casez (\$358 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \sprite_shift_on$next [4] = 1'h1;
           endcase
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$350 )
+          casez (\$362 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \sprite_shift_on$next [5] = 1'h1;
           endcase
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$352 )
+          casez (\$366 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \sprite_shift_on$next [6] = 1'h1;
           endcase
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$354 )
+          casez (\$370 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \sprite_shift_on$next [7] = 1'h1;
@@ -12487,7 +12535,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:302" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" *)
-                casez (\$356 )
+                casez (\$372 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:306" */
                   1'h1:
                       \sprite_shift_on$next  = 8'h00;
@@ -12508,7 +12556,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:283" */
       1'h1:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$358 )
+          casez (\$376 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \$signal$147$next  = 1'h0;
@@ -12522,7 +12570,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
           casez (sprite_shift_on[0])
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
-                \$signal$147$next  = \$360 ;
+                \$signal$147$next  = \$378 ;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
@@ -12539,7 +12587,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:283" */
       1'h1:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$362 )
+          casez (\$382 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \$signal$160$next  = 1'h0;
@@ -12553,7 +12601,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
           casez (sprite_shift_on[1])
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
-                \$signal$160$next  = \$364 ;
+                \$signal$160$next  = \$384 ;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
@@ -12570,7 +12618,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:283" */
       1'h1:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$366 )
+          casez (\$388 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \$signal$173$next  = 1'h0;
@@ -12584,7 +12632,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
           casez (sprite_shift_on[2])
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
-                \$signal$173$next  = \$368 ;
+                \$signal$173$next  = \$390 ;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
@@ -12601,7 +12649,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:283" */
       1'h1:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$370 )
+          casez (\$394 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \$signal$186$next  = 1'h0;
@@ -12615,7 +12663,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
           casez (sprite_shift_on[3])
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
-                \$signal$186$next  = \$372 ;
+                \$signal$186$next  = \$396 ;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
@@ -12632,7 +12680,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:283" */
       1'h1:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$374 )
+          casez (\$400 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \$signal$199$next  = 1'h0;
@@ -12646,7 +12694,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
           casez (sprite_shift_on[4])
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
-                \$signal$199$next  = \$376 ;
+                \$signal$199$next  = \$402 ;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
@@ -12663,7 +12711,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:283" */
       1'h1:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$378 )
+          casez (\$406 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \$signal$212$next  = 1'h0;
@@ -12677,7 +12725,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
           casez (sprite_shift_on[5])
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
-                \$signal$212$next  = \$380 ;
+                \$signal$212$next  = \$408 ;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
@@ -12694,7 +12742,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:283" */
       1'h1:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$382 )
+          casez (\$412 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \$signal$225$next  = 1'h0;
@@ -12708,7 +12756,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
           casez (sprite_shift_on[6])
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
-                \$signal$225$next  = \$384 ;
+                \$signal$225$next  = \$414 ;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
@@ -12725,7 +12773,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:283" */
       1'h1:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" *)
-          casez (\$386 )
+          casez (\$418 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:285" */
             1'h1:
                 \$signal$238$next  = 1'h0;
@@ -12739,7 +12787,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
           casez (sprite_shift_on[7])
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
-                \$signal$238$next  = \$388 ;
+                \$signal$238$next  = \$420 ;
           endcase
     endcase
     (* src = "/home/markus/work/repos/amaranth/amaranth/hdl/xfrm.py:503" *)
@@ -12894,7 +12942,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:326" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:327" *)
-                casez (\$390 )
+                casez (\$422 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:327" */
                   1'h1:
                       (* full_case = 32'd1 *)
@@ -12927,7 +12975,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:335" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:336" *)
-                casez (\$392 )
+                casez (\$424 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:336" */
                   1'h1:
                       (* full_case = 32'd1 *)
@@ -12960,7 +13008,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:344" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" *)
-                casez (\$394 )
+                casez (\$426 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:345" */
                   1'h1:
                       (* full_case = 32'd1 *)
@@ -13013,7 +13061,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
-                casez (\$396 )
+                casez (\$428 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" */
                   1'h1:
                       \$signal$144$next  = \$signal$145 [23:22];
@@ -13038,7 +13086,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
-                casez (\$398 )
+                casez (\$430 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" */
                   1'h1:
                       \$signal$157$next  = \$signal$158 [23:22];
@@ -13063,7 +13111,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
-                casez (\$400 )
+                casez (\$432 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" */
                   1'h1:
                       \$signal$170$next  = \$signal$171 [23:22];
@@ -13186,7 +13234,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
-                casez (\$402 )
+                casez (\$434 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" */
                   1'h1:
                       \$signal$183$next  = \$signal$184 [23:22];
@@ -13211,7 +13259,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
-                casez (\$404 )
+                casez (\$436 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" */
                   1'h1:
                       \$signal$196$next  = \$signal$197 [23:22];
@@ -13236,7 +13284,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
-                casez (\$406 )
+                casez (\$438 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" */
                   1'h1:
                       \$signal$209$next  = \$signal$210 [23:22];
@@ -13261,7 +13309,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
-                casez (\$408 )
+                casez (\$440 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" */
                   1'h1:
                       \$signal$222$next  = \$signal$223 [23:22];
@@ -13286,7 +13334,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:291" */
             1'h1:
                 (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" *)
-                casez (\$410 )
+                casez (\$442 )
                   /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:294" */
                   1'h1:
                       \$signal$235$next  = \$signal$236 [23:22];
@@ -13316,7 +13364,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* \amaranth.decoding  = "s-access-0/2" */
       4'h2:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:323" *)
-          casez (\$412 )
+          casez (\$444 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:323" */
             1'h1:
                 vic_owns_ph1 = 1'h1;
@@ -13325,7 +13373,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* \amaranth.decoding  = "s-access-1/3" */
       4'h3:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:332" *)
-          casez (\$414 )
+          casez (\$446 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:332" */
             1'h1:
                 vic_owns_ph1 = 1'h1;
@@ -13334,7 +13382,7 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
       /* \amaranth.decoding  = "s-access-2/4" */
       4'h4:
           (* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:341" *)
-          casez (\$416 )
+          casez (\$448 )
             /* src = "/home/markus/work/repos/myc64-pocket/src/fpga/core/myc64/rtl/myc64/vicii.py:341" */
             1'h1:
                 vic_owns_ph1 = 1'h1;
@@ -13357,35 +13405,35 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   assign \$10  = \$13 ;
   assign \$19  = \$20 ;
   assign \$28  = \$29 ;
-  assign \$420  = \$421 ;
-  assign \$425  = \$426 ;
-  assign \$430  = \$431 ;
-  assign \$528  = \$529 ;
-  assign \$531  = \$532 ;
-  assign \$534  = \$535 ;
-  assign \$537  = \$538 ;
-  assign \$540  = \$541 ;
-  assign \$543  = \$544 ;
-  assign \$546  = \$547 ;
-  assign \$549  = \$550 ;
-  assign \$555  = \$556 ;
-  assign \$558  = \$559 ;
-  assign \$561  = \$562 ;
-  assign \$564  = \$565 ;
-  assign \$567  = \$568 ;
-  assign \$570  = \$571 ;
-  assign \$573  = \$574 ;
-  assign \$576  = \$577 ;
-  assign \$582  = \$583 ;
-  assign \$585  = \$586 ;
-  assign \$588  = \$589 ;
-  assign \$591  = \$592 ;
-  assign \$594  = \$595 ;
-  assign \$597  = \$598 ;
-  assign \$600  = \$601 ;
-  assign \$603  = \$604 ;
-  assign \$622  = \$623 ;
-  assign o_irq = \$911 ;
+  assign \$452  = \$453 ;
+  assign \$457  = \$458 ;
+  assign \$462  = \$463 ;
+  assign \$560  = \$561 ;
+  assign \$563  = \$564 ;
+  assign \$566  = \$567 ;
+  assign \$569  = \$570 ;
+  assign \$572  = \$573 ;
+  assign \$575  = \$576 ;
+  assign \$578  = \$579 ;
+  assign \$581  = \$582 ;
+  assign \$587  = \$588 ;
+  assign \$590  = \$591 ;
+  assign \$593  = \$594 ;
+  assign \$596  = \$597 ;
+  assign \$599  = \$600 ;
+  assign \$602  = \$603 ;
+  assign \$605  = \$606 ;
+  assign \$608  = \$609 ;
+  assign \$614  = \$615 ;
+  assign \$617  = \$618 ;
+  assign \$620  = \$621 ;
+  assign \$623  = \$624 ;
+  assign \$626  = \$627 ;
+  assign \$629  = \$630 ;
+  assign \$632  = \$633 ;
+  assign \$635  = \$636 ;
+  assign \$654  = \$655 ;
+  assign o_irq = \$943 ;
   assign debug_sprite_bits_7 = \$338 ;
   assign debug_sprite_shift_2msb_7 = \$signal$235 ;
   assign debug_sprite_shift_toggle_7 = \$signal$238 ;
@@ -13449,12 +13497,12 @@ module u_vic(o_reg_data, o_irq, o_steal_bus, clk_8mhz_en, clk_1mhz_ph1_en, clk_1
   assign o_hsync = \$118 ;
   assign bad_line_cond = \$77 ;
   assign raster = y;
-  assign \$153  = \$151 ;
-  assign \$166  = \$164 ;
-  assign \$179  = \$177 ;
-  assign \$192  = \$190 ;
-  assign \$205  = \$203 ;
-  assign \$218  = \$216 ;
-  assign \$231  = \$229 ;
-  assign \$244  = \$242 ;
+  assign \$151  = \$signal$145 [23];
+  assign \$164  = \$signal$158 [23];
+  assign \$177  = \$signal$171 [23];
+  assign \$190  = \$signal$184 [23];
+  assign \$203  = \$signal$197 [23];
+  assign \$216  = \$signal$210 [23];
+  assign \$229  = \$signal$223 [23];
+  assign \$242  = \$signal$236 [23];
 endmodule
