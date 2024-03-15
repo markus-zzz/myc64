@@ -1,0 +1,6 @@
+[submodule "rtl/myc64/cpu-tv65"]
+	path = rtl/myc64/cpu-tv65
+	url = https://github.com/opengateware-modules/cpu-tv65.git
+[submodule "rtl/myc64/T65"]
+	path = rtl/myc64/T65
+	url = https://github.com/mist-devel/T65.git
