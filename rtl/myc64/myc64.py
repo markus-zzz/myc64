@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2020-2021 Markus Lavin (https://www.zzzconsulting.se/)
+# Copyright (C) 2020-2024 Markus Lavin (https://www.zzzconsulting.se/)
 #
 # All rights reserved.
 #
@@ -231,6 +231,7 @@ class MyC64(Elaboratable):
     # Keyboard matrix and joysticks.
     m.d.comb += u_cia1.i_pa.eq(Cat(~self.i_joystick2[0:5], C(0b111, 3)))
     m.d.comb += u_cia1.i_pb.eq(~(
+        Cat(self.i_joystick1[0:5], C(0b000, 3)) |  #
         Mux(~u_cia1.o_pa[7], self.i_keyboard_mask[56:64], 0) |  #
         Mux(~u_cia1.o_pa[6], self.i_keyboard_mask[48:56], 0) |  #
         Mux(~u_cia1.o_pa[5], self.i_keyboard_mask[40:48], 0) |  #
